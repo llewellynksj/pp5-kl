@@ -1,3 +1,7 @@
-.NavLink * {
+.NavLink {
   color: var(--primary-color);
+}
+
+.Active {
+  color: var(--secondary-color);
 }
