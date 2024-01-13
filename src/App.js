@@ -1,16 +1,18 @@
 import NavBar from "./components/NavBar";
-import styles from "./App.module.css"
+import styles from "./App.module.css";
 import { Container } from "react-bootstrap";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    
     <div className={styles.App}>
       <NavBar />
       <Container>
-        <h1>Homepage</h1>
-        <h1>Login</h1>
-        <h1>Register</h1>
+        <Switch>
+          <Route exact path="/" render={() => <h1>Homepage</h1>} />
+          <Route exact path="/login" render={() => <h1>Login</h1>} />
+          <Route exact path="/register" render={() => <h1>Register</h1>} />
+        </Switch>
       </Container>
     </div>
   );
