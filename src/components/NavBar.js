@@ -15,11 +15,11 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`${styles.NavLink} me-auto`}>
-            <Nav.Link><TiHome size={25} />Home</Nav.Link>
+            <Nav.Link>Home<TiHome size={25} /></Nav.Link>
           </Nav>
           <Nav className={`${styles.NavLink} ml-auto`}>
-            <Nav.Link><TiKeyOutline size={25} />Login</Nav.Link>
-            <Nav.Link><TiUserAdd size={25} />Register</Nav.Link>
+            <Nav.Link>Login<TiKeyOutline size={25} /></Nav.Link>
+            <Nav.Link>Register<TiUserAdd size={25} /></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

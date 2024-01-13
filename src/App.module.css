@@ -1,8 +1,9 @@
 .App {
   color: var(--primary-color);
   font-family: 'Bitter', sans-serif;
+  min-height: 100vh;
 }
 
-h1 {
-  font-family: 'Moon Dance', sans-serif;
+a {
+  color: var(--primary-color);
 }

@@ -3,3 +3,7 @@
   --primary-color: #FF00DE;
   --secondary-color: #1ADF00;
 }
+
+h1, h2, h3 {
+  font-family: 'Moon Dance', sans-serif;
+}
