@@ -1,19 +1,25 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import logo from '../assets/logo.webp'
+import { TiHome, TiUserAdd, TiKeyOutline } from "react-icons/ti";
+import styles from '../styles/NavBar.module.css'
+
 
 import React from 'react'
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home">InkPad</Navbar.Brand>
+        <Navbar.Brand>
+          <img src={logo} alt="logo" height="45" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+          <Nav className={`${styles.NavLink} me-auto`}>
+            <Nav.Link><TiHome size={25} />Home</Nav.Link>
+          </Nav>
+          <Nav className={`${styles.NavLink} ml-auto`}>
+            <Nav.Link><TiKeyOutline size={25} />Login</Nav.Link>
+            <Nav.Link><TiUserAdd size={25} />Register</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
