@@ -35,6 +35,7 @@ const RegisterForm = () => {
   return (
     <>
       <Container>
+        <h1>Register</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="username">
             <Form.Label className="d-none">Username</Form.Label>
@@ -88,7 +89,9 @@ const RegisterForm = () => {
             Submit
           </Button>
           {errors.non_field_errors?.map((message, idx) => (
-            <Alert key={idx} variant="warning" className="mt-3">{message}</Alert>
+            <Alert key={idx} variant="warning" className="mt-3">
+              {message}
+            </Alert>
           ))}
         </Form>
       </Container>
