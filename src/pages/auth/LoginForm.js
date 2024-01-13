@@ -1,11 +1,11 @@
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { SetCurrentUserConext } from "../../App";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 const LoginForm = () => {
-  const setCurrentUser = useContext(SetCurrentUserConext);
+  const setCurrentUser = useSetCurrentUser();
 
   const [loginData, setLoginData] = useState({
     username: "",

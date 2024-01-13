@@ -3,11 +3,11 @@ import logo from "../assets/logo_dark.webp";
 import { TiHome, TiUserAdd, TiKeyOutline } from "react-icons/ti";
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
-import { CurrentUserContext } from "../App";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const NavBar = () => {
-  const currentUser = useContext(CurrentUserContext);
+  const currentUser = useCurrentUser();
+
   const loggedOutNav = (
     <>
       <NavLink to="/login" className={s.NavLink} activeClassName={s.Active}>
