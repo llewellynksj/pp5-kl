@@ -3,8 +3,26 @@ import logo from "../assets/logo_dark.webp";
 import { TiHome, TiUserAdd, TiKeyOutline } from "react-icons/ti";
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CurrentUserContext } from "../App";
 
 const NavBar = () => {
+  const currentUser = useContext(CurrentUserContext);
+  const loggedOutNav = (
+    <>
+      <NavLink to="/login" className={s.NavLink} activeClassName={s.Active}>
+        Login
+        <TiKeyOutline size={25} />
+      </NavLink>
+      <NavLink to="/register" className={s.NavLink} activeClassName={s.Active}>
+        Register
+        <TiUserAdd size={25} />
+      </NavLink>
+    </>
+  );
+
+  const loggedInNav = <>{currentUser?.username}</>;
+
   return (
     <Navbar expand="lg">
       <Container>
@@ -27,22 +45,7 @@ const NavBar = () => {
             </NavLink>
           </Nav>
           <Nav className={`ml-auto`}>
-            <NavLink
-              to="/login"
-              className={s.NavLink}
-              activeClassName={s.Active}
-            >
-              Login
-              <TiKeyOutline size={25} />
-            </NavLink>
-            <NavLink
-              to="/register"
-              className={s.NavLink}
-              activeClassName={s.Active}
-            >
-              Register
-              <TiUserAdd size={25} />
-            </NavLink>
+            {currentUser ? loggedInNav : loggedOutNav}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,9 +1,12 @@
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
+import { SetCurrentUserConext } from "../../App";
 
 const LoginForm = () => {
+  const setCurrentUser = useContext(SetCurrentUserConext);
+
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -17,7 +20,8 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/dj-rest-auth/login/", loginData);
+      const { data } = await axios.post("/dj-rest-auth/login/", loginData);
+      setCurrentUser(data.user);
       history.push("/");
     } catch (err) {
       setErrors(err.response?.data);
