@@ -1,0 +1,15 @@
+.Container {
+  min-height: 350px;
+}
+
+.TextContainer {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
