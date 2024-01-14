@@ -73,7 +73,10 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className={s.NavToggle}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`me-auto`}>
             <NavLink

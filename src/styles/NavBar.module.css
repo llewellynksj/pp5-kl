@@ -5,3 +5,7 @@
 .Active {
   color: var(--secondary-color);
 }
+
+.NavToggle {
+  background-color: var(--primary-color);
+}
