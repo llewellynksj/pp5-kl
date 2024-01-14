@@ -1,6 +1,12 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo_dark.webp";
-import { TiHome, TiUserAdd, TiKeyOutline } from "react-icons/ti";
+import {
+  TiHome,
+  TiUserAdd,
+  TiKeyOutline,
+  TiPlus,
+  TiLockClosed,
+} from "react-icons/ti";
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
@@ -21,7 +27,25 @@ const NavBar = () => {
     </>
   );
 
-  const loggedInNav = <>{currentUser?.username}</>;
+  const loggedInNav = (
+    <>
+      <NavLink to="/" className={s.NavLink} activeClassName={s.Active}>
+        Add Post
+        <TiPlus size={25} />
+      </NavLink>
+      <NavLink to="/" className={s.NavLink} onClick={() => {}}>
+        Logout
+        <TiLockClosed size={25} />
+      </NavLink>
+      <NavLink
+        to={`/profiles/${currentUser?.profile_id}`}
+        className={s.NavLink}
+      >
+        <img src={currentUser?.profile_image} />
+      </NavLink>
+      {currentUser?.username}
+    </>
+  );
 
   return (
     <Navbar expand="lg">
