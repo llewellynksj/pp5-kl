@@ -15,10 +15,13 @@ import {
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import axios from "axios";
+import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+
+  const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleLogout = async () => {
     try {
@@ -66,7 +69,7 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expand="lg">
+    <Navbar expanded={expanded} expand="lg">
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
@@ -76,6 +79,8 @@ const NavBar = () => {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={s.NavToggle}
+          ref={ref}
+          onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`me-auto`}>
