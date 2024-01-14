@@ -9,11 +9,25 @@ import {
 } from "react-icons/ti";
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import {
+  useCurrentUser,
+  useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleLogout = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const loggedOutNav = (
     <>
@@ -34,7 +48,7 @@ const NavBar = () => {
         Add Post
         <TiPlus size={25} />
       </NavLink>
-      <NavLink to="/" className={s.NavLink} onClick={() => {}}>
+      <NavLink to="/" className={s.NavLink} onClick={handleLogout}>
         Logout
         <TiLockClosed size={25} />
       </NavLink>
