@@ -10,6 +10,7 @@ import {
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -41,9 +42,12 @@ const NavBar = () => {
         to={`/profiles/${currentUser?.profile_id}`}
         className={s.NavLink}
       >
-        <img src={currentUser?.profile_image} />
+        <Avatar
+          src={currentUser?.profile_image}
+          text={currentUser?.username}
+          height={40}
+        />
       </NavLink>
-      {currentUser?.username}
     </>
   );
 
