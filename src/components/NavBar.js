@@ -47,7 +47,7 @@ const NavBar = () => {
 
   const loggedInNav = (
     <>
-      <NavLink to="/" className={s.NavLink} activeClassName={s.Active}>
+      <NavLink to="/add" className={s.NavLink} activeClassName={s.Active}>
         Add Post
         <TiPlus size={25} />
       </NavLink>

@@ -16,11 +16,23 @@ import s from "../../styles/AddPostForm.module.css";
 
 function AddPostForm() {
   const [postData, setPostData] = useState({
-    content: "",
+    caption: "",
     image_tag: "",
+    image_tag2: "",
+    image_tag3: "",
+    image_tag4: "",
+    image_tag5: "",
     image: "",
   });
-  const { content, image_tag, image } = postData;
+  const {
+    caption,
+    image_tag,
+    image_tag2,
+    image_tag3,
+    image_tag4,
+    image_tag5,
+    image,
+  } = postData;
 
   const [errors, setErrors] = useState({});
   const history = useHistory();
@@ -48,8 +60,12 @@ function AddPostForm() {
     event.preventDefault();
     const form = new Form();
 
-    form.append("content", content);
+    form.append("caption", caption);
     form.append("image_tag", image_tag);
+    form.append("image_tag2", image_tag2);
+    form.append("image_tag3", image_tag3);
+    form.append("image_tag4", image_tag4);
+    form.append("image_tag5", image_tag5);
     form.append("image", imageInput.current.files[0]);
 
     try {
@@ -64,13 +80,14 @@ function AddPostForm() {
 
   const formFields = (
     <div className="text-center">
+      {/* Caption */}
       <Form.Group>
         <Form.Label>Caption</Form.Label>
         <Form.Control
           as="textarea"
           rows={3}
-          name="content"
-          value={content}
+          name="caption"
+          value={caption}
           onChange={handleChange}
         />
       </Form.Group>
@@ -80,20 +97,143 @@ function AddPostForm() {
         </Alert>
       ))}
 
-      <Form.Group>
-        <Form.Label>Tags</Form.Label>
-        <Form.Control
-          type="text"
-          name="image_tag"
-          value={image_tag}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+      <>
+        <p>Select up 5 Tags:</p>
+        {/* Tag 1 */}
+        <div className="d-flex sm-col m-1 justify-content-center">
+          <label>
+            <select
+              className=""
+              name="image_tag"
+              id="image_tag"
+              value={image_tag}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Tribal">Tribal</option>
+              <option value="Geometric">Geometric</option>
+              <option value="Realism">Realism</option>
+              <option value="Portraits">Portraits</option>
+              <option value="Illustrative">Illustrative</option>
+              <option value="Dotwork">Dotwork</option>
+              <option value="Watercolour">Watercolour</option>
+              <option value="Traditional">Traditional</option>
+              <option value="Neo-traditional">Neo-traditional</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Animals">Animals</option>
+              <option value="Lettering">Lettering</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Tag 2 */}
+        <div className="d-flex sm-col m-1 justify-content-center">
+          <label>
+            <select
+              className=""
+              name="image_tag2"
+              id="image_tag2"
+              value={image_tag2}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Tribal">Tribal</option>
+              <option value="Geometric">Geometric</option>
+              <option value="Realism">Realism</option>
+              <option value="Portraits">Portraits</option>
+              <option value="Illustrative">Illustrative</option>
+              <option value="Dotwork">Dotwork</option>
+              <option value="Watercolour">Watercolour</option>
+              <option value="Traditional">Traditional</option>
+              <option value="Neo-traditional">Neo-traditional</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Animals">Animals</option>
+              <option value="Lettering">Lettering</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Tag 3 */}
+        <div className="d-flex sm-col m-1 justify-content-center">
+          <label>
+            <select
+              className=""
+              name="image_tag3"
+              id="image_tag3"
+              value={image_tag3}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Tribal">Tribal</option>
+              <option value="Geometric">Geometric</option>
+              <option value="Realism">Realism</option>
+              <option value="Portraits">Portraits</option>
+              <option value="Illustrative">Illustrative</option>
+              <option value="Dotwork">Dotwork</option>
+              <option value="Watercolour">Watercolour</option>
+              <option value="Traditional">Traditional</option>
+              <option value="Neo-traditional">Neo-traditional</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Animals">Animals</option>
+              <option value="Lettering">Lettering</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Tag 4 */}
+        <div className="d-flex sm-col m-1 justify-content-center">
+          <label>
+            <select
+              className=""
+              name="image_tag4"
+              id="image_tag4"
+              value={image_tag4}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Tribal">Tribal</option>
+              <option value="Geometric">Geometric</option>
+              <option value="Realism">Realism</option>
+              <option value="Portraits">Portraits</option>
+              <option value="Illustrative">Illustrative</option>
+              <option value="Dotwork">Dotwork</option>
+              <option value="Watercolour">Watercolour</option>
+              <option value="Traditional">Traditional</option>
+              <option value="Neo-traditional">Neo-traditional</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Animals">Animals</option>
+              <option value="Lettering">Lettering</option>
+            </select>
+          </label>
+        </div>
+
+        {/* Tag 5 */}
+        <div className="d-flex sm-col m-1 justify-content-center">
+          <label>
+            <select
+              className=""
+              name="image_tag5"
+              id="image_tag5"
+              value={image_tag5}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Tribal">Tribal</option>
+              <option value="Geometric">Geometric</option>
+              <option value="Realism">Realism</option>
+              <option value="Portraits">Portraits</option>
+              <option value="Illustrative">Illustrative</option>
+              <option value="Dotwork">Dotwork</option>
+              <option value="Watercolour">Watercolour</option>
+              <option value="Traditional">Traditional</option>
+              <option value="Neo-traditional">Neo-traditional</option>
+              <option value="Abstract">Abstract</option>
+              <option value="Animals">Animals</option>
+              <option value="Lettering">Lettering</option>
+            </select>
+          </label>
+        </div>
+      </>
 
       <Button onClick={() => history.goBack()}>Cancel</Button>
       <Button type="submit">Post</Button>
@@ -102,7 +242,7 @@ function AddPostForm() {
 
   return (
     <Container>
-      <h1>Add a new post!</h1>
+      <h1>Add a new post</h1>
 
       <Form onSubmit={handleSubmit}>
         <Row>
