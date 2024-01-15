@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import logo from "../assets/logo_dark.webp";
+import logo from "../assets/logo.webp";
 import {
   TiHome,
   TiUserAdd,

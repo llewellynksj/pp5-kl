@@ -19,11 +19,14 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("Before axios request");
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", loginData);
+      console.log("After axios request, data received:", data);
       setCurrentUser(data.user);
       history.push("/");
     } catch (err) {
+      console.log("Error response from server:", err.response?.data);
       setErrors(err.response?.data);
     }
   };
