@@ -257,7 +257,10 @@ function AddPostForm() {
                       <Image className={s.Image} src={image} rounded />
                     </figure>
                     <div>
-                      <Form.Label className="btn" htmlFor="image-upload">
+                      <Form.Label
+                        className={`${s.Text} btn`}
+                        htmlFor="image-upload"
+                      >
                         Change
                       </Form.Label>
                     </div>

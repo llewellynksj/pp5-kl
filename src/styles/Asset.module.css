@@ -5,3 +5,7 @@
   align-items: center;
   min-height: 120px;
 }
+
+.AssetImg {
+  max-width: 40vw;
+}

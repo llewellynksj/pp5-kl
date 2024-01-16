@@ -8,6 +8,14 @@
   border-radius: 5px;
 }
 
+.Text {
+  color: var(--primary-color)
+}
+
+.Text:hover {
+  color: var(--secondary-color)
+}
+
 .Image {
   max-height: 40vh;
   max-width: 100%;
