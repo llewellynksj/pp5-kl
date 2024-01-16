@@ -11,7 +11,7 @@ import {
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
 import Asset from "../../components/Asset";
-import upload from "../../assets/upload_icon.png";
+import upload from "../../assets/upload.png";
 import s from "../../styles/AddPostForm.module.css";
 
 function AddPostForm() {
