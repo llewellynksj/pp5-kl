@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useRef } from "react";
 import {
   Container,
@@ -58,20 +59,21 @@ function AddPostForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const form = new Form();
+    const formData = new FormData();
 
-    form.append("caption", caption);
-    form.append("image_tag", image_tag);
-    form.append("image_tag2", image_tag2);
-    form.append("image_tag3", image_tag3);
-    form.append("image_tag4", image_tag4);
-    form.append("image_tag5", image_tag5);
-    form.append("image", imageInput.current.files[0]);
+    formData.append("caption", caption);
+    formData.append("image_tag", image_tag);
+    formData.append("image_tag2", image_tag2);
+    formData.append("image_tag3", image_tag3);
+    formData.append("image_tag4", image_tag4);
+    formData.append("image_tag5", image_tag5);
+    formData.append("image", imageInput.current.files[0]);
 
     try {
-      const { data } = await axiosReq.post("/posts/", form);
+      const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
     } catch (err) {
+      console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
@@ -244,7 +246,7 @@ function AddPostForm() {
     <Container>
       <h1>Add a new post</h1>
 
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} encType="multipart/form-data">
         <Row>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
             <Container
@@ -275,9 +277,11 @@ function AddPostForm() {
                 )}
 
                 <Form.File
+                  className={s.FormFile}
                   id="image-upload"
                   accept="image/*"
                   onChange={handleChangeImage}
+                  ref={imageInput}
                 />
               </Form.Group>
               <div className={`${s.TextContainer} d-md-none`}>{formFields}</div>
