@@ -96,6 +96,7 @@ function AddPostForm() {
     }
   };
 
+  // Form fields to complete excluding image upload
   const formFields = (
     <div className="text-center">
       {/* Caption */}
@@ -116,7 +117,7 @@ function AddPostForm() {
       ))}
 
       <>
-        <p>Select up 5 Tags:</p>
+        <p>Select up to 5 Tags:</p>
         {/* Tag 1 */}
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
@@ -137,6 +138,11 @@ function AddPostForm() {
             </Form.Control>
           </Form.Label>
         </div>
+        {errors?.image_tag?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         {/* Tag 2 */}
         <div className="d-flex sm-col m-1 justify-content-center">
@@ -158,6 +164,11 @@ function AddPostForm() {
             </Form.Control>
           </Form.Label>
         </div>
+        {errors?.image_tag2?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         {/* Tag 3 */}
         <div className="d-flex sm-col m-1 justify-content-center">
@@ -179,6 +190,11 @@ function AddPostForm() {
             </Form.Control>
           </Form.Label>
         </div>
+        {errors?.image_tag3?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         {/* Tag 4 */}
         <div className="d-flex sm-col m-1 justify-content-center">
@@ -200,6 +216,11 @@ function AddPostForm() {
             </Form.Control>
           </Form.Label>
         </div>
+        {errors?.image_tag4?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         {/* Tag 5 */}
         <div className="d-flex sm-col m-1 justify-content-center">
@@ -221,6 +242,11 @@ function AddPostForm() {
             </Form.Control>
           </Form.Label>
         </div>
+        {errors?.image_tag5?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
       </>
 
       <Button onClick={() => history.goBack()}>Cancel</Button>
@@ -270,6 +296,12 @@ function AddPostForm() {
                   ref={imageInput}
                 />
               </Form.Group>
+              {errors?.image?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                  {message}
+                </Alert>
+              ))}
+
               <div className={`${s.TextContainer} d-md-none`}>{formFields}</div>
             </Container>
           </Col>
