@@ -6,6 +6,7 @@ import Avatar from "../../components/Avatar";
 import { TiHeartOutline, TiHeart } from "react-icons/ti";
 import { LiaCommentDots } from "react-icons/lia";
 import { axiosRes } from "../../services/axiosDefaults";
+import s from "../../styles/Post.module.css";
 
 const Post = (props) => {
   const {
@@ -67,12 +68,12 @@ const Post = (props) => {
     <Card>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
-          <Link to={`/profiles/${profile_id}`}>
+          <Link to={`/profiles/${profile_id}`} className={`${s.Text}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span>{updated_at}</span>
+            <span className={`${s.Text}`}>{updated_at}</span>
             {is_owner && postPage && "..."}
           </div>
         </Media>
@@ -80,7 +81,7 @@ const Post = (props) => {
       <Link to={`/posts/${id}`}>
         <Card.Img src={image} alt={`Image by ${owner} captioned ${caption}`} />
       </Link>
-      <Card.Body>
+      <Card.Body className={`${s.Text}`}>
         {caption && <Card.Text>{caption}</Card.Text>}
         {image_tag && <Card.Text>{image_tag}</Card.Text>}
         {image_tag2 && <Card.Text>{image_tag2}</Card.Text>}
@@ -88,7 +89,7 @@ const Post = (props) => {
         {image_tag4 && <Card.Text>{image_tag4}</Card.Text>}
         {image_tag5 && <Card.Text>{image_tag5}</Card.Text>}
       </Card.Body>
-      <div>
+      <div className={`${s.Text}`}>
         {is_owner ? (
           <OverlayTrigger
             placment="top"
@@ -113,7 +114,7 @@ const Post = (props) => {
           </OverlayTrigger>
         )}
         {likes_count}
-        <Link to={`/posts/${id}`}>
+        <Link to={`/posts/${id}`} className={`${s.Text}`}>
           <LiaCommentDots size={25} />
         </Link>
         {comments_count}
