@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Container,
   Form,
@@ -37,6 +37,22 @@ function AddPostForm() {
 
   const [errors, setErrors] = useState({});
   const history = useHistory();
+
+  const [tagChoices, setTagChoices] = useState([]);
+
+  // Fetch the tag choices from api
+  useEffect(() => {
+    async function fetchTagChoices() {
+      try {
+        const response = await axiosReq.get("/posts/tag-choices");
+        setTagChoices(response.data);
+      } catch (error) {
+        console.error("Error fetching tag choices:", error);
+      }
+    }
+
+    fetchTagChoices();
+  }, []);
 
   const handleChange = (event) => {
     setPostData({
@@ -103,137 +119,107 @@ function AddPostForm() {
         <p>Select up 5 Tags:</p>
         {/* Tag 1 */}
         <div className="d-flex sm-col m-1 justify-content-center">
-          <label>
-            <select
+          <Form.Label>
+            <Form.Control
               className=""
+              as="select"
               name="image_tag"
               id="image_tag"
               value={image_tag}
               onChange={handleChange}
             >
-              <option value=""></option>
-              <option value="Tribal">Tribal</option>
-              <option value="Geometric">Geometric</option>
-              <option value="Realism">Realism</option>
-              <option value="Portraits">Portraits</option>
-              <option value="Illustrative">Illustrative</option>
-              <option value="Dotwork">Dotwork</option>
-              <option value="Watercolour">Watercolour</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Neo-traditional">Neo-traditional</option>
-              <option value="Abstract">Abstract</option>
-              <option value="Animals">Animals</option>
-              <option value="Lettering">Lettering</option>
-            </select>
-          </label>
+              <option value="">Select an option</option>
+              {tagChoices.map((tagChoice) => (
+                <option key={tagChoice.value} value={tagChoice.value}>
+                  {tagChoice.label}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Label>
         </div>
 
         {/* Tag 2 */}
         <div className="d-flex sm-col m-1 justify-content-center">
-          <label>
-            <select
+          <Form.Label>
+            <Form.Control
               className=""
+              as="select"
               name="image_tag2"
               id="image_tag2"
               value={image_tag2}
               onChange={handleChange}
             >
-              <option value=""></option>
-              <option value="Tribal">Tribal</option>
-              <option value="Geometric">Geometric</option>
-              <option value="Realism">Realism</option>
-              <option value="Portraits">Portraits</option>
-              <option value="Illustrative">Illustrative</option>
-              <option value="Dotwork">Dotwork</option>
-              <option value="Watercolour">Watercolour</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Neo-traditional">Neo-traditional</option>
-              <option value="Abstract">Abstract</option>
-              <option value="Animals">Animals</option>
-              <option value="Lettering">Lettering</option>
-            </select>
-          </label>
+              <option value="">Select an option</option>
+              {tagChoices.map((tagChoice) => (
+                <option key={tagChoice.value} value={tagChoice.value}>
+                  {tagChoice.label}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Label>
         </div>
 
         {/* Tag 3 */}
         <div className="d-flex sm-col m-1 justify-content-center">
-          <label>
-            <select
+          <Form.Label>
+            <Form.Control
               className=""
+              as="select"
               name="image_tag3"
               id="image_tag3"
               value={image_tag3}
               onChange={handleChange}
             >
-              <option value=""></option>
-              <option value="Tribal">Tribal</option>
-              <option value="Geometric">Geometric</option>
-              <option value="Realism">Realism</option>
-              <option value="Portraits">Portraits</option>
-              <option value="Illustrative">Illustrative</option>
-              <option value="Dotwork">Dotwork</option>
-              <option value="Watercolour">Watercolour</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Neo-traditional">Neo-traditional</option>
-              <option value="Abstract">Abstract</option>
-              <option value="Animals">Animals</option>
-              <option value="Lettering">Lettering</option>
-            </select>
-          </label>
+              <option value="">Select an option</option>
+              {tagChoices.map((tagChoice) => (
+                <option key={tagChoice.value} value={tagChoice.value}>
+                  {tagChoice.label}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Label>
         </div>
 
         {/* Tag 4 */}
         <div className="d-flex sm-col m-1 justify-content-center">
-          <label>
-            <select
+          <Form.Label>
+            <Form.Control
               className=""
+              as="select"
               name="image_tag4"
               id="image_tag4"
               value={image_tag4}
               onChange={handleChange}
             >
-              <option value=""></option>
-              <option value="Tribal">Tribal</option>
-              <option value="Geometric">Geometric</option>
-              <option value="Realism">Realism</option>
-              <option value="Portraits">Portraits</option>
-              <option value="Illustrative">Illustrative</option>
-              <option value="Dotwork">Dotwork</option>
-              <option value="Watercolour">Watercolour</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Neo-traditional">Neo-traditional</option>
-              <option value="Abstract">Abstract</option>
-              <option value="Animals">Animals</option>
-              <option value="Lettering">Lettering</option>
-            </select>
-          </label>
+              <option value="">Select an option</option>
+              {tagChoices.map((tagChoice) => (
+                <option key={tagChoice.value} value={tagChoice.value}>
+                  {tagChoice.label}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Label>
         </div>
 
         {/* Tag 5 */}
         <div className="d-flex sm-col m-1 justify-content-center">
-          <label>
-            <select
+          <Form.Label>
+            <Form.Control
               className=""
+              as="select"
               name="image_tag5"
               id="image_tag5"
               value={image_tag5}
               onChange={handleChange}
             >
-              <option value=""></option>
-              <option value="Tribal">Tribal</option>
-              <option value="Geometric">Geometric</option>
-              <option value="Realism">Realism</option>
-              <option value="Portraits">Portraits</option>
-              <option value="Illustrative">Illustrative</option>
-              <option value="Dotwork">Dotwork</option>
-              <option value="Watercolour">Watercolour</option>
-              <option value="Traditional">Traditional</option>
-              <option value="Neo-traditional">Neo-traditional</option>
-              <option value="Abstract">Abstract</option>
-              <option value="Animals">Animals</option>
-              <option value="Lettering">Lettering</option>
-            </select>
-          </label>
+              <option value="">Select an option</option>
+              {tagChoices.map((tagChoice) => (
+                <option key={tagChoice.value} value={tagChoice.value}>
+                  {tagChoice.label}
+                </option>
+              ))}
+            </Form.Control>
+          </Form.Label>
         </div>
       </>
 
