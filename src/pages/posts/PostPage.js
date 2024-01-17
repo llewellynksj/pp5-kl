@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
+import Post from "./Post";
 // import s from "../../App.module.css";
 
 function PostPage() {
@@ -28,7 +29,7 @@ function PostPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
-        <p>Post component</p>
+        <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className="">Comments</Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
