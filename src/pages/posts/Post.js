@@ -1,8 +1,10 @@
 import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media } from "react-bootstrap";
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
+import { TiHeartOutline, TiHeart } from "react-icons/ti";
+import { LiaCommentDots } from "react-icons/lia";
 
 const Post = (props) => {
   const {
@@ -52,6 +54,36 @@ const Post = (props) => {
         {image_tag4 && <Card.Text>{image_tag4}</Card.Text>}
         {image_tag5 && <Card.Text>{image_tag5}</Card.Text>}
       </Card.Body>
+      <div>
+        {is_owner ? (
+          <OverlayTrigger
+            placment="top"
+            overlay={<Tooltip>This post belongs to you</Tooltip>}
+          >
+            <TiHeartOutline size={25} />
+          </OverlayTrigger>
+        ) : like_id ? (
+          <span onClick={() => {}}>
+            <TiHeart size={25} />
+          </span>
+        ) : currentUser ? (
+          <span onClick={() => {}}>
+            <TiHeartOutline size={25} />
+          </span>
+        ) : (
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Login to show your love</Tooltip>}
+          >
+            <TiHeartOutline size={25} />
+          </OverlayTrigger>
+        )}
+        {likes_count}
+        <Link to={`/posts/${id}`}>
+          <LiaCommentDots size={25} />
+        </Link>
+        {comments_count}
+      </div>
     </Card>
   );
 };
