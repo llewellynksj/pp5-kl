@@ -5,6 +5,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
 import { TiHeartOutline, TiHeart } from "react-icons/ti";
 import { LiaCommentDots } from "react-icons/lia";
+import { axiosRes } from "../../services/axiosDefaults";
 
 const Post = (props) => {
   const {
@@ -24,10 +25,43 @@ const Post = (props) => {
     image,
     updated_at,
     postPage,
+    setPosts,
   } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <Card>
@@ -63,11 +97,11 @@ const Post = (props) => {
             <TiHeartOutline size={25} />
           </OverlayTrigger>
         ) : like_id ? (
-          <span onClick={() => {}}>
+          <span onClick={handleUnlike}>
             <TiHeart size={25} />
           </span>
         ) : currentUser ? (
-          <span onClick={() => {}}>
+          <span onClick={handleLike}>
             <TiHeartOutline size={25} />
           </span>
         ) : (
