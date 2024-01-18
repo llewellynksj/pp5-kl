@@ -7,7 +7,7 @@ import Post from "./Post";
 import Asset from "../../components/Asset";
 import NoRes from "../../assets/no_results.png";
 
-function PostList({ message, filter = "", profile_id }) {
+function PostList({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
@@ -18,14 +18,12 @@ function PostList({ message, filter = "", profile_id }) {
         const { data } = await axiosReq.get(`/posts/?${filter}`);
         setPosts(data);
         setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
+      } catch (err) {}
     };
 
     setHasLoaded(false);
     fetchPosts();
-  }, [filter, pathname, profile_id]);
+  }, [filter, pathname]);
 
   return (
     <Row className="h-100">

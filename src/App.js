@@ -14,8 +14,6 @@ function App() {
   const currentUser = useCurrentUser();
   const profile_id = currentUser?.profile_id || "";
 
-  // console.log("Profile ID:", profile_id);
-
   return (
     <div className={styles.App}>
       <NavBar />
