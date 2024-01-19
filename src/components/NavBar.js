@@ -1,12 +1,12 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo.webp";
 import {
-  TiHome,
-  TiUserAdd,
-  TiKeyOutline,
-  TiPlus,
-  TiLockClosed,
-} from "react-icons/ti";
+  BsHouseFill,
+  BsFillLockFill,
+  BsFillUnlockFill,
+  BsPlusCircleFill,
+  BsPersonAdd,
+} from "react-icons/bs";
 import s from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import {
@@ -36,11 +36,11 @@ const NavBar = () => {
     <>
       <NavLink to="/login" className={s.NavLink} activeClassName={s.Active}>
         Login
-        <TiKeyOutline size={25} />
+        <BsFillUnlockFill size={25} />
       </NavLink>
       <NavLink to="/register" className={s.NavLink} activeClassName={s.Active}>
         Register
-        <TiUserAdd size={25} />
+        <BsPersonAdd size={25} />
       </NavLink>
     </>
   );
@@ -49,11 +49,11 @@ const NavBar = () => {
     <>
       <NavLink to="/add" className={s.NavLink} activeClassName={s.Active}>
         Add Post
-        <TiPlus size={25} />
+        <BsPlusCircleFill size={25} />
       </NavLink>
       <NavLink to="/" className={s.NavLink} onClick={handleLogout}>
         Logout
-        <TiLockClosed size={25} />
+        <BsFillLockFill size={25} />
       </NavLink>
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
@@ -91,7 +91,7 @@ const NavBar = () => {
               activeClassName={s.Active}
             >
               Home
-              <TiHome size={25} />
+              <BsHouseFill size={25} />
             </NavLink>
           </Nav>
           <Nav className={`ml-auto`}>

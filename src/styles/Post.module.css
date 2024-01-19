@@ -1,3 +1,12 @@
 .Text {
   color: #252525;
 }
+
+.Heart {
+  color: #FF00DE;
+
+}
+
+.IconOutline:hover {
+  color: #FF00DE;
+}

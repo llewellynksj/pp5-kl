@@ -3,8 +3,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
-import { TiHeartOutline, TiHeart } from "react-icons/ti";
-import { LiaCommentDots } from "react-icons/lia";
+import { BsSuitHeart, BsSuitHeartFill, BsChatDots } from "react-icons/bs";
 import { axiosRes } from "../../services/axiosDefaults";
 import s from "../../styles/Post.module.css";
 
@@ -95,27 +94,27 @@ const Post = (props) => {
             placment="top"
             overlay={<Tooltip>This post belongs to you</Tooltip>}
           >
-            <TiHeartOutline size={25} />
+            <BsSuitHeart size={25} />
           </OverlayTrigger>
         ) : like_id ? (
           <span onClick={handleUnlike}>
-            <TiHeart size={25} />
+            <BsSuitHeartFill size={25} className={s.Heart} />
           </span>
         ) : currentUser ? (
           <span onClick={handleLike}>
-            <TiHeartOutline size={25} />
+            <BsSuitHeart size={25} className={s.IconOutline} />
           </span>
         ) : (
           <OverlayTrigger
             placement="top"
             overlay={<Tooltip>Login to show your love</Tooltip>}
           >
-            <TiHeartOutline size={25} />
+            <BsSuitHeart size={25} />
           </OverlayTrigger>
         )}
         {likes_count}
         <Link to={`/posts/${id}`} className={`${s.Text}`}>
-          <LiaCommentDots size={25} />
+          <BsChatDots size={25} className={s.IconOutline} />
         </Link>
         {comments_count}
       </div>
