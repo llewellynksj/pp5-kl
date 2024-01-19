@@ -6,7 +6,6 @@ import { axiosReq } from "../../services/axiosDefaults";
 import Post from "./Post";
 import Asset from "../../components/Asset";
 import NoRes from "../../assets/no_results.png";
-import { BsSearch } from "react-icons/bs";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 
