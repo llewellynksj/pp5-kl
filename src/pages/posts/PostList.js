@@ -1,7 +1,7 @@
 import { Form, Col, Row, Container } from "react-bootstrap";
 import s from "../../styles/PostList.module.css";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../services/axiosDefaults";
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -13,12 +13,16 @@ function PostList({ message, filter = "" }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    console.log("Filter before API call:", filter);
+
     const fetchPosts = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/?${filter}`);
         setPosts(data);
         setHasLoaded(true);
-      } catch (err) {}
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      }
     };
 
     setHasLoaded(false);
