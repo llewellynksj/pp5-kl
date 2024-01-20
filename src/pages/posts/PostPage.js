@@ -5,7 +5,7 @@ import { axiosReq } from "../../services/axiosDefaults";
 import Post from "./Post";
 import AddCommentForm from "../comments/AddCommentForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Comment from "../comments/comment";
+import Comment from "../comments/Comment";
 
 function PostPage() {
   const { id } = useParams();
@@ -24,7 +24,7 @@ function PostPage() {
         setPost({ results: [post] });
         setComments(comments);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -50,7 +50,12 @@ function PostPage() {
           ) : null}
           {comments.results.length ? (
             comments.results.map((comment) => (
-              <Comment key={comment.id} {...comment} />
+              <Comment
+                key={comment.id}
+                {...comment}
+                setPost={setPost}
+                setComments={setComments}
+              />
             ))
           ) : currentUser ? (
             <span>No comments yet</span>
