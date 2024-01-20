@@ -4,6 +4,7 @@ import { axiosReq } from "../../services/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import s from "../../App.module.css";
 import Asset from "../../components/Asset";
+import Profile from "./Profile";
 
 const HottestProfiles = ({ mobile }) => {
   const [profileData, setProfileData] = useState({
@@ -38,16 +39,12 @@ const HottestProfiles = ({ mobile }) => {
           {mobile ? (
             <div className={`d-flex justify-content-around`}>
               {hottestProfiles.results.map((profile) => (
-                <p key={profile.id} className={s.Text}>
-                  {profile.owner}
-                </p>
+                <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>
           ) : (
             hottestProfiles.results.map((profile) => (
-              <p key={profile.id} className={s.Text}>
-                {profile.owner}
-              </p>
+              <Profile key={profile.id} profile={profile} />
             ))
           )}
         </>
