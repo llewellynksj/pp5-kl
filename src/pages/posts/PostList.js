@@ -8,6 +8,7 @@ import Asset from "../../components/Asset";
 import NoRes from "../../assets/no_results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import HottestProfiles from "../profiles/HottestProfiles";
 
 function PostList({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -79,7 +80,7 @@ function PostList({ message, filter = "" }) {
         )}
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
+        <HottestProfiles />
       </Col>
     </Row>
   );
