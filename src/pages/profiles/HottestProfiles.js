@@ -5,7 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import s from "../../App.module.css";
 import Asset from "../../components/Asset";
 
-const HottestProfiles = () => {
+const HottestProfiles = ({ mobile }) => {
   const [profileData, setProfileData] = useState({
     userProfile: { results: [] },
     hottestProfiles: { results: [] },
@@ -31,15 +31,25 @@ const HottestProfiles = () => {
   }, [currentUser]);
 
   return (
-    <Container>
+    <Container className={`${mobile && "d-lg-none text-center mb-3"}`}>
       {hottestProfiles.results.length ? (
         <>
           <p>Hottest Profiles</p>
-          {hottestProfiles.results.map((profile) => (
-            <p key={profile.id} className={s.Text}>
-              {profile.owner}
-            </p>
-          ))}
+          {mobile ? (
+            <div className={`d-flex justify-content-around`}>
+              {hottestProfiles.results.map((profile) => (
+                <p key={profile.id} className={s.Text}>
+                  {profile.owner}
+                </p>
+              ))}
+            </div>
+          ) : (
+            hottestProfiles.results.map((profile) => (
+              <p key={profile.id} className={s.Text}>
+                {profile.owner}
+              </p>
+            ))
+          )}
         </>
       ) : (
         <Asset spinner />
