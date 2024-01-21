@@ -2,7 +2,6 @@
   background-color: var(--main-bg-color);
   color: var(--primary-color);
   font-family: 'Moulpali', sans-serif;
-  font-size: 25px;
   min-height: 100vh;
 }
 
@@ -16,4 +15,5 @@ a {
 
 .Heading {
   font-family: var(--headings-font-family);
+  font-size: 25px;
 }

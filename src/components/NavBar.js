@@ -16,12 +16,32 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  const [isMobile, setIsMobile] = useState(false);
+
+  //Check if the user is on mobile screen size
+  useEffect(() => {
+    // Check the screen width to determine the size is less than lg to match burger menu toggle
+    const isMobileDevice = window.innerWidth <= 992;
+    setIsMobile(isMobileDevice);
+
+    // Update the state if the screen width changes
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 992);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener when unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -34,36 +54,61 @@ const NavBar = () => {
 
   const loggedOutNav = (
     <>
-      <NavLink to="/login" className={s.NavLink} activeClassName={s.Active}>
+      <NavLink
+        to="/login"
+        className={`${s.NavLink} d-flex`}
+        activeClassName={s.Active}
+      >
         Login
-        <BsFillUnlockFill size={25} />
+        <div className={`px-2`}>
+          <BsFillUnlockFill size={18} />
+        </div>
       </NavLink>
-      <NavLink to="/register" className={s.NavLink} activeClassName={s.Active}>
+      <NavLink
+        to="/register"
+        className={`${s.NavLink} d-flex`}
+        activeClassName={s.Active}
+      >
         Register
-        <BsPersonAdd size={25} />
+        <div className={`px-2`}>
+          <BsPersonAdd size={18} />
+        </div>
       </NavLink>
     </>
   );
 
   const loggedInNav = (
     <>
-      <NavLink to="/add" className={s.NavLink} activeClassName={s.Active}>
+      <NavLink
+        to="/add"
+        className={`${s.NavLink} d-flex`}
+        activeClassName={s.Active}
+      >
         Add Post
-        <BsPlusCircleFill size={25} />
+        <div className={`px-2`}>
+          <BsPlusCircleFill size={18} />
+        </div>
       </NavLink>
-      <NavLink to="/" className={s.NavLink} onClick={handleLogout}>
+      <NavLink to="/" className={`${s.NavLink} d-flex`} onClick={handleLogout}>
         Logout
-        <BsFillLockFill size={25} />
+        <div className={`px-2`}>
+          <BsFillLockFill size={18} />
+        </div>
       </NavLink>
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
-        className={s.NavLink}
+        className={`${s.NavLink} d-flex`}
+        activeClassName={s.Active}
       >
-        <Avatar
-          src={currentUser?.profile_image}
-          text={currentUser?.username}
-          height={40}
-        />
+        {isMobile ? (
+          <p mobile>{currentUser?.username}'s Account</p>
+        ) : (
+          <Avatar
+            src={currentUser?.profile_image}
+            text={currentUser?.username}
+            height={32}
+          />
+        )}
       </NavLink>
     </>
   );
@@ -87,11 +132,13 @@ const NavBar = () => {
             <NavLink
               exact
               to="/"
-              className={s.NavLink}
+              className={`${s.NavLink} d-flex`}
               activeClassName={s.Active}
             >
               Home
-              <BsHouseFill size={25} />
+              <div className={`px-2`}>
+                <BsHouseFill size={18} />
+              </div>
             </NavLink>
           </Nav>
           <Nav className={`ml-auto`}>
