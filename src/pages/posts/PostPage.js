@@ -40,7 +40,7 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <HottestProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className="">
+        <Container className={`m-0`}>
           {currentUser ? (
             <AddCommentForm
               profile_id={currentUser.profile_id}
