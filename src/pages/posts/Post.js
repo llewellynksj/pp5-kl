@@ -79,7 +79,7 @@ const Post = (props) => {
   };
 
   return (
-    <Card className={s.Card}>
+    <Card className={`${s.Card} my-2 pb-2`}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`} className={`${s.Text}`}>
@@ -112,7 +112,7 @@ const Post = (props) => {
         {image_tag4 && <Card.Text>{image_tag4}</Card.Text>}
         {image_tag5 && <Card.Text>{image_tag5}</Card.Text>}
       </Card.Body>
-      <div className={`${s.Text}`}>
+      <div className={`${s.Text} text-center p-4`}>
         {is_owner ? (
           <OverlayTrigger
             placment="top"
@@ -122,23 +122,23 @@ const Post = (props) => {
           </OverlayTrigger>
         ) : like_id ? (
           <span onClick={handleUnlike}>
-            <BsSuitHeartFill size={25} className={s.Heart} />
+            <BsSuitHeartFill size={25} className={`${s.Heart} pr-1`} />
           </span>
         ) : currentUser ? (
           <span onClick={handleLike}>
-            <BsSuitHeart size={25} className={s.IconOutline} />
+            <BsSuitHeart size={25} className={`${s.IconOutline} pr-1`} />
           </span>
         ) : (
           <OverlayTrigger
             placement="top"
             overlay={<Tooltip>Login to show your love</Tooltip>}
           >
-            <BsSuitHeart size={25} />
+            <BsSuitHeart size={25} className="pr-1" />
           </OverlayTrigger>
         )}
         {likes_count}
-        <Link to={`/posts/${id}`} className={`${s.Text}`}>
-          <BsChatDots size={25} className={s.IconOutline} />
+        <Link to={`/posts/${id}`} className={`${s.Text} pl-3`}>
+          <BsChatDots size={25} className={`${s.IconOutline} pr-1`} />
         </Link>
         {comments_count}
       </div>

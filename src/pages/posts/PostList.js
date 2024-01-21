@@ -68,6 +68,7 @@ function PostList({ message, filter = "" }) {
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
+                className={s.Scroll}
               />
             ) : (
               <Container>

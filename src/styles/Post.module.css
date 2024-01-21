@@ -14,8 +14,11 @@
 .Image {
   width: 600px;
   height: 600px;
+  padding: 2px;
+  object-fit: cover;
 }
 
 .Card {
   max-width: 600px;
+  border: none;
 }
