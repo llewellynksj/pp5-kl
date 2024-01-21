@@ -14,6 +14,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoRes from "../../assets/no_results.png";
+import { UpdateProfileDropdown } from "../../components/MenuDropDown";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -48,6 +49,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
+      {profile?.is_owner && <UpdateProfileDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -83,6 +85,7 @@ function ProfilePage() {
             ))}
         </Col>
         {profile?.bio && <Col className="p-3">{profile.bio}</Col>}
+        {profile?.status && <Col className="p-3">{profile.status}</Col>}
       </Row>
     </>
   );
