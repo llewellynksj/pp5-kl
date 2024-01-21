@@ -1,5 +1,7 @@
 .NavLink {
   color: var(--primary-color);
+  font-family: var(--headings-font-family);
+  font-size: smaller;
 }
 
 .Active {

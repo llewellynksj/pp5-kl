@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
+import s from "../../App.module.css";
 
 const HottestProfiles = ({ mobile }) => {
   const { hottestProfiles } = useProfileData();
@@ -10,7 +11,7 @@ const HottestProfiles = ({ mobile }) => {
     <Container className={`${mobile && "d-lg-none text-center mb-3"}`}>
       {hottestProfiles.results.length ? (
         <>
-          <p>Hottest Profiles</p>
+          <p className={s.Heading}>Hottest Profiles</p>
           {mobile ? (
             <div className={`d-flex justify-content-around`}>
               {hottestProfiles.results.slice(0, 5).map((profile) => (
