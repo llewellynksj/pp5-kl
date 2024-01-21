@@ -14,8 +14,10 @@ import { axiosReq } from "../../services/axiosDefaults";
 import Asset from "../../components/Asset";
 import upload from "../../assets/upload.png";
 import s from "../../styles/AddPostForm.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function AddPostForm() {
+  useRedirect("loggedOut");
   const [postData, setPostData] = useState({
     caption: "",
     image_tag: "",
@@ -37,7 +39,6 @@ function AddPostForm() {
 
   const [errors, setErrors] = useState({});
   const history = useHistory();
-
   const [tagChoices, setTagChoices] = useState([]);
 
   // Fetch the tag choices from api
