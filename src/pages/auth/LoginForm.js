@@ -3,10 +3,11 @@ import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const LoginForm = () => {
   const setCurrentUser = useSetCurrentUser();
-
+  useRedirect("loggedIn");
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -24,7 +25,7 @@ const LoginForm = () => {
       const { data } = await axios.post("/dj-rest-auth/login/", loginData);
       console.log("After axios request, data received:", data);
       setCurrentUser(data.user);
-      history.push("/");
+      history.goBack();
     } catch (err) {
       console.log("Error response from server:", err.response?.data);
       setErrors(err.response?.data);

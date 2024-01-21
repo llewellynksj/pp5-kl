@@ -2,8 +2,10 @@ import { Form, Button, Container, Alert } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import axios from "axios";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const RegisterForm = () => {
+  useRedirect("loggedIn");
   const [loginData, setLoginData] = useState({
     username: "",
     password1: "",
