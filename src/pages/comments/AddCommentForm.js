@@ -40,29 +40,31 @@ function AddCommentForm(props) {
   };
 
   return (
-    <Form className="mt-2" onSubmit={handleSubmit}>
-      <Form.Group>
-        <InputGroup>
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profileImage} />
-          </Link>
-          <Form.Control
-            placeholder="my comment..."
-            as="textarea"
-            value={content}
-            onChange={handleChange}
-            rows={2}
-          />
-        </InputGroup>
-      </Form.Group>
-      <button
-        className={`${s.Button} btn d-block ml-auto`}
-        disabled={!content.trim()}
-        type="submit"
-      >
-        Add
-      </button>
-    </Form>
+    <div className={`m-2 pb-2`}>
+      <Form className="mt-2" onSubmit={handleSubmit}>
+        <Form.Group>
+          <InputGroup>
+            <Link to={`/profiles/${profile_id}`}>
+              <Avatar src={profileImage} />
+            </Link>
+            <Form.Control
+              placeholder="my comment..."
+              as="textarea"
+              value={content}
+              onChange={handleChange}
+              rows={2}
+            />
+          </InputGroup>
+        </Form.Group>
+        <button
+          className={`${s.Button} btn d-block ml-auto`}
+          disabled={!content.trim()}
+          type="submit"
+        >
+          Add
+        </button>
+      </Form>
+    </div>
   );
 }
 

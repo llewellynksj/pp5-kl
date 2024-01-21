@@ -10,6 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
+import s from "../../styles/PostPage.module.css";
 
 function PostPage() {
   const { id } = useParams();
@@ -40,7 +41,7 @@ function PostPage() {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <HottestProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={`m-0`}>
+        <Container className={`${s.Container} m-2 pb-2`}>
           {currentUser ? (
             <AddCommentForm
               profile_id={currentUser.profile_id}

@@ -1,0 +1,5 @@
+.Container {
+  max-width: 600px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
