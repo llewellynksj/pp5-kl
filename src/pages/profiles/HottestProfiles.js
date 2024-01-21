@@ -14,7 +14,7 @@ const HottestProfiles = ({ mobile }) => {
           <p className={s.Heading}>Hottest Profiles</p>
           {mobile ? (
             <div className={`d-flex justify-content-around`}>
-              {hottestProfiles.results.slice(0, 5).map((profile) => (
+              {hottestProfiles.results.slice(0, 4).map((profile) => (
                 <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>

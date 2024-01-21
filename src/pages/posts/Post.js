@@ -79,7 +79,7 @@ const Post = (props) => {
   };
 
   return (
-    <Card>
+    <Card className={s.Card}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`} className={`${s.Text}`}>
@@ -98,7 +98,11 @@ const Post = (props) => {
         </Media>
       </Card.Body>
       <Link to={`/posts/${id}`}>
-        <Card.Img src={image} alt={`Image by ${owner} captioned ${caption}`} />
+        <Card.Img
+          src={image}
+          alt={`Image by ${owner} captioned ${caption}`}
+          className={s.Image}
+        />
       </Link>
       <Card.Body className={`${s.Text}`}>
         {caption && <Card.Text>{caption}</Card.Text>}

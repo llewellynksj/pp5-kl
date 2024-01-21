@@ -10,3 +10,12 @@
 .IconOutline:hover {
   color: #FF00DE;
 }
+
+.Image {
+  width: 600px;
+  height: 600px;
+}
+
+.Card {
+  max-width: 600px;
+}
