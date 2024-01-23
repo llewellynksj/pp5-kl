@@ -84,8 +84,16 @@ function ProfilePage() {
               <Button onClick={() => handleFollow(profile)}>Follow</Button>
             ))}
         </Col>
-        {profile?.bio && <Col className="p-3">{profile.bio}</Col>}
-        {profile?.status && <Col className="p-3">{profile.status}</Col>}
+        <Col>
+          <div>
+            {profile?.bio && <Col className="p-3">Bio: {profile.bio}</Col>}
+          </div>
+          <div>
+            {profile?.status && (
+              <Col className="p-3">Status: {profile.status}</Col>
+            )}
+          </div>
+        </Col>
       </Row>
     </>
   );
@@ -98,7 +106,9 @@ function ProfilePage() {
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
-            <Post key={post.id} {...post} setPosts={setProfilePosts} />
+            <Col>
+              <Post key={post.id} {...post} setPosts={setProfilePosts} />
+            </Col>
           ))}
           dataLength={profilePosts.results.length}
           loader={<Asset spinner />}
