@@ -15,6 +15,7 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoRes from "../../assets/no_results.png";
 import { UpdateProfileDropdown } from "../../components/MenuDropDown";
+import appS from "../../App.module.css";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -60,6 +61,13 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
+          <div>
+            {profile?.status && (
+              <strong>
+                <em className={appS.Highlight}>{profile.status}</em>
+              </strong>
+            )}
+          </div>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
               <div>{profile?.posts_count}</div>
@@ -84,15 +92,8 @@ function ProfilePage() {
               <Button onClick={() => handleFollow(profile)}>Follow</Button>
             ))}
         </Col>
-        <Col>
-          <div>
-            {profile?.bio && <Col className="p-3">Bio: {profile.bio}</Col>}
-          </div>
-          <div>
-            {profile?.status && (
-              <Col className="p-3">Status: {profile.status}</Col>
-            )}
-          </div>
+        <Col className={`${s.CardBg} text-left`}>
+          <div>{profile?.bio && <Col className="p-3">{profile.bio}</Col>}</div>
         </Col>
       </Row>
     </>
