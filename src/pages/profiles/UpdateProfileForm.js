@@ -1,19 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import {
-  Form,
-  Button,
-  Image,
-  Row,
-  Col,
-  Container,
-  Alert,
-} from "react-bootstrap";
+import { Form, Image, Row, Col, Container, Alert } from "react-bootstrap";
 import { axiosReq } from "../../services/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
+import Button from "../../components/Button";
 
 const UpdateProfileForm = () => {
   const currentUser = useCurrentUser();

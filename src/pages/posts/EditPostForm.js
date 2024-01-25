@@ -1,20 +1,13 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import {
-  Container,
-  Form,
-  Button,
-  Alert,
-  Row,
-  Col,
-  Image,
-} from "react-bootstrap";
+import { Container, Form, Alert, Row, Col, Image } from "react-bootstrap";
 import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
 import s from "../../styles/AddPostForm.module.css";
+import Button from "../../components/Button";
 
 function EditPostForm() {
   const [postData, setPostData] = useState({

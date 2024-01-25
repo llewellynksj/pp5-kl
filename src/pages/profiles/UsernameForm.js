@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Alert, Col, Container, Form, Row } from "react-bootstrap";
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../services/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
+import Button from "../../components/Button";
 
 const UsernameForm = () => {
   const [username, setUsername] = useState("");

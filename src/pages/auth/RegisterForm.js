@@ -1,8 +1,9 @@
-import { Form, Button, Container, Alert } from "react-bootstrap";
+import { Form, Container, Alert } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
+import Button from "../../components/Button";
 
 const RegisterForm = () => {
   useRedirect("loggedIn");
@@ -87,9 +88,7 @@ const RegisterForm = () => {
             </Alert>
           ))}
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
+          <Button type="submit">Submit</Button>
           {errors.non_field_errors?.map((message, idx) => (
             <Alert key={idx} variant="warning" className="mt-3">
               {message}

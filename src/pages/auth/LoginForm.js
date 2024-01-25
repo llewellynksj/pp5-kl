@@ -1,12 +1,4 @@
-import {
-  Form,
-  Button,
-  Container,
-  Alert,
-  Row,
-  Col,
-  Carousel,
-} from "react-bootstrap";
+import { Form, Container, Alert, Row, Col, Carousel } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import axios from "axios";
@@ -15,6 +7,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import carousel1 from "../../assets/carousel1.webp";
 import carousel2 from "../../assets/carousel2.webp";
 import carousel3 from "../../assets/carousel3.webp";
+import Button from "../../components/Button";
 
 const LoginForm = () => {
   const setCurrentUser = useSetCurrentUser();
@@ -93,9 +86,7 @@ const LoginForm = () => {
               </Alert>
             ))}
 
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            <Button type="submit">Submit</Button>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">
                 {message}

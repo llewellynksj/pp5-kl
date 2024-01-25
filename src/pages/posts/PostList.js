@@ -19,8 +19,6 @@ function PostList({ message, filter = "" }) {
   const currentUser = useCurrentUser();
 
   useEffect(() => {
-    console.log("Filter before API call:", filter);
-
     const fetchPosts = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);

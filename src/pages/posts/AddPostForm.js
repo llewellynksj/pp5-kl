@@ -1,20 +1,13 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
-import {
-  Container,
-  Form,
-  Button,
-  Alert,
-  Row,
-  Col,
-  Image,
-} from "react-bootstrap";
+import { Container, Form, Alert, Row, Col, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
 import Asset from "../../components/Asset";
 import upload from "../../assets/upload.png";
 import s from "../../styles/AddPostForm.module.css";
 import { useRedirect } from "../../hooks/useRedirect";
+import Button from "../../components/Button";
 
 function AddPostForm() {
   useRedirect("loggedOut");

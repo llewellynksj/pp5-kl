@@ -3,8 +3,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Avatar from "../../components/Avatar";
 import s from "../../styles/Profile.module.css";
-import { Button } from "react-bootstrap";
 import { useSetProfileData } from "../../contexts/ProfileDataContext";
+import Button from "../../components/Button";
 
 const Profile = (props) => {
   const { profile, mobile, imageSize = 45 } = props;

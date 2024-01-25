@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container, Button, Image } from "react-bootstrap";
+import { Col, Row, Container, Image } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import s from "../../styles/ProfilePage.module.css";
 import HottestProfiles from "./HottestProfiles";
@@ -16,6 +16,7 @@ import { fetchMoreData } from "../../utils/utils";
 import NoRes from "../../assets/no_results.png";
 import { UpdateProfileDropdown } from "../../components/MenuDropDown";
 import appS from "../../App.module.css";
+import Button from "../../components/Button";
 
 function ProfilePage() {
   const { id } = useParams();

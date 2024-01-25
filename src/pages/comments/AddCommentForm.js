@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../services/axiosDefaults";
-import s from "../../styles/AddCommentForm.module.css";
+import Button from "../../components/Button";
 
 function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -56,13 +56,9 @@ function AddCommentForm(props) {
             />
           </InputGroup>
         </Form.Group>
-        <button
-          className={`${s.Button} btn d-block ml-auto`}
-          disabled={!content.trim()}
-          type="submit"
-        >
+        <Button disabled={!content.trim()} type="submit">
           Add
-        </button>
+        </Button>
       </Form>
     </div>
   );
