@@ -29,7 +29,7 @@ const LoginForm = () => {
       const { data } = await axios.post("/dj-rest-auth/login/", loginData);
       console.log("After axios request, data received:", data);
       setCurrentUser(data.user);
-      history.goBack();
+      history.push("/feed");
     } catch (err) {
       console.log("Error response from server:", err.response?.data);
       setErrors(err.response?.data);

@@ -16,6 +16,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -26,14 +27,16 @@ function App() {
       <NavBar />
       <Container>
         <Switch>
-          <Route
+          <Route exact path="/" render={() => <Home />} />
+          {/* <Route
             exact
             path="/"
             render={() => (
               <PostList message="No results found. Follow a user" />
             )}
-          />
-          <Route
+          /> */}
+          <Route exact path="/feed" render={() => <PostList />} />
+          {/* <Route
             exact
             path="/feed"
             render={() => (
@@ -42,7 +45,7 @@ function App() {
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
-          />
+          /> */}
           <Route
             exact
             path="/favourites"
