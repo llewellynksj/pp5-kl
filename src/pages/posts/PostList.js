@@ -18,6 +18,7 @@ function PostList({ message }) {
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
 
+  // Conditional filter to render PostList by likes_count if on '/trending' route
   let filter = "";
   if (pathname === "/trending") {
     filter = "ordering=-likes_count";

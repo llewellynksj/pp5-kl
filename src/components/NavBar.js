@@ -54,62 +54,96 @@ const NavBar = () => {
 
   const loggedOutNav = (
     <>
-      <NavLink
-        to="/login"
-        className={`${s.NavLink} d-flex`}
-        activeClassName={s.Active}
-      >
-        Login
-        <div className={`px-2`}>
-          <BsFillUnlockFill size={18} />
-        </div>
-      </NavLink>
-      <NavLink
-        to="/register"
-        className={`${s.NavLink} d-flex`}
-        activeClassName={s.Active}
-      >
-        Register
-        <div className={`px-2`}>
-          <BsPersonAdd size={18} />
-        </div>
-      </NavLink>
+      <Nav className={`me-auto`}>
+        <NavLink
+          exact
+          to="/"
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          Home
+          <div className={`px-2`}>
+            <BsHouseFill size={18} />
+          </div>
+        </NavLink>
+      </Nav>
+      <Nav className={`ml-auto`}>
+        <NavLink
+          to="/login"
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          Login
+          <div className={`px-2`}>
+            <BsFillUnlockFill size={18} />
+          </div>
+        </NavLink>
+        <NavLink
+          to="/register"
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          Register
+          <div className={`px-2`}>
+            <BsPersonAdd size={18} />
+          </div>
+        </NavLink>
+      </Nav>
     </>
   );
 
   const loggedInNav = (
     <>
-      <NavLink
-        to="/add"
-        className={`${s.NavLink} d-flex`}
-        activeClassName={s.Active}
-      >
-        Add Post
-        <div className={`px-2`}>
-          <BsPlusCircleFill size={18} />
-        </div>
-      </NavLink>
-      <NavLink to="/" className={`${s.NavLink} d-flex`} onClick={handleLogout}>
-        Logout
-        <div className={`px-2`}>
-          <BsFillLockFill size={18} />
-        </div>
-      </NavLink>
-      <NavLink
-        to={`/profiles/${currentUser?.profile_id}`}
-        className={`${s.NavLink} d-flex`}
-        activeClassName={s.Active}
-      >
-        {isMobile ? (
-          <p mobile>{currentUser?.username}'s Account</p>
-        ) : (
-          <Avatar
-            src={currentUser?.profile_image}
-            text={currentUser?.username}
-            height={32}
-          />
-        )}
-      </NavLink>
+      <Nav className={`me-auto`}>
+        <NavLink
+          exact
+          to="/feed"
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          Home
+          <div className={`px-2`}>
+            <BsHouseFill size={18} />
+          </div>
+        </NavLink>
+      </Nav>
+      <Nav className={`ml-auto`}>
+        <NavLink
+          to="/add"
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          Add Post
+          <div className={`px-2`}>
+            <BsPlusCircleFill size={18} />
+          </div>
+        </NavLink>
+        <NavLink
+          to="/"
+          className={`${s.NavLink} d-flex`}
+          onClick={handleLogout}
+        >
+          Logout
+          <div className={`px-2`}>
+            <BsFillLockFill size={18} />
+          </div>
+        </NavLink>
+        <NavLink
+          to={`/profiles/${currentUser?.profile_id}`}
+          className={`${s.NavLink} d-flex`}
+          activeClassName={s.Active}
+        >
+          {isMobile ? (
+            <p mobile>{currentUser?.username}'s Account</p>
+          ) : (
+            <Avatar
+              src={currentUser?.profile_image}
+              text={currentUser?.username}
+              height={32}
+            />
+          )}
+        </NavLink>
+      </Nav>
     </>
   );
 
@@ -128,22 +162,7 @@ const NavBar = () => {
           onClick={() => setExpanded(!expanded)}
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={`me-auto`}>
-            <NavLink
-              exact
-              to="/"
-              className={`${s.NavLink} d-flex`}
-              activeClassName={s.Active}
-            >
-              Home
-              <div className={`px-2`}>
-                <BsHouseFill size={18} />
-              </div>
-            </NavLink>
-          </Nav>
-          <Nav className={`ml-auto`}>
-            {currentUser ? loggedInNav : loggedOutNav}
-          </Nav>
+          {currentUser ? loggedInNav : loggedOutNav}
         </Navbar.Collapse>
       </Container>
     </Navbar>
