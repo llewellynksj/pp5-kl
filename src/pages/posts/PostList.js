@@ -11,17 +11,24 @@ import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
-function PostList({ message, filter = "" }) {
+function PostList({ message }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
 
+  let filter = "";
+  if (pathname === "/trending") {
+    filter = "ordering=-likes_count";
+  }
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(
+          `/posts/?${filter}&search=${query}`
+        );
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {

@@ -28,24 +28,17 @@ function App() {
       <Container>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          {/* <Route
-            exact
-            path="/"
-            render={() => (
-              <PostList message="No results found. Follow a user" />
-            )}
-          /> */}
           <Route exact path="/feed" render={() => <PostList />} />
-          {/* <Route
+          <Route
             exact
-            path="/feed"
+            path="/following"
             render={() => (
               <PostList
                 message="No results found"
                 filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             )}
-          /> */}
+          />
           <Route
             exact
             path="/favourites"
@@ -55,6 +48,11 @@ function App() {
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
             )}
+          />
+          <Route
+            exact
+            path="/trending"
+            render={() => <PostList message="No results found" />}
           />
 
           <Route exact path="/login" render={() => <LoginForm />} />
