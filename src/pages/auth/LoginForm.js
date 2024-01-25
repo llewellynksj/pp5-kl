@@ -1,12 +1,9 @@
-import { Form, Container, Alert, Row, Col, Carousel } from "react-bootstrap";
+import { Form, Container, Alert, Row, Col } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
-import carousel1 from "../../assets/carousel1.webp";
-import carousel2 from "../../assets/carousel2.webp";
-import carousel3 from "../../assets/carousel3.webp";
 import Button from "../../components/Button";
 
 const LoginForm = () => {
@@ -98,32 +95,6 @@ const LoginForm = () => {
               Don't have an account? <span>Register</span>
             </Link>
           </Container>
-        </Col>
-        {/* Carousel */}
-        <Col md={6}>
-          <Carousel controls={false} indicators={false}>
-            <Carousel.Item>
-              <img
-                className={`d-block w-100`}
-                src={carousel1}
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={carousel2}
-                alt="Second slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={carousel3}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel>
         </Col>
       </Row>
     </Container>
