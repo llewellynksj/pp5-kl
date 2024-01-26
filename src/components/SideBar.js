@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import s from "../App.module.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import DividerLine from "./DividerLine";
 
 const SideBar = ({ mobile }) => {
   return (
@@ -20,6 +21,9 @@ const SideBar = ({ mobile }) => {
         >
           Favourite Posts
         </Link>
+      </div>
+      <div>
+        <DividerLine />
       </div>
     </Container>
   );
