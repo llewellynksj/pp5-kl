@@ -5,6 +5,7 @@ import axios from "axios";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import Button from "../../components/Button";
+import s from "../../styles/LoginRegisterForms.module.css";
 
 const LoginForm = () => {
   const setCurrentUser = useSetCurrentUser();
@@ -41,7 +42,7 @@ const LoginForm = () => {
   };
 
   return (
-    <Container>
+    <Container className={s.Height}>
       <Row>
         <Col className="mt-2 py-2">
           <h1>Login</h1>
@@ -90,9 +91,13 @@ const LoginForm = () => {
               </Alert>
             ))}
           </Form>
-          <Container>
-            <Link to="/register">
-              Don't have an account? <span>Register</span>
+          <Container className="mt-4">
+            <Link
+              to="/register"
+              style={{ textDecoration: "none" }}
+              className={`${s.Link} lead`}
+            >
+              Don't have an account yet? Register
             </Link>
           </Container>
         </Col>

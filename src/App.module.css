@@ -23,7 +23,7 @@ a {
 }
 
 .Link {
-  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .Link:hover {

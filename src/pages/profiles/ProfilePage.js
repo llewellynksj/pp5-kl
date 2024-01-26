@@ -17,6 +17,7 @@ import NoRes from "../../assets/no_results.png";
 import { UpdateProfileDropdown } from "../../components/MenuDropDown";
 import appS from "../../App.module.css";
 import Button from "../../components/Button";
+import BackToTopButton from "../../components/BackToTopButton";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -106,17 +107,20 @@ function ProfilePage() {
       <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
       {profilePosts.results.length ? (
-        <InfiniteScroll
-          children={profilePosts.results.map((post) => (
-            <Col>
-              <Post key={post.id} {...post} setPosts={setProfilePosts} />
-            </Col>
-          ))}
-          dataLength={profilePosts.results.length}
-          loader={<Asset spinner />}
-          hasMore={!!profilePosts.next}
-          next={() => fetchMoreData(profilePosts, setProfilePosts)}
-        />
+        <>
+          <InfiniteScroll
+            children={profilePosts.results.map((post) => (
+              <Col>
+                <Post key={post.id} {...post} setPosts={setProfilePosts} />
+              </Col>
+            ))}
+            dataLength={profilePosts.results.length}
+            loader={<Asset spinner />}
+            hasMore={!!profilePosts.next}
+            next={() => fetchMoreData(profilePosts, setProfilePosts)}
+          />
+          <BackToTopButton />
+        </>
       ) : (
         <Asset
           src={NoRes}

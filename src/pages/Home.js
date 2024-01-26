@@ -17,14 +17,22 @@ const Home = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <Link to="/login" className={`${s.Highlight} ${s.Link} py-3`}>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none" }}
+              className={`${s.Highlight} ${s.Link} py-3`}
+            >
               <h2>Login</h2>
             </Link>
             <p className="my-1 py-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <Link to="/register" className={`${s.Highlight} ${s.Link} py-3`}>
+            <Link
+              to="/register"
+              style={{ textDecoration: "none" }}
+              className={`${s.Highlight} ${s.Link} py-3`}
+            >
               <h2>Register Now</h2>
             </Link>
           </Col>
