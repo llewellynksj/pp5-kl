@@ -38,7 +38,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Container className={s.Height}>
+      <Container className="height">
         <Row>
           <Col className="mt-2 py-2">
             <h1>Login</h1>

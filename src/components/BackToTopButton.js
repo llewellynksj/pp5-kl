@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BsArrowUpSquareFill } from "react-icons/bs";
-import s from "../styles/Button.module.css";
+import s from "../styles/Buttons.module.css";
 
 // Code adapted from Geeks for Geeks tutorial: http://tinyurl.com/mryxtxnk
 const BackToTopButton = () => {

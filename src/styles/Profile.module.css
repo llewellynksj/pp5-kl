@@ -1,3 +1,14 @@
 .WordBreak {
   word-break: break-all;
 }
+
+.ChangeImgBtn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  width: 150px;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 2px;
+}
+

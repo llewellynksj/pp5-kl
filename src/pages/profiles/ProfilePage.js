@@ -139,26 +139,28 @@ function ProfilePage() {
   );
 
   return (
-    <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <SideBar mobile />
-        <HottestProfiles mobile />
-        <Container>
-          {hasLoaded ? (
-            <>
-              {mainProfile}
-              {mainProfilePosts}
-            </>
-          ) : (
-            <Asset spinner />
-          )}
-        </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <SideBar />
-        <HottestProfiles />
-      </Col>
-    </Row>
+    <Container className="h-100">
+      <Row>
+        <Col className="py-2 p-0 p-lg-2" lg={8}>
+          <SideBar mobile />
+          <HottestProfiles mobile />
+          <Container>
+            {hasLoaded ? (
+              <>
+                {mainProfile}
+                {mainProfilePosts}
+              </>
+            ) : (
+              <Asset spinner />
+            )}
+          </Container>
+        </Col>
+        <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+          <SideBar />
+          <HottestProfiles />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
