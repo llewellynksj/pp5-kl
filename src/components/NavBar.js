@@ -4,7 +4,6 @@ import {
   BsHouseFill,
   BsFillLockFill,
   BsFillUnlockFill,
-  BsPlusCircleFill,
   BsPersonAdd,
 } from "react-icons/bs";
 import s from "../styles/NavBar.module.css";
@@ -108,16 +107,6 @@ const NavBar = () => {
         </NavLink>
       </Nav>
       <Nav className={`ml-auto`}>
-        {/* <NavLink
-          to="/add"
-          className={`${s.NavLink} d-flex`}
-          activeClassName={s.Active}
-        >
-          Add Post
-          <div className={`px-2`}>
-            <BsPlusCircleFill size={18} />
-          </div>
-        </NavLink> */}
         <NavLink
           to="/"
           className={`${s.NavLink} d-flex`}

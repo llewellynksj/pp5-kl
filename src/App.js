@@ -52,7 +52,12 @@ function App() {
           <Route
             exact
             path="/trending"
-            render={() => <PostList message="No results found" />}
+            render={() => (
+              <PostList
+                message="No results found"
+                filter="ordering=-likes_count"
+              />
+            )}
           />
 
           <Route exact path="/login" render={() => <LoginForm />} />

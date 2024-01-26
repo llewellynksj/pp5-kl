@@ -10,11 +10,7 @@ const SideBar = ({ mobile }) => {
         <Link to="/add" style={{ textDecoration: "none" }} className="p-2">
           Add Post
         </Link>
-        <Link
-          to="/treanding"
-          style={{ textDecoration: "none" }}
-          className="p-2"
-        >
+        <Link to="/trending" style={{ textDecoration: "none" }} className="p-2">
           Trending Posts
         </Link>
         <Link

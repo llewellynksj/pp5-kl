@@ -13,18 +13,12 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import BackToTop from "../../components/BackToTopButton";
 import SideBar from "../../components/SideBar";
 
-function PostList({ message }) {
+function PostList({ message, filter }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
-
-  // Conditional filter to render PostList by likes_count if on '/trending' route
-  let filter = "";
-  if (pathname === "/trending") {
-    filter = "ordering=-likes_count";
-  }
 
   useEffect(() => {
     const fetchPosts = async () => {
