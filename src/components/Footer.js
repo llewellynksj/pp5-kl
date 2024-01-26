@@ -7,7 +7,7 @@ import s from "../styles/Footer.module.css";
 const Footer = () => {
   return (
     <footer
-      className={`${s.Footer} d-flex flex-wrap justify-content-between align-items-center border-top pt-3`}
+      className={`${s.Footer} d-flex flex-wrap justify-content-between align-items-center border-top p-3`}
     >
       <Row className="w-100">
         <Col>

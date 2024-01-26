@@ -21,3 +21,11 @@ a {
 .Highlight {
   color: var(--secondary-color);
 }
+
+.Link {
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: var(--primary-color);
+}
