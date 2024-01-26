@@ -18,6 +18,7 @@ import { UpdateProfileDropdown } from "../../components/MenuDropDown";
 import appS from "../../App.module.css";
 import Button from "../../components/Button";
 import BackToTopButton from "../../components/BackToTopButton";
+import SideBar from "../../components/SideBar";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -133,6 +134,7 @@ function ProfilePage() {
   return (
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <SideBar mobile />
         <HottestProfiles mobile />
         <Container>
           {hasLoaded ? (
@@ -146,6 +148,7 @@ function ProfilePage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+        <SideBar />
         <HottestProfiles />
       </Col>
     </Row>
