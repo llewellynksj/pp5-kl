@@ -7,7 +7,7 @@ const SideBar = ({ mobile }) => {
   return (
     <Container className={`${mobile && "d-lg-none text-center mb-3"}`}>
       <p className={`${s.Heading} mb-1`}>Quick Links</p>
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column pl-2">
         <Link to="/add" style={{ textDecoration: "none" }} className="p-2">
           Add Post
         </Link>

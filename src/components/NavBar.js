@@ -69,12 +69,12 @@ const NavBar = () => {
       <Nav className={`ml-auto`}>
         <NavLink
           to="/login"
-          className={`${s.NavLink} d-flex`}
+          className={`${s.NavLink} d-flex pr-2`}
           activeClassName={s.Active}
         >
           Login
           <div className={`px-2`}>
-            <BsFillUnlockFill size={18} />
+            <BsFillUnlockFill size={15} />
           </div>
         </NavLink>
         <NavLink
@@ -84,7 +84,7 @@ const NavBar = () => {
         >
           Register
           <div className={`px-2`}>
-            <BsPersonAdd size={18} />
+            <BsPersonAdd size={15} />
           </div>
         </NavLink>
       </Nav>
@@ -114,7 +114,7 @@ const NavBar = () => {
         >
           Logout
           <div className={`px-2`}>
-            <BsFillLockFill size={18} />
+            <BsFillLockFill size={15} />
           </div>
         </NavLink>
         <NavLink
