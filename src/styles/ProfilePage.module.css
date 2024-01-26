@@ -6,11 +6,16 @@
 }
 
 .CardBg {
-  border: 1px solid var(--secondary-color);
   margin-top: 50px;
   padding: 15px 5px 15px 5px;
   border-radius: 12px;
   max-width: 600px;
+  font-size: 20px;
+}
+
+.SubHeading {
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 

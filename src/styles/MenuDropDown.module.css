@@ -9,3 +9,8 @@
   right: 0;
   z-index: 99;
 }
+
+.Hover:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}

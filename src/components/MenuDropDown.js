@@ -9,9 +9,9 @@ import {
 } from "react-icons/bs";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
-const ThreeDots = React.forwardRef(({ onClick }, ref) => (
+const EditMenu = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fa-solid fa-caret-down"
+    className={`fa-solid fa-pen-to-square ${s.Hover}`}
     ref={ref}
     onClick={(e) => {
       e.preventDefault();
@@ -23,7 +23,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
 export const MenuDropDown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={EditMenu} />
 
       <Dropdown.Menu
         className="text-center"
@@ -52,7 +52,7 @@ export function UpdateProfileDropdown({ id }) {
   const history = useHistory();
   return (
     <Dropdown className={`ml-auto px-3 ${s.Absolute}`} drop="left">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={EditMenu} />
       <Dropdown.Menu>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/update`)}
