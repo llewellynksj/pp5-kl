@@ -108,7 +108,7 @@ const NavBar = () => {
         </NavLink>
       </Nav>
       <Nav className={`ml-auto`}>
-        <NavLink
+        {/* <NavLink
           to="/add"
           className={`${s.NavLink} d-flex`}
           activeClassName={s.Active}
@@ -117,7 +117,7 @@ const NavBar = () => {
           <div className={`px-2`}>
             <BsPlusCircleFill size={18} />
           </div>
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/"
           className={`${s.NavLink} d-flex`}

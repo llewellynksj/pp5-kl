@@ -11,6 +11,7 @@ import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import BackToTop from "../../components/BackToTopButton";
+import SideBar from "../../components/SideBar";
 
 function PostList({ message }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -50,6 +51,7 @@ function PostList({ message }) {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+        <SideBar mobile />
         <HottestProfiles mobile />
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className={s.SearchContainer}>
@@ -95,6 +97,7 @@ function PostList({ message }) {
         </div>
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
+        <SideBar />
         <HottestProfiles />
       </Col>
     </Row>
