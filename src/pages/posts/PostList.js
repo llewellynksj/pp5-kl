@@ -10,6 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import BackToTop from "../../components/BackToTopButton";
 
 function PostList({ message }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -67,16 +68,19 @@ function PostList({ message }) {
           {hasLoaded ? (
             <>
               {posts.results.length ? (
-                <InfiniteScroll
-                  children={posts.results.map((post) => (
-                    <Post key={post.id} {...post} setPosts={setPosts} />
-                  ))}
-                  dataLength={posts.results.length}
-                  loader={<Asset spinner />}
-                  hasMore={!!posts.next}
-                  next={() => fetchMoreData(posts, setPosts)}
-                  className={s.Scroll}
-                />
+                <>
+                  <InfiniteScroll
+                    children={posts.results.map((post) => (
+                      <Post key={post.id} {...post} setPosts={setPosts} />
+                    ))}
+                    dataLength={posts.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!posts.next}
+                    next={() => fetchMoreData(posts, setPosts)}
+                    className={s.Scroll}
+                  />
+                  <BackToTop />
+                </>
               ) : (
                 <Container>
                   <Asset src={NoRes} message={message} />
