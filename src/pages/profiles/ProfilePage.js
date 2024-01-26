@@ -53,7 +53,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      {profile?.is_owner && <UpdateProfileDropdown id={profile?.id} />}
+      {profile?.is_owner}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -61,6 +61,7 @@ function ProfilePage() {
             roundedCircle
             src={profile?.image}
           />
+          <UpdateProfileDropdown id={profile?.id} />
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>

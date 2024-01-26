@@ -11,8 +11,8 @@
   padding: 15px 5px 15px 5px;
   border-radius: 12px;
   max-width: 600px;
-
 }
+
 
 @media screen and (max-width: 991px) {
   .ProfileImage {
