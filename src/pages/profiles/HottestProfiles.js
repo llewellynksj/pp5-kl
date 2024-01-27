@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
-import s from "../../App.module.css";
+import s from "../../styles/SideBarHottestProfiles.module.css";
 
 const HottestProfiles = ({ mobile }) => {
   const { hottestProfiles } = useProfileData();
