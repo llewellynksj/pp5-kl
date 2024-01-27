@@ -46,6 +46,6 @@ https://codepen.io/isabelc/pen/MmrJgx */
   border: 1px dashed var(--secondary-color);
   text-align: center;
   line-height: 40px;
-  color: var(--secondary-color);
-  font-size: 15px;
+  color: var(--main-bg-color);
+  font-size: 10px;
 }
