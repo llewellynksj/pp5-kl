@@ -12,7 +12,7 @@ const SideBar = ({ mobile }) => {
         <Link
           to="/add"
           style={{ textDecoration: "none" }}
-          className="p-2 lead d-flex"
+          className={`${mobile && "justify-content-center"} p-2 lead d-flex`}
         >
           Add Post
           <div className="mx-2">
