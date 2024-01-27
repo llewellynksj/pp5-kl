@@ -87,7 +87,7 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span className={`${s.Text}`}>{updated_at}</span>
+            <span className={`${s.Text} mx-3`}>{updated_at}</span>
             {is_owner && postPage && (
               <MenuDropDown
                 handleEdit={handleEdit}
@@ -106,11 +106,13 @@ const Post = (props) => {
       </Link>
       <Card.Body className={`${s.Text}`}>
         {caption && <Card.Text>{caption}</Card.Text>}
-        {image_tag && <Card.Text>{image_tag}</Card.Text>}
-        {image_tag2 && <Card.Text>{image_tag2}</Card.Text>}
-        {image_tag3 && <Card.Text>{image_tag3}</Card.Text>}
-        {image_tag4 && <Card.Text>{image_tag4}</Card.Text>}
-        {image_tag5 && <Card.Text>{image_tag5}</Card.Text>}
+        <div className={`d-flex justify-content-around`}>
+          {image_tag && <Card.Text className={s.Tag}>{image_tag}</Card.Text>}
+          {image_tag2 && <Card.Text className={s.Tag}>{image_tag2}</Card.Text>}
+          {image_tag3 && <Card.Text className={s.Tag}>{image_tag3}</Card.Text>}
+          {image_tag4 && <Card.Text className={s.Tag}>{image_tag4}</Card.Text>}
+          {image_tag5 && <Card.Text className={s.Tag}>{image_tag5}</Card.Text>}
+        </div>
       </Card.Body>
       <div className={`${s.Text} text-center p-4`}>
         {is_owner ? (

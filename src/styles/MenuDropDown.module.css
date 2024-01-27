@@ -10,7 +10,10 @@
   z-index: 99;
 }
 
-.Hover:hover {
+.Hover {
   color: var(--secondary-color);
+}
+
+.Hover:hover {
   cursor: pointer;
 }
