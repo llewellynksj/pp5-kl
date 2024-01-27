@@ -112,8 +112,6 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className="text-center lead">{profile?.owner}'s posts</p>
-      <hr />
       {profilePosts.results.length ? (
         <>
           <InfiniteScroll
@@ -155,7 +153,7 @@ function ProfilePage() {
             )}
           </Container>
         </Col>
-        <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+        <Col lg={4} className="d-none d-lg-block p-0 p-lg-2 pl-lg-4">
           <SideBar />
           <HottestProfiles />
         </Col>

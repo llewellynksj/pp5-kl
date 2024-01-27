@@ -106,7 +106,7 @@ const Post = (props) => {
       </Link>
       <Card.Body className={`${s.Text}`}>
         {caption && <Card.Text>{caption}</Card.Text>}
-        <div className={`d-flex justify-content-around`}>
+        <div className={`d-flex justify-content-around flex-wrap`}>
           {image_tag && <Card.Text className={s.Tag}>{image_tag}</Card.Text>}
           {image_tag2 && <Card.Text className={s.Tag}>{image_tag2}</Card.Text>}
           {image_tag3 && <Card.Text className={s.Tag}>{image_tag3}</Card.Text>}

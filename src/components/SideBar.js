@@ -7,7 +7,7 @@ import { BsPlusCircleFill, BsChevronDown } from "react-icons/bs";
 const SideBar = ({ mobile }) => {
   if (mobile) {
     return (
-      <Container className="d-lg-none text-center mb-3">
+      <Container className="d-lg-none text-center">
         <Accordion>
           <Card className={s.Accordion}>
             <Accordion.Toggle
@@ -37,7 +37,6 @@ const SideBar = ({ mobile }) => {
             </Accordion.Collapse>
           </Card>
         </Accordion>
-        <DividerLine />
       </Container>
     );
   } else {
