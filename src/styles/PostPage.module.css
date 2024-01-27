@@ -1,5 +1,6 @@
 .Container {
   max-width: 600px;
-  border: 1px solid var(--secondary-color);
+  background-color: var(--main-bg-color);
   border-radius: 5px;
+  padding-top: 5px;
 }
