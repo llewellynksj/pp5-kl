@@ -8,7 +8,6 @@ import s from "../App.module.css";
 const Home = () => {
   return (
     <>
-      {/* Carousel */}
       <Container>
         <Row className="d-flex justify-content-center my-4 pt-4">
           <Col md={6} className="text-center mb-4">
@@ -36,6 +35,8 @@ const Home = () => {
               <h2>Register Now</h2>
             </Link>
           </Col>
+
+          {/* Carousel */}
           <Col md={6}>
             <Carousel controls={false} indicators={false}>
               <Carousel.Item>
