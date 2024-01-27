@@ -53,106 +53,119 @@ const NavBar = () => {
 
   const loggedOutNav = (
     <>
-      <Nav className={`me-auto`}>
-        <NavLink
-          exact
-          to="/"
-          className={`${s.NavLink} d-flex`}
-          activeClassName={s.Active}
-        >
-          Home
-          <div className={`px-2`}>
-            <BsHouseFill size={18} />
-          </div>
-        </NavLink>
-      </Nav>
-      <Nav className={`ml-auto`}>
-        <NavLink
-          to="/login"
-          className={`${s.NavLink} d-flex pr-2`}
-          activeClassName={s.Active}
-        >
-          Login
-          <div className={`px-2`}>
-            <BsFillUnlockFill size={15} />
-          </div>
-        </NavLink>
-        <NavLink
-          to="/register"
-          className={`${s.NavLink} d-flex`}
-          activeClassName={s.Active}
-        >
-          Register
-          <div className={`px-2`}>
-            <BsPersonAdd size={15} />
-          </div>
-        </NavLink>
-      </Nav>
+      <NavLink to="/">
+        <Navbar.Brand>
+          <img src={logo} alt="logo" height="45" />
+        </Navbar.Brand>
+      </NavLink>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        className={s.NavToggle}
+        ref={ref}
+        onClick={() => setExpanded(!expanded)}
+      />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className={`me-auto`}>
+          <NavLink
+            exact
+            to="/"
+            className={`${s.NavLink} d-flex`}
+            activeClassName={s.Active}
+          >
+            Home
+            <div className={`px-2`}>
+              <BsHouseFill size={18} />
+            </div>
+          </NavLink>
+        </Nav>
+        <Nav className={`ml-auto`}>
+          <NavLink
+            to="/login"
+            className={`${s.NavLink} d-flex pr-2`}
+            activeClassName={s.Active}
+          >
+            Login
+            <div className={`px-2`}>
+              <BsFillUnlockFill size={15} />
+            </div>
+          </NavLink>
+          <NavLink
+            to="/register"
+            className={`${s.NavLink} d-flex`}
+            activeClassName={s.Active}
+          >
+            Register
+            <div className={`px-2`}>
+              <BsPersonAdd size={15} />
+            </div>
+          </NavLink>
+        </Nav>
+      </Navbar.Collapse>
     </>
   );
 
   const loggedInNav = (
     <>
-      <Nav className={`me-auto`}>
-        <NavLink
-          exact
-          to="/feed"
-          className={`${s.NavLink} d-flex`}
-          activeClassName={s.Active}
-        >
-          Home
-          <div className={`px-2`}>
-            <BsHouseFill size={18} />
-          </div>
-        </NavLink>
-      </Nav>
-      <Nav className={`ml-auto`}>
-        <NavLink
-          to="/"
-          className={`${s.NavLink} d-flex`}
-          onClick={handleLogout}
-        >
-          Logout
-          <div className={`px-2`}>
-            <BsFillLockFill size={15} />
-          </div>
-        </NavLink>
-        <NavLink
-          to={`/profiles/${currentUser?.profile_id}`}
-          className={`${s.NavLink} d-flex`}
-          activeClassName={s.Active}
-        >
-          {isMobile ? (
-            <p mobile>{currentUser?.username}'s Account</p>
-          ) : (
-            <Avatar
-              src={currentUser?.profile_image}
-              text={currentUser?.username}
-              height={32}
-            />
-          )}
-        </NavLink>
-      </Nav>
+      <NavLink to="/feed">
+        <Navbar.Brand>
+          <img src={logo} alt="logo" height="45" />
+        </Navbar.Brand>
+      </NavLink>
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        className={s.NavToggle}
+        ref={ref}
+        onClick={() => setExpanded(!expanded)}
+      />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className={`me-auto`}>
+          <NavLink
+            exact
+            to="/feed"
+            className={`${s.NavLink} d-flex`}
+            activeClassName={s.Active}
+          >
+            Home
+            <div className={`px-2`}>
+              <BsHouseFill size={18} />
+            </div>
+          </NavLink>
+        </Nav>
+        <Nav className={`ml-auto`}>
+          <NavLink
+            to="/"
+            className={`${s.NavLink} d-flex`}
+            onClick={handleLogout}
+          >
+            Logout
+            <div className={`px-2`}>
+              <BsFillLockFill size={15} />
+            </div>
+          </NavLink>
+          <NavLink
+            to={`/profiles/${currentUser?.profile_id}`}
+            className={`${s.NavLink} d-flex`}
+            activeClassName={s.Active}
+          >
+            {isMobile ? (
+              <p mobile>{currentUser?.username}'s Account</p>
+            ) : (
+              <Avatar
+                src={currentUser?.profile_image}
+                text={currentUser?.username}
+                height={32}
+              />
+            )}
+          </NavLink>
+        </Nav>
+      </Navbar.Collapse>
     </>
   );
 
   return (
     <Navbar expanded={expanded} expand="lg" className="mb-3">
       <Container>
-        <NavLink to="/">
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
-          </Navbar.Brand>
-        </NavLink>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className={s.NavToggle}
-          ref={ref}
-          onClick={() => setExpanded(!expanded)}
-        />
-        <Navbar.Collapse id="basic-navbar-nav">
           {currentUser ? loggedInNav : loggedOutNav}
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

@@ -1,0 +1,11 @@
+.Heading {
+  font-family: var(--headings-font-family);
+  font-size: 25px;
+}
+
+.Accordion {
+  background-color: var(--main-bg-color);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
