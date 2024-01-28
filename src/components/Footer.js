@@ -15,18 +15,20 @@ const Footer = () => {
         >
           <img src={logo} alt="logo" height="25" />
         </Link>
-        <span className="mb-3 mb-md-0 text-muted">&copy; KSL Design</span>
+        <span className={`mb-3 mb-md-0 text-muted`}>
+          &copy; <span className={s.FooterFont}>KSL Design</span>
+        </span>
       </div>
 
       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li className="ms-3">
-          <Link className="text-muted" to="#">
-            <IoLogoInstagram />
+          <Link className="text-muted mx-2" to="https://www.instagram.com/">
+            <IoLogoInstagram size={20} />
           </Link>
         </li>
         <li className="ms-3">
-          <Link className="text-muted" to="#">
-            <IoLogoPinterest />
+          <Link className="text-muted mx-2" to="https://www.pinterest.co.uk/">
+            <IoLogoPinterest size={20} />
           </Link>
         </li>
       </ul>

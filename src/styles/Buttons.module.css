@@ -17,7 +17,7 @@
 .BackToTopButton {
   position: fixed;  
   width: 50px; 
-  bottom: 40px; 
+  bottom: 60px; 
   right: 40px; 
   z-index: 99; 
   cursor: pointer;

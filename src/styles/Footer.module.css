@@ -4,3 +4,7 @@
   border-top: 1px solid var(--primary-color);
 }
 
+.FooterFont {
+  font-family: var(--content-font-family);
+}
+
