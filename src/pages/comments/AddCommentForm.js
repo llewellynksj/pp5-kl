@@ -5,13 +5,26 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../services/axiosDefaults";
 import Button from "../../components/Button";
+import data from "@emoji-mart/data";
+import Picker from "@emoji-mart/react";
+import { BsEmojiSmile } from "react-icons/bs";
+import s from "../../styles/AddCommentForm.module.css";
 
 function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   const handleChange = (event) => {
     setContent(event.target.value);
+  };
+
+  const handleEmojiSelect = (event) => {
+    const icon = event.unified.split("_");
+    const newArray = [];
+    icon.forEach((element) => newArray.push("0x" + element));
+    let emoji = String.fromCodePoint(...newArray);
+    setContent(content + emoji);
   };
 
   const handleSubmit = async (event) => {
@@ -53,7 +66,26 @@ function AddCommentForm(props) {
               value={content}
               onChange={handleChange}
               rows={2}
+              className={s.TextareaIcon}
             />
+            <span
+              onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+              className={s.EmojiBtn}
+            >
+              <BsEmojiSmile size={15} />
+            </span>
+            {showEmojiPicker && (
+              <div className={s.Picker}>
+                <Picker
+                  data={data}
+                  emojiSize={18}
+                  emojiButtonSize={25}
+                  onEmojiSelect={handleEmojiSelect}
+                  maxFrequentRows={0}
+                  perLine={12}
+                />
+              </div>
+            )}
           </InputGroup>
         </Form.Group>
         <Button disabled={!content.trim()} type="submit">
