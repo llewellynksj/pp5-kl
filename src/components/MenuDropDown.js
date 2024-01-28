@@ -1,13 +1,17 @@
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import s from "../styles/MenuDropDown.module.css";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import {
   BsTrash3Fill,
   BsFillPenFill,
   BsKeyFill,
   BsPersonFillGear,
 } from "react-icons/bs";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
+
+// Bootstrap
+import Dropdown from "react-bootstrap/Dropdown";
+
+// Styles
+import s from "../styles/MenuDropDown.module.css";
 
 const EditMenu = React.forwardRef(({ onClick }, ref) => (
   <i

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Col, Row, Container, Image } from "react-bootstrap";
-import Asset from "../../components/Asset";
-import s from "../../styles/ProfilePage.module.css";
-import HottestProfiles from "./HottestProfiles";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { axiosReq } from "../../services/axiosDefaults";
+import Asset from "../../components/Asset";
+import HottestProfiles from "./HottestProfiles";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import {
   useProfileData,
   useSetProfileData,
@@ -15,10 +13,19 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoRes from "../../assets/no_results.png";
 import { UpdateProfileDropdown } from "../../components/MenuDropDown";
-import appS from "../../App.module.css";
 import Button from "../../components/Button";
 import BackToTopButton from "../../components/BackToTopButton";
 import SideBar from "../../components/SideBar";
+
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
+
+// Styles
+import s from "../../styles/ProfilePage.module.css";
+import appS from "../../App.module.css";
 
 function ProfilePage() {
   const { id } = useParams();

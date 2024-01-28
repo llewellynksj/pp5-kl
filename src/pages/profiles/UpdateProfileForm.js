@@ -1,12 +1,21 @@
 import { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { Form, Image, Row, Col, Container, Alert } from "react-bootstrap";
 import { axiosReq } from "../../services/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 import Button from "../../components/Button";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
+
+// Styles
 import s from "../../styles/Buttons.module.css";
 
 const UpdateProfileForm = () => {

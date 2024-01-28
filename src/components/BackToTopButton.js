@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { BsArrowUpSquareFill } from "react-icons/bs";
+
+// Styles
 import s from "../styles/Buttons.module.css";
 
 // Code adapted from Geeks for Geeks tutorial: http://tinyurl.com/mryxtxnk

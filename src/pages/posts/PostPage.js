@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Col, Row, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
 import Post from "./Post";
@@ -10,6 +9,13 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
+
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+
+// Styles
 import s from "../../styles/PostPage.module.css";
 
 function PostPage() {

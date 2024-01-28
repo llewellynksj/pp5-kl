@@ -1,8 +1,8 @@
-import React from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Asset from "./Asset";
 import NoRes from "../assets/no_results.png";
 import Button from "./Button";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 
 const NotFound = () => {
   const history = useHistory();
@@ -18,12 +18,7 @@ const NotFound = () => {
         message="Oops! The page you're looking for doesn't seem to exist!"
       />
       <div className="d-flex justify-content-center">
-        <Button onClick={handleClick}>
-          Home
-          {/* <div className="d-flex justify-content-center">
-          <Link to="/">Home</Link>
-        </div> */}
-        </Button>
+        <Button onClick={handleClick}>Home</Button>
       </div>
     </div>
   );

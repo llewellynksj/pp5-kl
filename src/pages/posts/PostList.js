@@ -1,5 +1,3 @@
-import { Form, Col, Row, Container } from "react-bootstrap";
-import s from "../../styles/PostList.module.css";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../services/axiosDefaults";
@@ -12,6 +10,15 @@ import HottestProfiles from "../profiles/HottestProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import BackToTop from "../../components/BackToTopButton";
 import SideBar from "../../components/SideBar";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+
+// Styles
+import s from "../../styles/PostList.module.css";
 
 function PostList({ message, filter }) {
   const [posts, setPosts] = useState({ results: [] });

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Alert, Col, Container, Form, Row } from "react-bootstrap";
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../services/axiosDefaults";
 import {
@@ -7,6 +6,13 @@ import {
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 import Button from "../../components/Button";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const UsernameForm = () => {
   const [username, setUsername] = useState("");

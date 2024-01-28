@@ -1,8 +1,8 @@
 .EmojiBtn {
   color: var(--secondary-color);
   position: absolute;
-  top: 5px; /* Adjust this value to align with the top of the textarea */
-  right: 5px; /* Adjust this value to align with the right of the textarea */
+  top: 5px; 
+  right: 5px; 
   cursor: pointer;
 }
 
@@ -13,9 +13,9 @@
 .TextareaIcon::after {
   content: '';
   position: absolute;
-  top: 5px; /* Adjust this value according to your layout */
-  right: 5px; /* Adjust this value according to your layout */
-  pointer-events: none; /* Ensure clicks go through to the textarea */
+  top: 5px; 
+  right: 5px; 
+  pointer-events: none; 
 }
 
 .Picker {

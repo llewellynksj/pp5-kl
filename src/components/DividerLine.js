@@ -1,3 +1,4 @@
+// Styles
 import s from "../styles/DividerLine.module.css";
 
 const DividerLine = () => {

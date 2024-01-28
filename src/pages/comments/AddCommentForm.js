@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../services/axiosDefaults";
+import Avatar from "../../components/Avatar";
 import Button from "../../components/Button";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 import { BsEmojiSmile } from "react-icons/bs";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
+
+// Styles
 import s from "../../styles/AddCommentForm.module.css";
 
 function AddCommentForm(props) {

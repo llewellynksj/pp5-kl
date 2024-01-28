@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
-import { Alert, Container, Row, Col, Form } from "react-bootstrap";
 import { useHistory, useParams } from "react-router-dom";
 import { axiosRes } from "../../services/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Button from "../../components/Button";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const UserPasswordForm = () => {
   const history = useHistory();

@@ -1,4 +1,12 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+import {
+  useCurrentUser,
+  useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
+import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import Avatar from "./Avatar";
 import logo from "../assets/logo.webp";
 import {
   BsHouseFill,
@@ -6,16 +14,14 @@ import {
   BsFillUnlockFill,
   BsPersonAdd,
 } from "react-icons/bs";
+
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// Styles
+
 import s from "../styles/NavBar.module.css";
-import { NavLink } from "react-router-dom";
-import {
-  useCurrentUser,
-  useSetCurrentUser,
-} from "../contexts/CurrentUserContext";
-import Avatar from "./Avatar";
-import axios from "axios";
-import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
-import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -164,9 +170,7 @@ const NavBar = () => {
 
   return (
     <Navbar expanded={expanded} expand="lg" className="mb-3">
-      <Container>
-          {currentUser ? loggedInNav : loggedOutNav}
-      </Container>
+      <Container>{currentUser ? loggedInNav : loggedOutNav}</Container>
     </Navbar>
   );
 };

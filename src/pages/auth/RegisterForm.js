@@ -1,9 +1,17 @@
-import { Form, Container, Alert, Row, Col } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 import Button from "../../components/Button";
+
+// Bootstrap
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+
+// Styles
 import s from "../../styles/LoginRegisterForms.module.css";
 
 const RegisterForm = () => {

@@ -1,9 +1,15 @@
-import { Container, Accordion, Card } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
-import s from "../../styles/SideBarHottestProfiles.module.css";
 import { BsChevronDown } from "react-icons/bs";
+
+// Bootstrap
+import Container from "react-bootstrap/Container";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
+
+// Styles
+import s from "../../styles/SideBarHottestProfiles.module.css";
 
 const HottestProfiles = ({ mobile }) => {
   const { hottestProfiles } = useProfileData();

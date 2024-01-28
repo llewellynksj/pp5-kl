@@ -1,3 +1,4 @@
+// Styles
 import s from "../styles/Buttons.module.css";
 
 const Button = ({ type = "button", children, onClick }) => {

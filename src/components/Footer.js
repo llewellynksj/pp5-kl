@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import logo from "../assets/logo.webp";
 import { IoLogoInstagram, IoLogoPinterest } from "react-icons/io";
+
+// Styles
 import s from "../styles/Footer.module.css";
 
 const Footer = () => {
