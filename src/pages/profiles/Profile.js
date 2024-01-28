@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 
 // Styles
 import s from "../../styles/Profile.module.css";
+import appS from "../../App.module.css";
 
 const Profile = (props) => {
   const { profile, mobile, imageSize = 45 } = props;
@@ -20,13 +21,14 @@ const Profile = (props) => {
       className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}
     >
       <Link
+        style={{ textDecoration: "none" }}
         className={`align-self-center d-flex ${mobile && "flex-column"}`}
         to={`/profiles/${id}`}
       >
         <div>
           <Avatar src={image} height={imageSize} />
         </div>
-        <div className={`mx-2 pt-2 ${s.WordBreak}`}>
+        <div className={`${appS.Link} mx-2 pt-2 ${s.WordBreak}`}>
           <strong>{owner}</strong>
         </div>
       </Link>

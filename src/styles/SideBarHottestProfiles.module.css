@@ -9,3 +9,13 @@
   margin: 0;
   padding: 0;
 }
+
+.Link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}

@@ -19,9 +19,14 @@ a {
 }
 
 .Link {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .Link:hover {
+  color: var(--secondary-color);
+}
+
+.OppositeLink:hover {
   color: var(--primary-color);
 }

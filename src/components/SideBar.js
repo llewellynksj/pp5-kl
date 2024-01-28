@@ -9,6 +9,7 @@ import Card from "react-bootstrap/Card";
 
 // Styles
 import s from "../styles/SideBarHottestProfiles.module.css";
+import appS from "../App.module.css";
 
 const SideBar = ({ mobile }) => {
   if (mobile) {
@@ -28,15 +29,28 @@ const SideBar = ({ mobile }) => {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="0">
               <Card.Body className="p-0">
-                <Link to="/add" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/add"
+                  style={{ textDecoration: "none" }}
+                  className={appS.Link}
+                >
                   Add Post
                 </Link>
                 <br />
-                <Link to="/trending" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/trending"
+                  style={{ textDecoration: "none" }}
+                  className={appS.Link}
+                >
                   Trending Posts
                 </Link>
                 <br />
-                <Link to="/favourites" style={{ textDecoration: "none" }}>
+
+                <Link
+                  to="/favourites"
+                  style={{ textDecoration: "none" }}
+                  className={appS.Link}
+                >
                   Favourite Posts
                 </Link>
               </Card.Body>
@@ -53,7 +67,7 @@ const SideBar = ({ mobile }) => {
           <Link
             to="/add"
             style={{ textDecoration: "none" }}
-            className="p-2 lead d-flex"
+            className={`${appS.Link} p-2 lead d-flex`}
           >
             Add Post
             <div className="mx-2">
@@ -63,14 +77,14 @@ const SideBar = ({ mobile }) => {
           <Link
             to="/trending"
             style={{ textDecoration: "none" }}
-            className="p-2 lead"
+            className={`${appS.Link} p-2 lead`}
           >
             Trending Posts
           </Link>
           <Link
             to="/favourites"
             style={{ textDecoration: "none" }}
-            className="p-2 lead"
+            className={`${appS.Link} p-2 lead`}
           >
             Favourite Posts
           </Link>

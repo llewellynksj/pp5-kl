@@ -30,7 +30,7 @@ const Home = () => {
             <Link
               to="/login"
               style={{ textDecoration: "none" }}
-              className={`${s.Highlight} ${s.Link} py-3`}
+              className={`${s.Highlight} ${s.OppositeLink} py-3`}
             >
               <h2>Login</h2>
             </Link>
@@ -50,7 +50,7 @@ const Home = () => {
             <Link
               to="/register"
               style={{ textDecoration: "none" }}
-              className={`${s.Highlight} ${s.Link} py-3`}
+              className={`${s.Highlight} ${s.OppositeLink} py-3`}
             >
               <h2>Register Now</h2>
             </Link>
