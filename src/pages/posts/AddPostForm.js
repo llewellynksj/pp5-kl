@@ -258,7 +258,7 @@ function AddPostForm() {
 
   return (
     <Container>
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center">
         <h1>Add a new post</h1>
         <div className="h-20">
           <Button onClick={() => history.goBack()}>Back</Button>
