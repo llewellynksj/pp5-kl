@@ -22,7 +22,7 @@ const SideBar = ({ mobile }) => {
               eventKey="0"
               className={`${s.Heading} p-0 d-flex justify-content-center`}
             >
-              Quick Links
+              Menu
               <div className="mx-2">
                 <BsChevronDown />
               </div>
@@ -53,6 +53,15 @@ const SideBar = ({ mobile }) => {
                 >
                   Favourite Posts
                 </Link>
+                <br />
+
+                <Link
+                  to="/following"
+                  style={{ textDecoration: "none" }}
+                  className={appS.Link}
+                >
+                  Following
+                </Link>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -62,7 +71,7 @@ const SideBar = ({ mobile }) => {
   } else {
     return (
       <Container>
-        <p className={`${s.Heading} mb-1`}>Quick Links</p>
+        <p className={`${s.Heading} mb-1`}>Menu</p>
         <div className="d-flex flex-column pl-2">
           <Link
             to="/add"
@@ -87,6 +96,13 @@ const SideBar = ({ mobile }) => {
             className={`${appS.Link} p-2 lead`}
           >
             Favourite Posts
+          </Link>
+          <Link
+            to="/following"
+            style={{ textDecoration: "none" }}
+            className={`${appS.Link} p-2 lead`}
+          >
+            Following
           </Link>
         </div>
         <DividerLine />

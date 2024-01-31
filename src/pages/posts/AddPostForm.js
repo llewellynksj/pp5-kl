@@ -258,8 +258,12 @@ function AddPostForm() {
 
   return (
     <Container>
-      <h1>Add a new post</h1>
-
+      <div className="d-flex justify-content-between align-items-center">
+        <h1>Add a new post</h1>
+        <div className="h-20">
+          <Button onClick={() => history.goBack()}>Back</Button>
+        </div>
+      </div>
       <Form onSubmit={handleSubmit} encType="multipart/form-data">
         <Row>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
