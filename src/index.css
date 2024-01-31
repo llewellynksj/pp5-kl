@@ -5,12 +5,12 @@
 }
 
 :root {
-  --headings-font-family: "Rubik Lines", sans-serif;
+  --headings-font-family: "Rubik 80s Fade", sans-serif;
   --content-font-family: "Maulpali", sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Rubik Lines', sans-serif;
+  font-family: var(--headings-font-family);
 }
 
 img {
