@@ -24,13 +24,21 @@ const Footer = () => {
 
       <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li className="ms-3">
-          <Link className="text-muted mx-2" to="https://www.instagram.com/">
-            <IoLogoInstagram size={20} />
+          <Link
+            className="text-muted mx-2"
+            to={{ pathname: "https://www.instagram.com/" }}
+            target="_blank"
+          >
+            <IoLogoInstagram size={22} className={s.Icon} />
           </Link>
         </li>
         <li className="ms-3">
-          <Link className="text-muted mx-2" to="https://www.pinterest.co.uk/">
-            <IoLogoPinterest size={20} />
+          <Link
+            className="text-muted mx-2"
+            to={{ pathname: "https://www.pinterest.co.uk/" }}
+            target="_blank"
+          >
+            <IoLogoPinterest size={22} className={s.Icon} />
           </Link>
         </li>
       </ul>
