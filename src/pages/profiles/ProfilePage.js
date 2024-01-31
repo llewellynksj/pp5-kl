@@ -118,10 +118,10 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
-      <hr />
       {profilePosts.results.length ? (
         <>
           <InfiniteScroll
+            className={s.MainContentContainer}
             children={profilePosts.results.map((post) => (
               <Col>
                 <Post key={post.id} {...post} setPosts={setProfilePosts} />
@@ -144,12 +144,12 @@ function ProfilePage() {
   );
 
   return (
-    <Container className="h-100">
+    <Container className={s.MainContentContainer}>
       <Row>
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <SideBar mobile />
           <HottestProfiles mobile />
-          <Container>
+          <Container className={s.MainContentContainer}>
             {hasLoaded ? (
               <>
                 {mainProfile}

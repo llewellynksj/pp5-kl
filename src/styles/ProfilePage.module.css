@@ -18,6 +18,11 @@
   text-transform: uppercase;
 }
 
+.MainContentContainer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 @media screen and (max-width: 991px) {
   .ProfileImage {
