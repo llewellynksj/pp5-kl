@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Row className="d-flex justify-content-center my-4 pt-4">
-          <Col md={6} className="text-center mb-4">
+        <Row className="d-flex justify-content-center mt-4 pt-4">
+          <Col md={5} className="text-center mb-4">
             <h1>Welcome to the InkPad community</h1>
             <p className="my-1 py-3">
               Unveil the artistry etched beneath the skin. Welcome to a vibrant
@@ -57,7 +57,7 @@ const Home = () => {
           </Col>
 
           {/* Carousel */}
-          <Col md={6}>
+          <Col md={7} className="pb-4">
             <Carousel controls={false} indicators={false}>
               <Carousel.Item>
                 <img
