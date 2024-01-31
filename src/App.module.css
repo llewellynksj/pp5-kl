@@ -3,6 +3,7 @@
   color: var(--primary-color);
   font-family: 'Moulpali', sans-serif;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 

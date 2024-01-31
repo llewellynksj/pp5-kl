@@ -6,18 +6,19 @@ import Button from "../../components/Button";
 import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 import { BsEmojiSmile } from "react-icons/bs";
+import useClickOutsideToggle from "../../hooks/useClickOutsideToggle";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 // Styles
-import s from "../../styles/AddCommentForm.module.css";
+import s from "../../styles/AddEditCommentForm.module.css";
 
 function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -73,12 +74,13 @@ function AddCommentForm(props) {
               className={s.TextareaIcon}
             />
             <span
-              onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+              ref={ref}
+              onClick={() => setExpanded(!expanded)}
               className={s.EmojiBtn}
             >
-              <BsEmojiSmile size={15} />
+              <BsEmojiSmile size={18} />
             </span>
-            {showEmojiPicker && (
+            {expanded && (
               <div className={s.Picker}>
                 <Picker
                   data={data}

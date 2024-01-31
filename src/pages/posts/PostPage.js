@@ -9,6 +9,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import HottestProfiles from "../profiles/HottestProfiles";
+import SideBar from "../../components/SideBar";
 
 // Bootstrap
 import Container from "react-bootstrap/Container";
@@ -45,6 +46,7 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <SideBar mobile />
         <HottestProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={`${s.Container} m-2 pb-2`}>
@@ -82,6 +84,7 @@ function PostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <SideBar />
         <HottestProfiles />
       </Col>
     </Row>
