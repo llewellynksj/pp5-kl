@@ -13,6 +13,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 
 // Styles
 import s from "../../styles/Post.module.css";
+import appS from "../../App.module.css";
 
 const Post = (props) => {
   const {
@@ -88,7 +89,11 @@ const Post = (props) => {
     <Card className={`${s.Card} m-2 pb-2`}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
-          <Link to={`/profiles/${profile_id}`} className={`${s.Text}`}>
+          <Link
+            to={`/profiles/${profile_id}`}
+            className={`${s.Text} ${appS.BlackLink}`}
+            style={{ textDecoration: "none" }}
+          >
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>

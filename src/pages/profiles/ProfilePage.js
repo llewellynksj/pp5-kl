@@ -26,6 +26,7 @@ import Image from "react-bootstrap/Image";
 // Styles
 import s from "../../styles/ProfilePage.module.css";
 import appS from "../../App.module.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -88,8 +89,11 @@ function ProfilePage() {
               <div>followers</div>
             </Col>
             <Col xs={3} className="my-2">
+              <Link to="/following" style={{ textDecoration: "none" }}
+                  className={appS.Link}>
               <div>{profile?.following_count}</div>
               <div>following</div>
+              </Link>
             </Col>
           </Row>
         </Col>

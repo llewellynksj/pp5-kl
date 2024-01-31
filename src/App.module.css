@@ -31,3 +31,11 @@ a {
 .OppositeLink:hover {
   color: var(--primary-color);
 }
+
+.BlackLink {
+  color: #252525;
+}
+
+.BlackLink:hover {
+  color: var(--secondary-color);
+}

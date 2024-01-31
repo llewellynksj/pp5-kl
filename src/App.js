@@ -38,7 +38,7 @@ function App() {
               path="/following"
               render={() => (
                 <PostList
-                  message="No results found"
+                  message="No results found. Start following someone to view their posts here!"
                   filter={`owner__followed__owner__profile=${profile_id}&`}
                 />
               )}
