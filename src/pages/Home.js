@@ -13,11 +13,15 @@ import Carousel from "react-bootstrap/Carousel";
 import s from "../App.module.css";
 
 const Home = () => {
+  const carouselStyle = {
+    objectFit: "cover",
+    width: "100%",
+  };
   return (
     <>
       <Container>
         <Row className="d-flex justify-content-center mt-4 pt-4">
-          <Col md={5} className="text-center mb-4">
+          <Col md={6} className="text-center mb-4">
             <h1>Welcome to the InkPad community</h1>
             <p className="my-1 py-3">
               Unveil the artistry etched beneath the skin. Welcome to a vibrant
@@ -57,7 +61,7 @@ const Home = () => {
           </Col>
 
           {/* Carousel */}
-          <Col md={7} className="pb-4">
+          <Col md={6} className="pb-4">
             <Carousel controls={false} indicators={false}>
               <Carousel.Item>
                 <img
@@ -65,6 +69,7 @@ const Home = () => {
                   height="650"
                   src={carousel1}
                   alt="First slide"
+                  style={carouselStyle}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -73,6 +78,7 @@ const Home = () => {
                   height="650"
                   src={carousel2}
                   alt="Second slide"
+                  style={carouselStyle}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -81,6 +87,7 @@ const Home = () => {
                   height="650"
                   src={carousel3}
                   alt="Third slide"
+                  style={carouselStyle}
                 />
               </Carousel.Item>
             </Carousel>
