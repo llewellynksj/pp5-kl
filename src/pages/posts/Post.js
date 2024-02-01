@@ -34,6 +34,7 @@ const Post = (props) => {
     updated_at,
     postPage,
     setPosts,
+    setQuery,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -86,7 +87,7 @@ const Post = (props) => {
   };
 
   const handleTagClick = (tag) => {
-    history.push(`/posts?filter=${tag}`);
+    setQuery(tag);
   };
 
   return (
@@ -130,10 +131,38 @@ const Post = (props) => {
               {image_tag}
             </Card.Text>
           )}
-          {image_tag2 && <Card.Text className={s.Tag}>{image_tag2}</Card.Text>}
-          {image_tag3 && <Card.Text className={s.Tag}>{image_tag3}</Card.Text>}
-          {image_tag4 && <Card.Text className={s.Tag}>{image_tag4}</Card.Text>}
-          {image_tag5 && <Card.Text className={s.Tag}>{image_tag5}</Card.Text>}
+          {image_tag2 && (
+            <Card.Text
+              className={s.Tag}
+              onClick={() => handleTagClick(image_tag2)}
+            >
+              {image_tag2}
+            </Card.Text>
+          )}
+          {image_tag3 && (
+            <Card.Text
+              className={s.Tag}
+              onClick={() => handleTagClick(image_tag3)}
+            >
+              {image_tag3}
+            </Card.Text>
+          )}
+          {image_tag4 && (
+            <Card.Text
+              className={s.Tag}
+              onClick={() => handleTagClick(image_tag4)}
+            >
+              {image_tag4}
+            </Card.Text>
+          )}
+          {image_tag5 && (
+            <Card.Text
+              className={s.Tag}
+              onClick={() => handleTagClick(image_tag5)}
+            >
+              {image_tag5}
+            </Card.Text>
+          )}
         </div>
       </Card.Body>
       <div className={`${s.Text} text-center p-4`}>

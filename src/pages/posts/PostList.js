@@ -74,7 +74,12 @@ function PostList({ message, filter }) {
                 <>
                   <InfiniteScroll
                     children={posts.results.map((post) => (
-                      <Post key={post.id} {...post} setPosts={setPosts} />
+                      <Post
+                        key={post.id}
+                        {...post}
+                        setPosts={setPosts}
+                        setQuery={setQuery}
+                      />
                     ))}
                     dataLength={posts.results.length}
                     loader={<Asset spinner />}
