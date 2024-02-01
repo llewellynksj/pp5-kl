@@ -4,7 +4,7 @@ InkPad is social media platform designed to share, explore and connect with a co
 
 Users will be able to browse and search through posts. They will be able to create their own posts, and attach tags to these to help others to find certain categories more easily. They will also be able to comment on eachothers posts, and to follow/be followed by other users.
 
-![Image of ](readme/images/responsiveimg.webp)
+![Image of site across a variety of device sizes ](readme/images/responsiveimg.webp)
 
 [Visit the live website here](https://pp5-kl-c6a010106309.herokuapp.com/)
 
@@ -94,6 +94,12 @@ Enter purpose description
 ## Design
 
 ### **Colour Scheme**
+
+The design of the site was based on an alternative and punky vibe. The site was designed with a dark theme with a black background throughout, utilising a variation of white (#E9ECEF) as the primary font colour. The contrasting bright pink (#FF00DE) was used as a secondary highlighting colour, to make certain things pop.
+
+<br>
+
+![InkPad colour palette](readme/images/coolors.webp)
 
 <br>
 
