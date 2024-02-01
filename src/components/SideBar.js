@@ -62,6 +62,15 @@ const SideBar = ({ mobile }) => {
                 >
                   Following
                 </Link>
+                <br />
+
+                <Link
+                  to="/followers"
+                  style={{ textDecoration: "none" }}
+                  className={appS.Link}
+                >
+                  Followers
+                </Link>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -103,6 +112,13 @@ const SideBar = ({ mobile }) => {
             className={`${appS.Link} p-2 lead`}
           >
             Following
+          </Link>
+          <Link
+            to="/followers"
+            style={{ textDecoration: "none" }}
+            className={`${appS.Link} p-2 lead`}
+          >
+            Followers
           </Link>
         </div>
         <DividerLine />
