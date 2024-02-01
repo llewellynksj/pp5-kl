@@ -8,6 +8,15 @@ Users will be able to browse and search through posts. They will be able to crea
 
 [Visit the live website here](https://pp5-kl-c6a010106309.herokuapp.com/)
 
+### Back-End API
+
+This project has been built as part of the Advanced Front-End module of my EQF Level 5 Diploma in Full Stack Software Development.
+The back-end API for this site was created using Django REST Framework:
+
+[Visit the InkPad API repository here](https://github.com/llewellynksj/pp5-api)
+
+[Visit the InkPad Live API here](https://pp5-api-kl-a5aee8435a6f.herokuapp.com/)
+
 <br>
 
 ## Contents
@@ -18,9 +27,6 @@ Users will be able to browse and search through posts. They will be able to crea
 
 - [Purpose](#purpose)
 - [User Stories](#user-stories)
-  - [First Time Visitors](#first-time-visitor-goals)
-  - [Returning Visitors](#returning-visitor-goals)
-  - [Frequent Users](#frequent-visitor-goals)
 
 ### [Design](#design-1)
 
@@ -28,6 +34,21 @@ Users will be able to browse and search through posts. They will be able to crea
 - [Typography](#typography)
 - [Imagery](#imagery)
 - [Wireframes](#wireframes)
+
+### [Project Logic](#project-logic-1)
+
+- [User Journey](#user-journey)
+- [Epics](#epics)
+- [Kanban Board](#kanban-board)
+
+### [Project Structure](#project-structure-1)
+
+- [Components](#components)
+  - [Product](#products)
+  - [Customer](#customer)
+  - [Contact](#contact)
+  - [Recommendations](#recommendations)
+  - [Appointment](#appointment)
 
 ### [Features](#features-1)
 
@@ -44,12 +65,6 @@ Users will be able to browse and search through posts. They will be able to crea
 ### [Deployment](#deployment-1)
 
 ### [Testing](#testing-1)
-
-- [Function Testing](#function-testing)
-- [User Story Testing](#user-story-testing)
-- [Lighthouse](#lighthouse)
-- [Validator Testing](#validator-testing)
-- [Bugs](#bugs)
 
 ### [Credits](#credits-1)
 
@@ -71,28 +86,6 @@ Enter purpose description
 <br>
 
 ### User Stories
-
-### **Client Goals**
-
--
-
-<br>
-
-### **First Time Visitor Goals**
-
--
-
-<br>
-
-### **Returning Visitor Goals**
-
--
-
-<br>
-
-### **Frequent Visitor Goals**
-
--
 
 <br>
 
@@ -147,6 +140,54 @@ Enter purpose description
 <br>
 
 For a full PDF of all wireframes (mobile, tablet, desktop) click [here]().
+
+---
+
+## Database and Logic
+
+Careful consideration was taken in the planning stages of this project. Initial user journeys were mapped out for both the admin and general user. From these an ER Diagram was created.
+
+### **User Journey**
+
+![Image of user journey map](readme_assets/lwd_user_journey.webp)
+
+<br>
+
+![Image of admin journey map](readme_assets/lwd_admin_journey.webp)
+
+<br>
+
+### **Database**
+
+![Image of entity relationship diagram](readme_assets/lwd_erd.webp)
+
+<br>
+
+### **Epics**
+
+![Image of epics chart](readme_assets/lwd_epics.webp)
+
+### **Kanban Board**
+
+A Kanban approach was used to keep track of the flow of the project. Once User Stories were set up in the Project they were assigned to EPICs and began the project journey in the 'ToDo' column. As development progressed these moved through 'In Progress' to finally 'Done'. An additional column was added 'Unable to implement' for any features that were not successfully completed.
+
+[You can visit the project board here](https://github.com/users/llewellynksj/projects/5/views/1)
+
+Below is an example part way through the site build:
+
+![Image of kanban project hub from Github](readme_assets/kanban.webp)
+
+---
+
+## Project Structure
+
+### **Components:**
+
+#### NavBar
+
+#### Footer
+
+#### SideBar
 
 ---
 
