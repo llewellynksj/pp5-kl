@@ -145,37 +145,27 @@ For a full PDF of all wireframes (mobile, tablet, desktop) click [here]().
 
 ## Database and Logic
 
-Careful consideration was taken in the planning stages of this project. Initial user journeys were mapped out for both the admin and general user. From these an ER Diagram was created.
-
 ### **User Journey**
 
-![Image of user journey map](readme_assets/lwd_user_journey.webp)
+![Image of user journey map]()
 
 <br>
-
-![Image of admin journey map](readme_assets/lwd_admin_journey.webp)
-
-<br>
-
-### **Database**
-
-![Image of entity relationship diagram](readme_assets/lwd_erd.webp)
 
 <br>
 
 ### **Epics**
 
-![Image of epics chart](readme_assets/lwd_epics.webp)
+![Image of epics chart]()
 
 ### **Kanban Board**
 
 A Kanban approach was used to keep track of the flow of the project. Once User Stories were set up in the Project they were assigned to EPICs and began the project journey in the 'ToDo' column. As development progressed these moved through 'In Progress' to finally 'Done'. An additional column was added 'Unable to implement' for any features that were not successfully completed.
 
-[You can visit the project board here](https://github.com/users/llewellynksj/projects/5/views/1)
+[You can visit the project board here]()
 
 Below is an example part way through the site build:
 
-![Image of kanban project hub from Github](readme_assets/kanban.webp)
+![Image of kanban project hub from Github](readme/images/kanban.webp)
 
 ---
 
@@ -189,21 +179,50 @@ Below is an example part way through the site build:
 
 #### SideBar
 
+#### BackToTopButton
+
+#### Button
+
+#### DividerLine
+
+#### MenuDropDown
+
+#### Asset
+
+#### Avatar
+
+#### HottestProfiles
+
+#### Profile
+
+#### Post
+
 ---
 
 ## Features
 
-### **Existing Features**
+### **Existing Features:**
+
+#### Home
+
+#### Login/Register
+
+#### Add Post
+
+#### Add Comment Form
+
+#### Following/Followers
 
 <br>
 
 ### **Accessibility**
 
-In addition to being best practice, having an accessible website is extremely high on the list of requirements for the target audience. Close attention has been paid to the following in order to ensure the site is as accessible as possible:
+The style of the website has utlised a rough punky style. However, in keeping with best practices steps have still been taken to ensure accessibility is considered throughout.
 
-- Clear and simple font styling, avoiding any cursive or calligraphic scripts.
-- Contrasting colour scheme, but avoiding colours that are too bold.
-- Use of semantic HTML
+Close attention has been paid to the following in order to ensure the site is as accessible as possible:
+
+- Contrasting colour scheme.
+- Use of semantic HTML.
 - Ensuring all images have an alt description for screen readers or where the image cannot be loaded. Also ensuring that these are as descriptive as possible.
 
 <br>
@@ -212,7 +231,7 @@ In addition to being best practice, having an accessible website is extremely hi
 
 In the future there are features and developments that it would be useful to consider adding to create an even better user experience of this website. They include:
 
--
+- Image cropping on image upload and profile avatar:
 
 <br>
 
@@ -252,141 +271,7 @@ The commit history can be viewed [here]()
 
 ## Testing
 
-Testing was performed across a range of devices, including:
-
--
-
-### **Function Testing**
-
-| Page | Test | Successfully Completed |
-| :--- | :--- | :--------------------: |
-|      |      |                        |
-|      |      |                        |
-|      |      |                        |
-|      |      |                        |
-|      |      |                        |
-|      |      |                        |
-|      |      |                        |
-
-<br>
-
-### **User Story Testing**
-
-| Client Goal | Solution | Tested & Successfully Completed |
-| :---------- | :------- | :-----------------------------: |
-|             |          |                                 |
-|             |          |                                 |
-|             |          |                                 |
-|             |          |                                 |
-|             |          |                                 |
-
-<br>
-
-| First Time Visitor Goal | Solution | Tested & Successfully Completed |
-| :---------------------- | :------- | :-----------------------------: |
-|                         |          |                                 |
-|                         |          |                                 |
-|                         |          |                                 |
-|                         |          |                                 |
-
-<br>
-
-| Returning Visitor Goal | Solution | Tested & Successfully Completed |
-| :--------------------- | :------- | :-----------------------------: |
-|                        |          |                                 |
-|                        |          |                                 |
-|                        |          |                                 |
-
-<br>
-
-| Frequent Visitor Goal | Solution | Tested & Successfully Completed |
-| :-------------------- | :------- | :-----------------------------: |
-|                       |          |                                 |
-|                       |          |                                 |
-|                       |          |                                 |
-
-<br>
-
-### **Lighthouse**
-
-For Mobile Devices
-
-<details>
-<summary>Homepage</summary>
-
-![Screenshot of Lighthouse testing for homepage on mobile devices]()
-
-</details>
-<details>
-<summary>Dates Page</summary>
-
-![Screenshot of Lighthouse testing for next page on mobile devices]()
-
-</details>
-<details>
-
-<br>
-
-For Desktop
-
-<details>
-<summary>Homepage</summary>
-
-![Screenshot of Lighthouse testing for homepage on desktop]()
-
-</details>
-<details>
-<summary>Dates Page</summary>
-
-![Screenshot of Lighthouse testing for next page on desktop]()
-
-</details>
-
-<br>
-
-### **Validator Testing**
-
-HTML
-
-<details>
-<summary>Homepage</summary>
-
-![Screenshot of WC3 testing for homepage]()
-
-</details>
-<details>
-<summary>Dates Page</summary>
-
-![Screenshot of WC3 testing for next page]()
-
-</details>
-<details>
-
-<br>
-
-CSS
-
-<details>
-<summary>Stylesheet</summary>
-
-![Screenshot of W3C Jigsaw testing for CSS Stylesheet]()
-
-</details>
-
-  <br>
-
-### **Bugs**
-
-| Raised by | Bug | Solution |
-| :-------- | :-- | :------- |
-|           |     |          |
-|           |     |          |
-|           |     |          |
-|           |     |          |
-|           |     |          |
-|           |     |          |
-
-<br>
+For all testing details visit the [TESTING](TESTING.md) file.
 
 ---
 
