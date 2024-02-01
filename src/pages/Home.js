@@ -2,6 +2,9 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import carousel1 from "../assets/carousel1.webp";
 import carousel2 from "../assets/carousel2.webp";
 import carousel3 from "../assets/carousel3.webp";
+import carousel4 from "../assets/carousel4.webp";
+import carousel5 from "../assets/carousel5.webp";
+import carousel6 from "../assets/carousel6.webp";
 
 // Bootstrap
 import Container from "react-bootstrap/Container";
@@ -17,6 +20,16 @@ const Home = () => {
     objectFit: "cover",
     width: "100%",
   };
+
+  const carouselImages = [
+    carousel1,
+    carousel2,
+    carousel3,
+    carousel4,
+    carousel5,
+    carousel6,
+  ];
+
   return (
     <>
       <Container>
@@ -63,33 +76,17 @@ const Home = () => {
           {/* Carousel */}
           <Col md={6} className="pb-4">
             <Carousel controls={false} indicators={false}>
-              <Carousel.Item>
-                <img
-                  className={`d-block m-auto`}
-                  height="650"
-                  src={carousel1}
-                  alt="First slide"
-                  style={carouselStyle}
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block m-auto"
-                  height="650"
-                  src={carousel2}
-                  alt="Second slide"
-                  style={carouselStyle}
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block m-auto"
-                  height="650"
-                  src={carousel3}
-                  alt="Third slide"
-                  style={carouselStyle}
-                />
-              </Carousel.Item>
+              {carouselImages.map((image, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    className={`d-block m-auto`}
+                    height="650"
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    style={carouselStyle}
+                  />
+                </Carousel.Item>
+              ))}
             </Carousel>
           </Col>
         </Row>
