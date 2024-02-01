@@ -46,6 +46,16 @@ function App() {
             />
             <Route
               exact
+              path="/followers"
+              render={() => (
+                <PostList
+                  message="No results found. Nobody is following you yet. Keep posting!"
+                  filter={`owner__following__followed__profile=${profile_id}&`}
+                />
+              )}
+            />
+            <Route
+              exact
               path="/favourites"
               render={() => (
                 <PostList

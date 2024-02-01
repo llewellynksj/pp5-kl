@@ -85,6 +85,10 @@ const Post = (props) => {
     }
   };
 
+  const handleTagClick = (tag) => {
+    history.push(`/posts?filter=${tag}`);
+  };
+
   return (
     <Card className={`${s.Card} m-2 pb-2`}>
       <Card.Body>
@@ -118,7 +122,14 @@ const Post = (props) => {
       <Card.Body className={`${s.Text}`}>
         {caption && <Card.Text>{caption}</Card.Text>}
         <div className={`d-flex justify-content-around flex-wrap`}>
-          {image_tag && <Card.Text className={s.Tag}>{image_tag}</Card.Text>}
+          {image_tag && (
+            <Card.Text
+              className={s.Tag}
+              onClick={() => handleTagClick(image_tag)}
+            >
+              {image_tag}
+            </Card.Text>
+          )}
           {image_tag2 && <Card.Text className={s.Tag}>{image_tag2}</Card.Text>}
           {image_tag3 && <Card.Text className={s.Tag}>{image_tag3}</Card.Text>}
           {image_tag4 && <Card.Text className={s.Tag}>{image_tag4}</Card.Text>}
