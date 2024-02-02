@@ -44,17 +44,28 @@ The back-end API for this site was created using Django REST Framework:
 ### [Project Structure](#project-structure-1)
 
 - [Components](#components)
-  - [Product](#products)
-  - [Customer](#customer)
-  - [Contact](#contact)
-  - [Recommendations](#recommendations)
-  - [Appointment](#appointment)
+  - [NavBar](#navbar)
+  - [Footer](#footer)
+  - [SideBar](#sidebar)
+  - [BackToTopButton](#backtotopbutton)
+  - [Button](#button)
+  - [DividerLine](#dividerline)
+  - [MenuDropDown](#menudropdown)
+  - [Asset](#asset)
+  - [Avatar](#avatar)
+  - [ImageCropper](#imagecropper)
+  - [HottestProfiles](#hottestprofiles)
+  - [Profile](#profile)
+  - [Post](#post)
 
 ### [Features](#features-1)
 
 - [Existing Features](#existing-features)
-  - [Homepage](#homepage)
-  - [Next page](#next_page)
+  - [Home](#home)
+  - [Login and Register](#login-and-register)
+  - [Add Post](#add-post)
+  - [Add Comment Form](#add-comment-form)
+  - [Following and Followers](#following-and-followers)
 - [Accessibility](#accessibility)
 - [Future Features](#future-features)
 
@@ -81,11 +92,37 @@ The back-end API for this site was created using Django REST Framework:
 
 ### **Purpose**
 
-Enter purpose description
+InkPad aims to provide a welcoming and open social media platform for users from all backgrounds to connect and share content.
+It strives to provide a community to all users with no discrimination of their personal views and values.
 
 <br>
 
 ### User Stories
+
+| User Story                                                                                     | Epic      |
+| :--------------------------------------------------------------------------------------------- | :-------- |
+| As a user I can navigate the website easily so I can find the pages I want                     | Feature   |
+| As a user I can create a profile so I can interact in the community of registered users        | Profiles  |
+| As a registered user I can login to view my own profile                                        | Profiles  |
+| As a user I can edit my profile and profile image so I can keep my profile updated             | Profiles  |
+| As a user I can post images to share my designs with the community                             | Posts     |
+| As a user I can view other posts by registered users so I can look for inspiration             | Posts     |
+| As a user I can favourite other users posts so I can easily refer back to them                 | Posts     |
+| As a user I can follow other users so that I can easily find their new posts                   | Followers |
+| As a user I can see which followers are following me so that I can reciprocate following       | Following |
+| As a user I can filter posts by their tags so I can look for specific types of images          | Posts     |
+| As a user I can filter posts by their user so I can see all the posts by one specific user     | Profiles  |
+| As a user I can search posts with keywords so I can look for specific types of images          | Posts     |
+| As a user I can see the most like images so I can keep up to date with what’s trending         | Posts     |
+| As a user I can scroll the posts feed so that I don’t have to click a next button              | Posts     |
+| As a user I can post comments on other users posts so I can share my thoughts                  | Comments  |
+| As a user I can view other users comments on my posts and other users posts                    | Comments  |
+| As a user I can edit my own posts so I can correct any errors                                  | Posts     |
+| As a user I can delete my own posts so I can remove any unwanted posts                         | Posts     |
+| As a user I can edit my own comments so I can correct any errors                               | Comments  |
+| As a user I can delete my own comments so I can remove any no longer wanted comments I’ve made | Comments  |
+| As a user I can view other users’ profiles so I can see their full posts and follow them       | Profiles  |
+| As a user I can see the most followed profiles so I can see who is trending                    | Profiles  |
 
 <br>
 
@@ -233,13 +270,13 @@ Below is an example part way through the site build:
 
 #### Home
 
-#### Login/Register
+#### Login and Register
 
 #### Add Post
 
 #### Add Comment Form
 
-#### Following/Followers
+#### Following and Followers
 
 <br>
 
