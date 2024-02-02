@@ -32,15 +32,17 @@ const SideBar = ({ mobile }) => {
                 <Link
                   to="/add"
                   style={{ textDecoration: "none" }}
-                  className={appS.Link}
+                  className={`${appS.Link} d-flex justify-content-center lead`}
                 >
                   Add Post
+                  <div className="px-1">
+                    <BsPlusCircleFill />
+                  </div>
                 </Link>
-                <br />
                 <Link
                   to="/trending"
                   style={{ textDecoration: "none" }}
-                  className={appS.Link}
+                  className={`${appS.Link} lead`}
                 >
                   Trending Posts
                 </Link>
@@ -49,7 +51,7 @@ const SideBar = ({ mobile }) => {
                 <Link
                   to="/favourites"
                   style={{ textDecoration: "none" }}
-                  className={appS.Link}
+                  className={`${appS.Link} lead`}
                 >
                   Favourite Posts
                 </Link>
@@ -58,7 +60,7 @@ const SideBar = ({ mobile }) => {
                 <Link
                   to="/following"
                   style={{ textDecoration: "none" }}
-                  className={appS.Link}
+                  className={`${appS.Link} lead`}
                 >
                   Following
                 </Link>
@@ -67,7 +69,7 @@ const SideBar = ({ mobile }) => {
                 <Link
                   to="/followers"
                   style={{ textDecoration: "none" }}
-                  className={appS.Link}
+                  className={`${appS.Link} lead`}
                 >
                   Followers
                 </Link>
