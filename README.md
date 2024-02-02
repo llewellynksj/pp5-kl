@@ -38,7 +38,6 @@ The back-end API for this site was created using Django REST Framework:
 ### [Project Logic](#project-logic-1)
 
 - [User Journey](#user-journey)
-- [Epics](#epics)
 - [Kanban Board](#kanban-board)
 
 ### [Project Structure](#project-structure-1)
