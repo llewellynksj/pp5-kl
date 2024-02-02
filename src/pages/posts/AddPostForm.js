@@ -5,6 +5,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import Button from "../../components/Button";
 import Asset from "../../components/Asset";
 import upload from "../../assets/upload.png";
+import ImageCropper from "../../components/ImageCropper";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
@@ -41,6 +42,8 @@ function AddPostForm() {
   const [errors, setErrors] = useState({});
   const history = useHistory();
   const [tagChoices, setTagChoices] = useState([]);
+  const [openCrop, setOpenCrop] = useState(false);
+  const [croppedImage, setCroppedImage] = useState(null);
 
   // Fetch the tag choices from api
   useEffect(() => {
@@ -63,6 +66,9 @@ function AddPostForm() {
     });
   };
 
+  // Image cropping code adapted from tutorial by 'Code Like a Pro'
+  // with help of chatGPT: https://www.youtube.com/watch?v=MWzaItRRTXw
+
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
@@ -70,7 +76,15 @@ function AddPostForm() {
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
+      setOpenCrop(true);
     }
+  };
+
+  const handleCropComplete = (croppedImage) => {
+    console.log("Cropped image:", croppedImage);
+    setOpenCrop(false);
+    setCroppedImage(croppedImage);
+    setPostData({ ...postData, image: croppedImage.url });
   };
 
   const imageInput = useRef(null);
@@ -85,7 +99,17 @@ function AddPostForm() {
     formData.append("image_tag3", image_tag3);
     formData.append("image_tag4", image_tag4);
     formData.append("image_tag5", image_tag5);
-    formData.append("image", imageInput.current.files[0]);
+
+    // Check if a cropped image is available
+    if (croppedImage) {
+      const croppedFile = new File([croppedImage.file], "cropped.jpeg", {
+        type: "image/jpeg",
+      });
+      formData.append("image", croppedFile);
+    } else {
+      // If no cropped image available, append the original image file
+      formData.append("image", imageInput.current.files[0]);
+    }
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -264,6 +288,12 @@ function AddPostForm() {
           <Button onClick={() => history.goBack()}>Back</Button>
         </div>
       </div>
+      {openCrop && (
+        <ImageCropper
+          image={postData.image}
+          onCropComplete={handleCropComplete}
+        />
+      )}
       <Form onSubmit={handleSubmit} encType="multipart/form-data">
         <Row>
           <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
