@@ -1,4 +1,4 @@
-// Code adapted from tutorial by 'Code Like a Pro' 
+// Code adapted from tutorial by 'Code Like a Pro'
 // with help of chatGPT: https://www.youtube.com/watch?v=MWzaItRRTXw
 
 import {
@@ -20,6 +20,7 @@ const ImageCropper = ({ image, onCropComplete }) => {
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+  // eslint-disable-next-line
   const [croppedImage, setCroppedImage] = useState(null);
 
   const cropComplete = (croppedArea, croppedAreaPixels) => {
