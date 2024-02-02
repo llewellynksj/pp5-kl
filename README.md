@@ -168,42 +168,40 @@ The InkPad logo was created using [Canva](https://www.canva.com/). The font used
 <details>
 <summary>Home Page</summary>
 
-![Wireframe image of home page design]()
+![Wireframe image of home page design](readme/wireframes/home_page.webp)
 
 </details>
 <details>
 <summary>NavBar</summary>
 
-![Wireframe image of navbar design]()
+![Wireframe image of navbar design](readme/wireframes/navbar.webp)
 
 </details>
 <details>
 <summary>Profile Page</summary>
 
-![Wireframe image of profile page design]()
+![Wireframe image of profile page design](readme/wireframes/profile.webp)
 
 </details>
 <details>
 <summary>Post List</summary>
 
-![Wireframe image of post list design]()
+![Wireframe image of post list design](readme/wireframes/post_list.webp)
 
 </details>
 <details>
 <summary>Post Page</summary>
 
-![Wireframe image of post page design]()
+![Wireframe image of post page design](readme/wireframes/post_page.webp)
 
 </details>
 <details>
 <summary>Add Post</summary>
 
-![Wireframe image of add a post page design]()
+![Wireframe image of add a post page design](readme/wireframes/add_post.webp)
 
 </details>
 <br>
-
-For a full PDF of all wireframes (mobile, tablet, desktop) click [here]().
 
 ---
 
