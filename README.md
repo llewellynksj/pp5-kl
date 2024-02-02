@@ -105,9 +105,23 @@ The design of the site was based on an alternative and punky vibe. The site was 
 
 ### **Typography**
 
+The [Google Fonts]() 'Rubik Distressed' was used for headings. This font is in keeping with the aesthetics of the site.
+
+![Example of Rubik Distressed font on website](readme/images/rubik_distressed.webp)
+
+<br>
+
+For the main content font, 'Moulpali' was used. This is a very simple and easy to read font that was picked with accessibility being the forefront concern. The slightly squared shape of the letters felt more in keeping with the overall design than a more curved, softer, font.
+
+![Example of Moulpali font on website](readme/images/moulpali.webp)
+
 <br>
 
 ### **Imagery**
+
+The InkPad logo was created using [Canva](https://www.canva.com/). The font used in the logo is 'Blanka', and again was chosen due to it's bold, punky style. This font has also been used to create the 'Upload' and 'No results found' images.
+
+![InkPad logo](readme/images/blanka_logo.webp)
 
 <br>
 
