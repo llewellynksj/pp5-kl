@@ -130,33 +130,41 @@ The InkPad logo was created using [Canva](https://www.canva.com/). The font used
 [Balsamiq Wireframing Software](https://balsamiq.com/) was used to create the wireframes.
 
 <details>
-<summary>Homepage (mobile)</summary>
+<summary>Home Page</summary>
 
-![Wireframe image of homepage design on mobile]()
-
-</details>
-<details>
-<summary>Homepage (desktop)</summary>
-
-![Wireframe image of homepage design on desktop]()
-
-</details>
-
-<br>
-
-<details>
-<summary>Next Page (mobile)</summary>
-
-![Wireframe image of next page design on mobile]()
+![Wireframe image of home page design]()
 
 </details>
 <details>
-<summary>Next Page (desktop)</summary>
+<summary>NavBar</summary>
 
-![Wireframe image of next page design on desktop]()
+![Wireframe image of navbar design]()
 
 </details>
+<details>
+<summary>Profile Page</summary>
 
+![Wireframe image of profile page design]()
+
+</details>
+<details>
+<summary>Post List</summary>
+
+![Wireframe image of post list design]()
+
+</details>
+<details>
+<summary>Post Page</summary>
+
+![Wireframe image of post page design]()
+
+</details>
+<details>
+<summary>Add Post</summary>
+
+![Wireframe image of add a post page design]()
+
+</details>
 <br>
 
 For a full PDF of all wireframes (mobile, tablet, desktop) click [here]().
