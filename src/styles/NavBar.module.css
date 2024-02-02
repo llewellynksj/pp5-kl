@@ -15,4 +15,5 @@
 
 .NavToggle {
   background-color: var(--primary-color);
+  padding: 2px 4px;
 }
