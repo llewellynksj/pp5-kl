@@ -5,7 +5,7 @@ import { CurrentUserProvider } from "../../contexts/CurrentUserContext";
 import { act } from "react-dom/test-utils";
 
 describe("Render NavBar for logged out users", () => {
-  const nonLoggedInUser = () =>
+  const loggedOutUser = () =>
     render(
       <Router>
         <NavBar />
@@ -13,22 +13,22 @@ describe("Render NavBar for logged out users", () => {
     );
 
   it("tests for Home link", () => {
-    nonLoggedInUser();
+    loggedOutUser();
     expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument();
   });
 
   it("tests for Login link", () => {
-    nonLoggedInUser();
+    loggedOutUser();
     expect(screen.getByRole("link", { name: "Login" })).toBeInTheDocument();
   });
 
   it("tests for Register link", () => {
-    nonLoggedInUser();
+    loggedOutUser();
     expect(screen.getByRole("link", { name: "Register" })).toBeInTheDocument();
   });
 
   it("tests there is no Logout link", () => {
-    nonLoggedInUser();
+    loggedOutUser();
     expect(
       screen.queryByRole("link", { name: "Logout" })
     ).not.toBeInTheDocument();
