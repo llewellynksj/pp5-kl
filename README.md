@@ -351,6 +351,34 @@ The commit history can be viewed [here](https://github.com/llewellynksj/pp5-kl/c
 
 ## Deployment
 
+### Deploy to Heroku
+1. Create a new repository on GitHub
+2. Open the repository in your chosen IDE
+3. In the terminal, create a React app using the following command: 
+```
+npx create-react-app . --use-npm
+```
+4. You can confirm the app is working by running:
+```
+npm start
+```
+(this may run automatically)
+
+5. Ensure a Procfile is added to the root directory
+
+6. In package.json, within the scripts section, add:
+```
+"heroku-prebuild": "npm install -g serve"
+``` 
+7. Add, commit, and push all changes to Github
+8. From your Heroku dashboard, click on 'New' app and create a new app
+9. Go to the 'Deploy' tab
+10. Connect to your relevant Github repository
+11. Once connected, click 'Deploy Branch'
+
+### Connecting to the API
+In order for the API to accept requests from this Front End site, certain permissions are required via heroku on the DRF API. [These are covered in the DRF API README here](https://github.com/llewellynksj/pp5-api).
+
 <br>
 
 ---
