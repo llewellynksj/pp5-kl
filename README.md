@@ -209,21 +209,17 @@ The InkPad logo was created using [Canva](https://www.canva.com/). The font used
 
 ### **User Journey**
 
-![Image of user journey map]()
+![Image of user journey map](readme/images/user_journey.webp)
 
 <br>
 
 <br>
-
-### **Epics**
-
-![Image of epics chart]()
 
 ### **Kanban Board**
 
 A Kanban approach was used to keep track of the flow of the project. Once User Stories were set up in the Project they were assigned to EPICs and began the project journey in the 'ToDo' column. As development progressed these moved through 'In Progress' to finally 'Done'. An additional column was added 'Unable to implement' for any features that were not successfully completed.
 
-[You can visit the project board here]()
+[You can visit the project board here](https://github.com/users/llewellynksj/projects/11)
 
 Below is an example part way through the site build:
 
