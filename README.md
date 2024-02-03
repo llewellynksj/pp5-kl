@@ -343,7 +343,7 @@ In the future there are features and developments that it would be useful to con
 
 Version control has been maintained using Git. The code written for this website has been updated via regular commits to Github. These serve as a record of development and changes made.
 
-The commit history can be viewed [here]()
+The commit history can be viewed [here](https://github.com/llewellynksj/pp5-kl/commits/main/)
 
 <br>
 
@@ -365,8 +365,23 @@ For all testing details visit the [TESTING](TESTING.md) file.
 
 ### **Resources**
 
--
+- [Code Institute's 'Moments' Walkthrough]() - a large amount of the structure of this site was based on CI's Moments walkthrough project from their Advanced Front End course content
+- [Code Like a Pro - 'Crop, Zoom, Rotate and upload profile images in React using react-easy-crop and Firebase'](https://www.youtube.com/watch?v=MWzaItRRTXw) - Image cropper walkthrough
+- [Geeks for Geeks - 'How to create a Scroll to top button in React'](https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/) - Tutorial for how to build back to top button
+- [Medium - 'Crop Images in React JS'](https://medium.com/@adarsh-d/crop-images-in-react-js-b9e3bcb433e0)
+- [Medium - 'How to customize the file upload button in React'](https://medium.com/web-dev-survey-from-kyoto/how-to-customize-the-file-upload-button-in-react-b3866a5973d8)
+- [Github - 'How to change size and color for icon'](https://github.com/react-icons/react-icons/issues/67) - changing size and colour of react icons
+- [React Test Utilities](https://legacy.reactjs.org/docs/test-utils.html#act) - information on the 'act' utility
+- [Stack OverFlow 'What does #describe and #it methods do in TDD react testing?'](https://stackoverflow.com/questions/39863877/what-does-describe-and-it-methods-do-in-tdd-react-testing) - details on how to use 'describe' and 'it' in unit testing
+- [Slack](https://slack.com/intl/en-gb) - the Code Institute Slack Community was utilised to assist with various other queries including how to overcome an axios module error when testing
 
 <br>
 
 ### **Acknowledgements**
+
+My final project as part of my EQF Level 5 Full Stack Software Development course with Code Institute has by far been the most challenging.
+I would like to thank the following people and communities for their support:
+
+- Code Institute Tutor Support
+- Code Institute Slack Community
+- My husband - you have given me all the space and time to complete this course so I can put my life on a new track. It's probably been harder on you than me, and I am utterly grateful.
