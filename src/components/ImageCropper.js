@@ -16,7 +16,6 @@ import getCroppedImg from "../utils/cropImage";
 
 const ImageCropper = ({ image, onCropComplete }) => {
   const history = useHistory();
-  // const [hasLoaded, setHasLoaded] = useState(false);
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
@@ -34,12 +33,11 @@ const ImageCropper = ({ image, onCropComplete }) => {
   const cropImage = async () => {
     try {
       if (!image) {
-        console.error("Image is not defined");
         return;
       }
-      const cropped = await getCroppedImg(image, croppedAreaPixels); // Call your cropping function
+      const cropped = await getCroppedImg(image, croppedAreaPixels);
       setCroppedImage(cropped);
-      onCropComplete(cropped); // Pass the cropped image back to parent
+      onCropComplete(cropped);
     } catch (error) {
       console.error("Error cropping image:", error);
     }
@@ -67,7 +65,7 @@ const ImageCropper = ({ image, onCropComplete }) => {
           onCropComplete={cropComplete}
         />
       </DialogContent>
-      <DialogActions sx={{ flexDirection: "colum", mx: 3, my: 2 }}>
+      <DialogActions sx={{ flexDirection: "column", mx: 3, my: 2 }}>
         <Box sx={{ width: "100%", mb: 1 }}>
           <Box>
             <Typography>Zoom: {zoomPercentage(zoom)}</Typography>
