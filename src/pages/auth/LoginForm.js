@@ -14,6 +14,7 @@ import Row from "react-bootstrap/Row";
 
 // Styles
 import s from "../../styles/LoginRegisterForms.module.css";
+import { setTokenTimestamp } from "../../utils/utils";
 
 const LoginForm = () => {
   const setCurrentUser = useSetCurrentUser();
@@ -30,14 +31,13 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Before axios request");
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", loginData);
-      console.log("After axios request, data received:", data);
       setCurrentUser(data.user);
+      setTokenTimestamp(data);
       history.push("/feed");
     } catch (err) {
-      console.log("Error response from server:", err.response?.data);
+      // console.log("Error response from server:", err.response?.data);
       setErrors(err.response?.data);
     }
   };

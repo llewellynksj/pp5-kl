@@ -52,7 +52,7 @@ function ProfilePage() {
         setProfilePosts(profilePosts);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     fetchData();
@@ -123,8 +123,8 @@ function ProfilePage() {
           <InfiniteScroll
             className={s.MainContentContainer}
             children={profilePosts.results.map((post) => (
-              <Col>
-                <Post key={post.id} {...post} setPosts={setProfilePosts} />
+              <Col key={post.id}>
+                <Post {...post} setPosts={setProfilePosts} />
               </Col>
             ))}
             dataLength={profilePosts.results.length}
