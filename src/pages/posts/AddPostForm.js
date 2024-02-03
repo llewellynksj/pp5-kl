@@ -127,8 +127,9 @@ function AddPostForm() {
     <div className="text-center">
       {/* Caption */}
       <Form.Group>
-        <Form.Label>Caption</Form.Label>
+        <Form.Label htmlFor="caption">Caption</Form.Label>
         <Form.Control
+          id="caption"
           as="textarea"
           rows={3}
           name="caption"
