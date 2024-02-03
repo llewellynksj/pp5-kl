@@ -303,13 +303,37 @@ In the future there are features and developments that it would be useful to con
 
 ### **Languages Used**
 
-This website has been written in .
+- HTML
+- CSS
+- JavaScript ES6
+- JSX (an extension to JavaScript ES6)
 
 <br>
 
 **Frameworks, Libraries and Programs Used**
 
--
+- [React](https://react.dev/)
+
+- [Bootstrap](https://getbootstrap.com/) - styling
+- [React Bootstrap](https://react-bootstrap.netlify.app/) - styling
+- [Material UI](https://mui.com/material-ui/) - specifically used for building the ImageCropper
+- [ElephantSQL](https://www.elephantsql.com/) - database
+- [Font Awesome](https://fontawesome.com/) - icons
+- [React Icons](https://react-icons.github.io/react-icons/) - icons
+- [Balsamiq](https://balsamiq.com/) - wireframes
+- [Cloudinary](https://cloudinary.com/) - image storage
+- [Google Fonts](https://fonts.google.com/) - fonts
+- [Heroku](https://dashboard.heroku.com/apps) - deployment
+- [Am I Responsive](https://ui.dev/amiresponsive) - checking responsive across different screen sizes
+- [Birme](https://www.birme.net) - image resizing
+- [Remove BG](https://www.remove.bg/) - remove image backgrounds
+- [Canva](https://www.canva.com/) - designing the logo
+- [Coolors](https://coolors.co/) - designing colour palette
+- [React Easy Crop](https://www.npmjs.com/package/react-easy-crop) - image cropping
+- [React Emoji Mart](https://www.npmjs.com/package/emoji-mart) - emoji picker
+- [React Rouer Dom](https://www.npmjs.com/package/react-router-dom)
+- [Axios](https://www.npmjs.com/package/axios) - HTTP client for the browser and node.js
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
 
 <br>
 
