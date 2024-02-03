@@ -289,7 +289,11 @@ Close attention has been paid to the following in order to ensure the site is as
 
 In the future there are features and developments that it would be useful to consider adding to create an even better user experience of this website. They include:
 
-- Image cropping on image upload and profile avatar:
+- Advanced implementation of the image cropper including on the profile avatar
+- A more advanced filtering system where users can select a dropdown filter and sort posts by user, tag, date etc
+- A more in-depth Profile page that offers artisits to build a portfolio of work
+- A messaging service that allows users to connect with private chats
+- Incorporate the search bar within the NavBar and so have it appear across all pages
 
 <br>
 
