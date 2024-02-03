@@ -1,10 +1,10 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "../NavBar";
 import { CurrentUserProvider } from "../../contexts/CurrentUserContext";
 import { act } from "react-dom/test-utils";
 
-describe("Test NavBar rendering for non-logged in user", () => {
+describe("Render NavBar for logged out users", () => {
   const nonLoggedInUser = () =>
     render(
       <Router>
@@ -27,7 +27,7 @@ describe("Test NavBar rendering for non-logged in user", () => {
     expect(screen.getByRole("link", { name: "Register" })).toBeInTheDocument();
   });
 
-  it("tests no Logout link", () => {
+  it("tests there is no Logout link", () => {
     nonLoggedInUser();
     expect(
       screen.queryByRole("link", { name: "Logout" })
@@ -35,7 +35,7 @@ describe("Test NavBar rendering for non-logged in user", () => {
   });
 });
 
-describe("Test NavBar rendering for logged in user", () => {
+describe("Render NavBar for logged in users", () => {
   const loggedInUser = () =>
     render(
       <Router>
@@ -51,7 +51,7 @@ describe("Test NavBar rendering for logged in user", () => {
     expect(link).toBeInTheDocument();
   });
 
-  it("tests for no Login link", async () => {
+  it("tests there is no Login link", async () => {
     loggedInUser();
     await waitFor(() => {
       const link = screen.queryByRole("link", { name: "Login" });
@@ -59,7 +59,7 @@ describe("Test NavBar rendering for logged in user", () => {
     });
   });
 
-  it("tests for no Register link", async () => {
+  it("tests there is no Register link", async () => {
     loggedInUser();
     await waitFor(() => {
       const link = screen.queryByRole("link", { name: "Register" });
@@ -67,7 +67,7 @@ describe("Test NavBar rendering for logged in user", () => {
     });
   });
 
-  it("tests signing out via Logout in NavBar", async () => {
+  it("tests logout via Logout button in NavBar", async () => {
     loggedInUser();
 
     const link = await screen.findByRole("link", { name: "Logout" });

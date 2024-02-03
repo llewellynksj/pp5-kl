@@ -28,6 +28,7 @@ const Footer = () => {
             className="text-muted mx-2"
             to={{ pathname: "https://www.instagram.com/" }}
             target="_blank"
+            aria-label="Instagram"
           >
             <IoLogoInstagram size={22} className={s.Icon} />
           </Link>
@@ -37,6 +38,7 @@ const Footer = () => {
             className="text-muted mx-2"
             to={{ pathname: "https://www.pinterest.co.uk/" }}
             target="_blank"
+            aria-label="Pinterest"
           >
             <IoLogoPinterest size={22} className={s.Icon} />
           </Link>
