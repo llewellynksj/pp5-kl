@@ -149,7 +149,7 @@ function AddPostForm() {
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
             <Form.Control
-              className=""
+              className={s.Tag}
               as="select"
               name="image_tag"
               id="image_tag"
@@ -175,7 +175,7 @@ function AddPostForm() {
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
             <Form.Control
-              className=""
+              className={s.Tag}
               as="select"
               name="image_tag2"
               id="image_tag2"
@@ -201,7 +201,7 @@ function AddPostForm() {
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
             <Form.Control
-              className=""
+              className={s.Tag}
               as="select"
               name="image_tag3"
               id="image_tag3"
@@ -227,7 +227,7 @@ function AddPostForm() {
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
             <Form.Control
-              className=""
+              className={s.Tag}
               as="select"
               name="image_tag4"
               id="image_tag4"
@@ -253,7 +253,7 @@ function AddPostForm() {
         <div className="d-flex sm-col m-1 justify-content-center">
           <Form.Label>
             <Form.Control
-              className=""
+              className={s.Tag}
               as="select"
               name="image_tag5"
               id="image_tag5"
@@ -276,8 +276,8 @@ function AddPostForm() {
         ))}
       </>
 
-      <Button onClick={() => history.goBack()}>Cancel</Button>
       <Button type="submit">Post</Button>
+      <Button onClick={() => history.goBack()}>Cancel</Button>
     </div>
   );
 
