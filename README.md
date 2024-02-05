@@ -247,7 +247,7 @@ Below is an example part way through the site build:
 
 #### BackToTopButton
 
-Gif of back to top button
+[![Image from Gyazo](https://i.gyazo.com/5df28bf214cfdbe999429e2b99d25402.gif)](https://gyazo.com/5df28bf214cfdbe999429e2b99d25402)
 
 #### Button
 
@@ -279,7 +279,7 @@ Gif of back to top button
 
 #### Home
 
-Gif of home carousel
+[![Image from Gyazo](https://i.gyazo.com/c7327476e92c115cee9cb96ea4da7042.gif)](https://gyazo.com/c7327476e92c115cee9cb96ea4da7042)
 
 #### Login and Register
 
@@ -297,11 +297,9 @@ Gif of home carousel
 
 ![Image of comment form](readme/images/comment.webp)
 
-Gif of emoji picker
+[![Image from Gyazo](https://i.gyazo.com/3eb819a58718c58500a7100249283b10.gif)](https://gyazo.com/3eb819a58718c58500a7100249283b10)
 
 #### Following and Followers
-
-
 
 <br>
 

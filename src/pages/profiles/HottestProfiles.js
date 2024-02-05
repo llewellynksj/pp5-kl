@@ -34,7 +34,11 @@ const HottestProfiles = ({ mobile }) => {
                 <Card.Body className="p-0">
                   <div className={`d-flex justify-content-around`}>
                     {hottestProfiles.results.slice(0, 4).map((profile) => (
-                      <Profile key={profile.id} profile={profile} mobile />
+                      <Profile
+                        key={profile.id}
+                        profile={profile}
+                        mobile="true"
+                      />
                     ))}
                   </div>
                 </Card.Body>

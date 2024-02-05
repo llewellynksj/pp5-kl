@@ -27,7 +27,7 @@ function EditCommentForm(props) {
     const newArray = [];
     icon.forEach((element) => newArray.push("0x" + element));
     let emoji = String.fromCodePoint(...newArray);
-    setFormContent(formContent + emoji);
+    setFormContent((prevContent) => prevContent + emoji);
   };
 
   const handleSubmit = async (event) => {

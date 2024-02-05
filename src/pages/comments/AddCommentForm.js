@@ -29,7 +29,8 @@ function AddCommentForm(props) {
     const newArray = [];
     icon.forEach((element) => newArray.push("0x" + element));
     let emoji = String.fromCodePoint(...newArray);
-    setContent(content + emoji);
+    console.log(emoji);
+    setContent((prevContent) => prevContent + emoji);
   };
 
   const handleSubmit = async (event) => {
