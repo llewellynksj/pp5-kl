@@ -45,7 +45,7 @@ The back-end API for this site was created using Django REST Framework:
 - [Components](#components)
   - [NavBar](#navbar)
   - [Footer](#footer)
-  - [SideBar](#sidebar)
+  - [Hottest Profiles, SideBar and DividerLine](#hottest-profiles-sidebar-and-dividerline)
   - [BackToTopButton](#backtotopbutton)
   - [Button](#button)
   - [DividerLine](#dividerline)
@@ -233,15 +233,21 @@ Below is an example part way through the site build:
 
 #### NavBar
 
+![Image of logged out user Navbar](readme/images/navbar_loggedout.webp)
+
+![Image of logged in user Navbar](readme/images/navbar_loggedin.webp)
+
 #### Footer
 
-#### SideBar
+![Image of Footer](readme/images/footer.webp)
+
+#### Hottest Profiles, SideBar and DividerLine
+
+![Image of sidebar menu](readme/images/sidebar.webp)
 
 #### BackToTopButton
 
 #### Button
-
-#### DividerLine
 
 #### MenuDropDown
 
@@ -249,11 +255,13 @@ Below is an example part way through the site build:
 
 #### Avatar
 
-#### HottestProfiles
-
 #### Profile
 
+![Image of Profile page]()
+
 #### Post
+
+![Imgae of Post page]()
 
 ---
 
@@ -265,9 +273,19 @@ Below is an example part way through the site build:
 
 #### Login and Register
 
+![Image of Register Page](readme/images/register.webp)
+
+![Image of Login Page](readme/images/login.webp)
+
 #### Add Post
 
+![Image of Add Post Form](readme/images/add_post.webp)
+
+![Image cropper on Add Post Form](readme/images/addpost_cropper.webp)
+
 #### Add Comment Form
+
+![Image of comment form](readme/images/comment.webp)
 
 #### Following and Followers
 
@@ -352,24 +370,31 @@ The commit history can be viewed [here](https://github.com/llewellynksj/pp5-kl/c
 ## Deployment
 
 ### Deploy to Heroku
+
 1. Create a new repository on GitHub
 2. Open the repository in your chosen IDE
-3. In the terminal, create a React app using the following command: 
+3. In the terminal, create a React app using the following command:
+
 ```
 npx create-react-app . --use-npm
 ```
+
 4. You can confirm the app is working by running:
+
 ```
 npm start
 ```
+
 (this may run automatically)
 
 5. Ensure a Procfile is added to the root directory
 
 6. In package.json, within the scripts section, add:
+
 ```
 "heroku-prebuild": "npm install -g serve"
-``` 
+```
+
 7. Add, commit, and push all changes to Github
 8. From your Heroku dashboard, click on 'New' app and create a new app
 9. Go to the 'Deploy' tab
@@ -377,6 +402,7 @@ npm start
 11. Once connected, click 'Deploy Branch'
 
 ### Connecting to the API
+
 In order for the API to accept requests from this Front End site, certain permissions are required via heroku on the DRF API. [These are covered in the DRF API README here](https://github.com/llewellynksj/pp5-api).
 
 <br>
