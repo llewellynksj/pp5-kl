@@ -247,21 +247,29 @@ Below is an example part way through the site build:
 
 #### BackToTopButton
 
+Gif of back to top button
+
 #### Button
 
+![Image of Button component](readme/images/button.webp)
+
 #### MenuDropDown
+
+![Image of drop down menu](readme/images/dropdownmenu.webp)
 
 #### Asset
 
 #### Avatar
 
+![Image of Avatar component](readme/images/avatar.webp)
+
 #### Profile
 
-![Image of Profile page]()
+![Image of Profile page](readme/images/profile.webp)
 
 #### Post
 
-![Imgae of Post page]()
+![Imgae of Post page](readme/images/post.webp)
 
 ---
 
@@ -270,6 +278,8 @@ Below is an example part way through the site build:
 ### **Existing Features:**
 
 #### Home
+
+Gif of home carousel
 
 #### Login and Register
 
@@ -287,7 +297,11 @@ Below is an example part way through the site build:
 
 ![Image of comment form](readme/images/comment.webp)
 
+Gif of emoji picker
+
 #### Following and Followers
+
+
 
 <br>
 
