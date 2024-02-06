@@ -309,27 +309,46 @@ The Post component renders the post that has been uploaded by the user. It is pa
 
 #### Home
 
+The Home page has been created as an initial introduction to InkPad. It features some content explaining what the site is about, links to login and register, and a carousel of images.
+
+The images on the carousel have been purposefully selected to show that InkPad is resprentative of all people, and all styles to strengthen it's messgae of inclusivity.
+Images have been sourced from [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/).
+
 [![Image from Gyazo](https://i.gyazo.com/c7327476e92c115cee9cb96ea4da7042.gif)](https://gyazo.com/c7327476e92c115cee9cb96ea4da7042)
 
 #### Login and Register
 
+Register Page:
+
 ![Image of Register Page](readme/images/register.webp)
+
+Login Page:
 
 ![Image of Login Page](readme/images/login.webp)
 
 #### Add Post
 
+The Add Post Form allows users to upload an image, add a caption, and apply up to 5 different tags. The tags are used to assist with keyword searching.
+
 ![Image of Add Post Form](readme/images/add_post.webp)
+
+A simple image cropper has been implemented on the add post form. This is so that images are consistent in size when a user posts. However, there are some minor issues with this. Given more time, and for future implementations, this would be improved. Currently the cropper can be bypassed by the user and an image can be uploaded without being resized.
 
 ![Image cropper on Add Post Form](readme/images/addpost_cropper.webp)
 
 #### Add Comment Form
 
+The Add Comment form appears below the post of the individual post page:
+
 ![Image of comment form](readme/images/comment.webp)
+
+An emoji picker has been integrated into the add/edit comment form. There are some minor issues with this that would be improved upon in future implementations. For example the user needs to click out of the textbox for the emoji menu picker to appear.
 
 [![Image from Gyazo](https://i.gyazo.com/3eb819a58718c58500a7100249283b10.gif)](https://gyazo.com/3eb819a58718c58500a7100249283b10)
 
 #### Following and Followers
+
+In order for the user to know which other users are following them, or to quickly see the posts of users they follow, quicklinks have been created in the sidebar menu to redirect to a version of the PostList that renders posts of followers/following.
 
 <br>
 
@@ -472,6 +491,8 @@ For all testing details visit the [TESTING](TESTING.md) file.
 - [React Test Utilities](https://legacy.reactjs.org/docs/test-utils.html#act) - information on the 'act' utility
 - [Stack OverFlow 'What does #describe and #it methods do in TDD react testing?'](https://stackoverflow.com/questions/39863877/what-does-describe-and-it-methods-do-in-tdd-react-testing) - details on how to use 'describe' and 'it' in unit testing
 - [Slack](https://slack.com/intl/en-gb) - the Code Institute Slack Community was utilised to assist with various other queries including how to overcome an axios module error when testing
+- [Pexels](https://www.pexels.com/) - royalty free images
+- [Unsplash](https://unsplash.com/) - royalty free images
 
 <br>
 
