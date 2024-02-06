@@ -1,7 +1,7 @@
 .EmojiBtn {
   color: var(--secondary-color);
   position: absolute;
-  top: 5px; 
+  bottom: -25px; 
   right: 5px; 
   cursor: pointer;
 }

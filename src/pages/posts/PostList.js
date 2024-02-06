@@ -61,6 +61,7 @@ function PostList({ message, filter }) {
               onSubmit={(event) => event.preventDefault()}
             >
               <Form.Control
+                name="searchInput"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 type="text"
