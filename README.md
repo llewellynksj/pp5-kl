@@ -213,8 +213,6 @@ The InkPad logo was created using [Canva](https://www.canva.com/). The font used
 
 <br>
 
-<br>
-
 ### **Kanban Board**
 
 A Kanban approach was used to keep track of the flow of the project. Once User Stories were set up in the Project they were assigned to EPICs and began the project journey in the 'ToDo' column. As development progressed these moved through 'In Progress' to finally 'Done'. An additional column was added 'Unable to implement' for any features that were not successfully completed.
@@ -233,41 +231,73 @@ Below is an example part way through the site build:
 
 #### NavBar
 
+The NavBar was created to show different icons/links based on whether the current user is logged in or not:
+
+Non-logged in user:
 ![Image of logged out user Navbar](readme/images/navbar_loggedout.webp)
 
+Logged-in user:
 ![Image of logged in user Navbar](readme/images/navbar_loggedin.webp)
 
 #### Footer
+
+The Footer has been kept very simple, showing just the logo, website designer name, and relevant social links:
 
 ![Image of Footer](readme/images/footer.webp)
 
 #### Hottest Profiles, SideBar and DividerLine
 
+The sidebar was designed to hold a basic menu of quicklinks. From here the user can easily open the following pages:
+
+- The page to upload a new post
+- Trending posts (posts ordered in decsending order of most likes)
+- Favourite posts (posts that the current user has liked)
+- Following (posts from users that the current user is following)
+- Followers (posts from users that are following the current user)
+
+A DividerLine component was created to show seperation between the sidebar menu and the hottest profiles list. The hottest profiles list shows the most popular profiles.
+
 ![Image of sidebar menu](readme/images/sidebar.webp)
 
 #### BackToTopButton
+
+As inifinite scroll was implemented on the page showing all posts, a back to the top button component was also designed. This button shows on pages where a large number of posts are/could be rendered.
+
+A simple click of the bright pink arrow button sends the user back to the top of the page:
 
 [![Image from Gyazo](https://i.gyazo.com/5df28bf214cfdbe999429e2b99d25402.gif)](https://gyazo.com/5df28bf214cfdbe999429e2b99d25402)
 
 #### Button
 
+A resuable button component was created to ensure the buttons had continuity of design throughout
+
 ![Image of Button component](readme/images/button.webp)
 
 #### MenuDropDown
+
+The MenuDropDown component is used across the site when a small drop down menu is required. For exmaple options to edit the profile page, or options to edit/delete comments on a post.
 
 ![Image of drop down menu](readme/images/dropdownmenu.webp)
 
 #### Asset
 
+The Asset component has multi-functionality. It is primarily used to show a loading spinner.
+
 #### Avatar
+
+The avatar component is used on pages where the profile image is presented. It is a rounded version of this image:
 
 ![Image of Avatar component](readme/images/avatar.webp)
 
 #### Profile
 
+The Profile page is a central component used to display details of the current user:
+
 ![Image of Profile page](readme/images/profile.webp)
 
 #### Post
+
+The Post component renders the post that has been uploaded by the user. It is passed to other components such as the PostList to render all posts by users.
 
 ![Imgae of Post page](readme/images/post.webp)
 
@@ -321,9 +351,10 @@ In the future there are features and developments that it would be useful to con
 
 - Advanced implementation of the image cropper including on the profile avatar
 - A more advanced filtering system where users can select a dropdown filter and sort posts by user, tag, date etc
-- A more in-depth Profile page that offers artisits to build a portfolio of work
+- A more in-depth Profile page that offers artisits a tool for building a portfolio of work
 - A messaging service that allows users to connect with private chats
 - Incorporate the search bar within the NavBar and so have it appear across all pages
+- Advanced implementation of the emoji picker so it is integrated with any textareas more seamlessly
 
 <br>
 
@@ -364,6 +395,7 @@ In the future there are features and developments that it would be useful to con
 - [React Rouer Dom](https://www.npmjs.com/package/react-router-dom)
 - [Axios](https://www.npmjs.com/package/axios) - HTTP client for the browser and node.js
 - [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [Gyazo](https://gyazo.com) - creating GIFs for README
 
 <br>
 
