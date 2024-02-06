@@ -156,7 +156,7 @@ const NavBar = () => {
             activeClassName={s.Active}
           >
             {isMobile ? (
-              <p mobile>{currentUser?.username}'s Account</p>
+              <p mobile="true">{currentUser?.username}'s Account</p>
             ) : (
               <Avatar
                 src={currentUser?.profile_image}
