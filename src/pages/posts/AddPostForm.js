@@ -154,7 +154,7 @@ function AddPostForm() {
               className={s.Tag}
               as="select"
               name="image_tag"
-              id="first_image_tag"
+              id="image_tag"
               value={image_tag}
               onChange={handleChange}
             >
