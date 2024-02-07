@@ -59,30 +59,30 @@ Testing was performed across a range of devices, including:
 
 ### **User Story Testing**
 
-| User Goal                                                                                      | Solution  | Successfully Implemented? |
-| :--------------------------------------------------------------------------------------------- | :-------- | :------------------------ |
-| As a user I can navigate the website easily so I can find the pages I want                     | Feature   | Yes                       |
-| As a user I can create a profile so I can interact in the community of registered users        | Profiles  | Yes                       |
-| As a registered user I can login to view my own profile                                        | Profiles  | Yes                       |
-| As a user I can edit my profile and profile image so I can keep my profile updated             | Profiles  | Yes                       |
-| As a user I can post images to share my designs with the community                             | Posts     | Yes                       |
-| As a user I can view other posts by registered users so I can look for inspiration             | Posts     | Yes                       |
-| As a user I can favourite other users posts so I can easily refer back to them                 | Posts     | Yes                       |
-| As a user I can follow other users so that I can easily find their new posts                   | Followers | Yes                       |
-| As a user I can see which followers are following me so that I can reciprocate following       | Following | Yes                       |
-| As a user I can filter posts by their tags so I can look for specific types of images          | Posts     | Yes                       |
-| As a user I can filter posts by their user so I can see all the posts by one specific user     | Profiles  | Yes                       |
-| As a user I can search posts with keywords so I can look for specific types of images          | Posts     | Yes                       |
-| As a user I can see the most like images so I can keep up to date with what’s trending         | Posts     | Yes                       |
-| As a user I can scroll the posts feed so that I don’t have to click a next button              | Posts     | Yes                       |
-| As a user I can post comments on other users posts so I can share my thoughts                  | Comments  | Yes                       |
-| As a user I can view other users comments on my posts and other users posts                    | Comments  | Yes                       |
-| As a user I can edit my own posts so I can correct any errors                                  | Posts     | Yes                       |
-| As a user I can delete my own posts so I can remove any unwanted posts                         | Posts     | Yes                       |
-| As a user I can edit my own comments so I can correct any errors                               | Comments  | Yes                       |
-| As a user I can delete my own comments so I can remove any no longer wanted comments I’ve made | Comments  | Yes                       |
-| As a user I can view other users’ profiles so I can see their full posts and follow them       | Profiles  | Yes                       |
-| As a user I can see the most followed profiles so I can see who is trending                    | Profiles  | Yes                       |
+| User Goal                                                                                      | Solution                                                                                                                                               | Successfully Implemented? |
+| :--------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ |
+| As a user I can navigate the website easily so I can find the pages I want                     | Navigation bar and sidebar menu implemented                                                                                                            | Yes                       |
+| As a user I can create a profile so I can interact in the community of registered users        | Able to view, comment on, and like posts. Can follow/unfollow other users                                                                              | Yes                       |
+| As a registered user I can login to view my own profile                                        | Login authorisation and profile pages implmented                                                                                                       | Yes                       |
+| As a user I can edit my profile and profile image so I can keep my profile updated             | Update profile functionality implemented                                                                                                               | Yes                       |
+| As a user I can post images to share my designs with the community                             | Registered users can upload posts via the Add Post Form                                                                                                | Yes                       |
+| As a user I can view other posts by registered users so I can look for inspiration             | PostList allows users to browse other users posts. Keyword search also available                                                                       | Yes                       |
+| As a user I can favourite other users posts so I can easily refer back to them                 | Like button on posts allows users to add posts to their favourites                                                                                     | Yes                       |
+| As a user I can follow other users so that I can easily find their new posts                   | Follow button implemented                                                                                                                              | Yes                       |
+| As a user I can see which followers are following me so that I can reciprocate following       | A link to see all posts by users following the logged in user is available via the sidebar menu                                                        | Yes                       |
+| As a user I can filter posts by their tags so I can look for specific types of images          | Users are able to search for posts by using the tag in the search bar. Users can also click on the tag of a post to load all search results that match | Yes                       |
+| As a user I can filter posts by their user so I can see all the posts by one specific user     | Did not implement as intended, however users can use the keyword search bar to search for users                                                        | Yes                       |
+| As a user I can search posts with keywords so I can look for specific types of images          | Keyword search bar implemented                                                                                                                         | Yes                       |
+| As a user I can see the most like images so I can keep up to date with what’s trending         | Link to trending posts is available in sidebar menu                                                                                                    | Yes                       |
+| As a user I can scroll the posts feed so that I don’t have to click a next button              | Infinite scroll implemented                                                                                                                            | Yes                       |
+| As a user I can post comments on other users posts so I can share my thoughts                  | Comment form is available on post page                                                                                                                 | Yes                       |
+| As a user I can view other users comments on my posts and other users posts                    | Comments are available to view on post page                                                                                                            | Yes                       |
+| As a user I can edit my own posts so I can correct any errors                                  | Edit post functionality is available to the post owner on post page                                                                                    | Yes                       |
+| As a user I can delete my own posts so I can remove any unwanted posts                         | Delete post functionality is availble to the post owner on the post page                                                                               | Yes                       |
+| As a user I can edit my own comments so I can correct any errors                               | Edit comment functionality is available to the comment owner on the post page                                                                          | Yes                       |
+| As a user I can delete my own comments so I can remove any no longer wanted comments I’ve made | Delete comment functionality is available to the comment owner on the post page                                                                        | Yes                       |
+| As a user I can view other users’ profiles so I can see their full posts and follow them       | Profile page for each registered user is automatically created                                                                                         | Yes                       |
+| As a user I can see the most followed profiles so I can see who is trending                    | The Hottest Profiles section provides users with the top 4-5 user profiles                                                                             | Yes                       |
 
 <br>
 
@@ -91,19 +91,19 @@ Testing was performed across a range of devices, including:
 <details>
 <summary>Home Page</summary>
 
-![Screenshot of Lighthouse testing for home page on desktop devices]()
+![Screenshot of Lighthouse testing for home page](readme/testing_images/lh_home.webp)
 
 </details>
 <details>
 <summary>Register</summary>
 
-![Screenshot of Lighthouse testing for register page on desktop devices]()
+![Screenshot of Lighthouse testing for register page](readme/testing_images/lh_register.webp)
 
 </details>
 <details>
 <summary>Login</summary>
 
-![Screenshot of Lighthouse testing for login on desktop devices]()
+![Screenshot of Lighthouse testing for login](readme/testing_images/lh_login.webp)
 
 </details>
 <details>
