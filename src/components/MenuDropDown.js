@@ -13,6 +13,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 // Styles
 import s from "../styles/MenuDropDown.module.css";
 
+// Code from Code Institute's 'Moments' Walkthrough
+
 const EditMenu = React.forwardRef(({ onClick }, ref) => (
   <i
     className={`fa-solid fa-pen-to-square ${s.Hover}`}

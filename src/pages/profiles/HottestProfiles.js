@@ -11,6 +11,8 @@ import Card from "react-bootstrap/Card";
 // Styles
 import s from "../../styles/SideBarHottestProfiles.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const HottestProfiles = ({ mobile }) => {
   const { hottestProfiles } = useProfileData();
 

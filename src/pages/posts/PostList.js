@@ -20,6 +20,8 @@ import Row from "react-bootstrap/Row";
 // Styles
 import s from "../../styles/PostList.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function PostList({ message, filter }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -36,7 +38,7 @@ function PostList({ message, filter }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.error("Error fetching data:", err);
+        // console.error("Error fetching data:", err);
       }
     };
 

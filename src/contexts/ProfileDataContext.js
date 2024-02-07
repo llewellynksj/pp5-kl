@@ -3,6 +3,8 @@ import { axiosRes, axiosReq } from "../services/axiosDefaults";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import { followHelper, unfollowHelper } from "../utils/utils";
 
+// Code from Code Institute's 'Moments' Walkthrough
+
 const ProfileDataContext = createContext();
 const SetProfileDataContext = createContext();
 

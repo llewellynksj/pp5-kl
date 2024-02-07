@@ -1,3 +1,5 @@
+// Code from Code Institute's 'Moments' Walkthrough
+
 import axios from "axios";
 
 axios.defaults.baseURL = "https://pp5-api-kl-a5aee8435a6f.herokuapp.com/";

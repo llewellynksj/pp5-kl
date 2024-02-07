@@ -8,6 +8,8 @@ import Button from "../../components/Button";
 import s from "../../styles/Profile.module.css";
 import appS from "../../App.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const Profile = (props) => {
   const { profile, mobile, imageSize = 45 } = props;
   const { id, following_id, image, owner } = profile;

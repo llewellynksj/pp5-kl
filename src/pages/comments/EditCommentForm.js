@@ -13,6 +13,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 // Styles
 import s from "../../styles/AddEditCommentForm.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function EditCommentForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
   const [formContent, setFormContent] = useState(content);

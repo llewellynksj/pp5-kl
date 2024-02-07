@@ -15,15 +15,15 @@ import InputGroup from "react-bootstrap/InputGroup";
 // Styles
 import s from "../../styles/AddEditCommentForm.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
-
-  const [isPickerReady, setIsPickerReady] = useState(false); // Track whether the picker is ready to be rendered
+  const [isPickerReady, setIsPickerReady] = useState(false);
 
   useEffect(() => {
-    // Set isPickerReady to true when necessary data is available
     setIsPickerReady(true);
   }, []);
 
@@ -31,6 +31,7 @@ function AddCommentForm(props) {
     setContent(event.target.value);
   };
 
+  // Code adapted from Emoji Mart Walkthrough by Milad Tech: https://www.youtube.com/watch?v=pOuIC73VNR8
   const handleEmojiSelect = (event) => {
     const icon = event.unified.split("_");
     const newArray = [];
@@ -74,6 +75,7 @@ function AddCommentForm(props) {
               <Avatar src={profileImage} />
             </Link>
             <Form.Control
+              name="comment"
               placeholder="my comment..."
               as="textarea"
               value={content}

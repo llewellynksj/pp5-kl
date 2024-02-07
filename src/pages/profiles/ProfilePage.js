@@ -27,6 +27,8 @@ import Image from "react-bootstrap/Image";
 import s from "../../styles/ProfilePage.module.css";
 import appS from "../../App.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function ProfilePage() {
   const { id } = useParams();
   const currentUser = useCurrentUser();

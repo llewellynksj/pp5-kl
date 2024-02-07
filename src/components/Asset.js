@@ -1,6 +1,8 @@
 import Spinner from "react-bootstrap/Spinner";
 import s from "../styles/Asset.module.css";
 
+// Code from Code Institute's 'Moments' Walkthrough
+
 const Asset = ({ spinner, src, message }) => {
   return (
     <div className={`${s.Asset} p-4`}>

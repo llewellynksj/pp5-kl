@@ -14,6 +14,8 @@ import Alert from "react-bootstrap/Alert";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const UsernameForm = () => {
   const [username, setUsername] = useState("");
   const [errors, setErrors] = useState({});
@@ -42,7 +44,7 @@ const UsernameForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

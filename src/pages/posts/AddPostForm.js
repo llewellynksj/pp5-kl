@@ -18,6 +18,8 @@ import Image from "react-bootstrap/Image";
 // Styles
 import s from "../../styles/AddPostForm.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function AddPostForm() {
   useRedirect("loggedOut");
   const [postData, setPostData] = useState({
@@ -52,7 +54,7 @@ function AddPostForm() {
         const response = await axiosReq.get("/posts/tag-choices");
         setTagChoices(response.data);
       } catch (error) {
-        console.error("Error fetching tag choices:", error);
+        // console.error("Error fetching tag choices:", error);
       }
     }
 
@@ -115,7 +117,7 @@ function AddPostForm() {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

@@ -18,6 +18,8 @@ import Image from "react-bootstrap/Image";
 // Styles
 import s from "../../styles/Buttons.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const UpdateProfileForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
@@ -42,7 +44,7 @@ const UpdateProfileForm = () => {
         const response = await axiosReq.get("/profiles/status-choices");
         setStatusChoices(response.data);
       } catch (error) {
-        console.error("Error fetching status choices:", error);
+        // console.error("Error fetching status choices:", error);
       }
     }
 
@@ -94,7 +96,7 @@ const UpdateProfileForm = () => {
       }));
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

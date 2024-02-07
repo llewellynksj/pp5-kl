@@ -17,6 +17,8 @@ import Image from "react-bootstrap/Image";
 // Styles
 import s from "../../styles/AddPostForm.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function EditPostForm() {
   const [postData, setPostData] = useState({
     caption: "",
@@ -69,7 +71,7 @@ function EditPostForm() {
             })
           : history.push("/");
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     handleMount();
@@ -82,7 +84,7 @@ function EditPostForm() {
         const response = await axiosReq.get("/posts/tag-choices");
         setTagChoices(response.data);
       } catch (error) {
-        console.error("Error fetching tag choices:", error);
+        // console.error("Error fetching tag choices:", error);
       }
     }
 
@@ -127,7 +129,7 @@ function EditPostForm() {
       await axiosReq.put(`/posts/${id}`, formData);
       history.push(`/posts/${id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

@@ -19,6 +19,8 @@ import Row from "react-bootstrap/Row";
 // Styles
 import s from "../../styles/PostPage.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
@@ -46,7 +48,7 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <SideBar mobile />
+        <SideBar mobile />
         <HottestProfiles mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={`${s.Container} m-2 pb-2`}>
@@ -84,7 +86,7 @@ function PostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <SideBar />
+        <SideBar />
         <HottestProfiles />
       </Col>
     </Row>

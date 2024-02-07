@@ -15,6 +15,8 @@ import Tooltip from "react-bootstrap/Tooltip";
 import s from "../../styles/Post.module.css";
 import appS from "../../App.module.css";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const Post = (props) => {
   const {
     id,
@@ -50,7 +52,7 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}`);
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -66,7 +68,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
@@ -82,7 +84,7 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

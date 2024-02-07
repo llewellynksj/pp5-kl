@@ -9,6 +9,8 @@ import EditCommentForm from "./EditCommentForm";
 // Bootstrap
 import Media from "react-bootstrap/Media";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const Comment = (props) => {
   const {
     profile_id,

@@ -6,6 +6,7 @@ import Button from "./Button";
 
 const NotFound = () => {
   const currentUser = useCurrentUser();
+
   const loggedOutHomeBtn = (
     <Link to="/">
       <Button>Home</Button>

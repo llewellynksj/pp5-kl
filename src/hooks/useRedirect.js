@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useHistory } from "react-router";
 import axios from "axios";
 
+// Code from Code Institute's 'Moments' Walkthrough
+
 export const useRedirect = (userAuthStatus) => {
   const history = useHistory();
 

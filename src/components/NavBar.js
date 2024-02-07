@@ -24,6 +24,8 @@ import Navbar from "react-bootstrap/Navbar";
 import s from "../styles/NavBar.module.css";
 import { removeTokenTimestamp } from "../utils/utils";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
@@ -43,7 +45,6 @@ const NavBar = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Remove event listener when unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -55,7 +56,7 @@ const NavBar = () => {
       setCurrentUser(null);
       removeTokenTimestamp();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 

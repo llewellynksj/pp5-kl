@@ -11,6 +11,8 @@ import Alert from "react-bootstrap/Alert";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
+// Code adapted from Code Institute's 'Moments' Walkthrough
+
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
@@ -41,7 +43,7 @@ const UserPasswordForm = () => {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       setErrors(err.response?.data);
     }
   };

@@ -68,6 +68,7 @@ const LoginForm = () => {
                 name="username"
                 value={username}
                 onChange={handleChange}
+                autocomplete="on"
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
@@ -84,6 +85,7 @@ const LoginForm = () => {
                 name="password"
                 value={password}
                 onChange={handleChange}
+                autocomplete="on"
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
