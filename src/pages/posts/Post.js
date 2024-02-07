@@ -192,7 +192,11 @@ const Post = (props) => {
           </OverlayTrigger>
         )}
         {likes_count}
-        <Link to={`/posts/${id}`} className={`${s.Text} pl-3`}>
+        <Link
+          to={`/posts/${id}`}
+          className={`${s.Text} pl-3`}
+          aria-label="Go to post to view comments"
+        >
           <BsChatDots size={25} className={`${s.IconOutline} pr-1`} />
         </Link>
         {comments_count}
