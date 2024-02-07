@@ -467,12 +467,12 @@ Testing was carried out on the following:
 
 Additional testing was carried out by friends and family, and resulting bugs and their solutions were detailed below.
 
-| Raised by   | Bug                                                                                         | Solution                                                                                                |
-| :---------- | :------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------ |
-| User Tester | After registering, attempt to login and get 500 error                                       | Needed to add if statement to check customer had a customer ID in order to show newly added booking url |
-| User Tester | Spacing on product pages was not correct across devices                                     | Added missing classes to correct spacing and make consistent                                            |
-| User Tester | Appointment booking button on homepage not working on mobile                                | Missing URL was inserted                                                                                |
-| User Tester | Image on product detail page did not have rounded corners like images elsewhere on the site | Added border-radius to images rendered on the product details page                                      |
+| Raised by   | Bug | Solution |
+| :---------- | :-- | :------- |
+| User Tester |     |          |
+| User Tester |     |          |
+| User Tester |     |          |
+| User Tester |     |          |
 
 <br>
 
