@@ -35,29 +35,25 @@ Testing was performed across a range of devices, including:
 
 ### **Function Testing**
 
-| Page               | Test                                                                     | Successfully Completed |
-| :----------------- | :----------------------------------------------------------------------- | :--------------------: |
-| All                | Logo text links back to homepage                                         |          Yes           |
-| All                | Navigation links go to relevant page                                     |          Yes           |
-| All                | Social media icons in footer link to external sites, opening in new tabs |          Yes           |
-| All                | Call to action buttons link to relevant page                             |          Yes           |
-| All                | Images and text flex responsively                                        |          Yes           |
-| Login & Register   | Form submits                                                             |          Yes           |
-| Contact            | Submitted form sends email                                               |          Yes           |
-| Register           | Form creates new user                                                    |          Yes           |
-| Login              | Registered user can login successfully                                   |          Yes           |
-| Logout             | Registered user can logout                                               |          Yes           |
-| Logout             | Message is displayed on logout                                           |          Yes           |
-| Products/Profile   | Favourited items are saved and appear on User's profile page             |          Yes           |
-| My Appointments    | Booked appointments are visible to the User                              |          Yes           |
-| Book Appointment   | Form submits successfully                                                |          Yes           |
-| Book Appointment   | Date that falls on a store closed day cannot be booked                   |          Yes           |
-| Book Appointment   | Date in the past cannot be booked                                        |          Yes           |
-| Book Appointment   | A date and time that already exists in the database cannot be booked     |          Yes           |
-| My Appointments    | Booked appointments can be rescheduled and cancelled                     |          Yes           |
-| My Recommendations | Recommendations added by User are displayed                              |          Yes           |
-| My Recommendations | Recommendations added by User can be amended and deleted                 |          Yes           |
-| Add Recommendation | Form submits successfully                                                |          Yes           |
+| Page                      | Test                                                                     | Successfully Completed |
+| :------------------------ | :----------------------------------------------------------------------- | :--------------------: |
+| All                       | Logo text links back to homepage                                         |          Yes           |
+| All                       | Navigation links go to relevant page                                     |          Yes           |
+| All                       | Social media icons in footer link to external sites, opening in new tabs |          Yes           |
+| All                       | Call to action buttons link to relevant page                             |          Yes           |
+| All                       | Images and text flex responsively                                        |          Yes           |
+| Login & Register          | Form submits                                                             |          Yes           |
+| Login                     | Registered user can login successfully                                   |          Yes           |
+| Logout                    | Registered user can logout                                               |          Yes           |
+| Add post                  | Registered user can upload a new post                                    |          Yes           |
+| Add post                  | Users can zoom to crop their images before uploading                     |          Yes           |
+| Post                      | Registered user can edit and delete their own posts                      |          Yes           |
+| Post                      | Registered user can add a comment to a post                              |          Yes           |
+| Post                      | Registered user can edit and delete their own comment                    |          Yes           |
+| Profile                   | Registered user can view and update their own Profile                    |          Yes           |
+| Profile                   | Users can view other users' profiles                                     |          Yes           |
+| All registered user pages | Registered user can follow and unfollow other users                      |          Yes           |
+| Post List                 | Users can keyword search posts                                           |          Yes           |
 
 <br>
 
