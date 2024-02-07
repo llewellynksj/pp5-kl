@@ -229,7 +229,7 @@ Below is an example part way through the site build:
 
 ### **Components:**
 
-#### NavBar
+### NavBar
 
 The NavBar was created to show different icons/links based on whether the current user is logged in or not:
 
@@ -239,13 +239,13 @@ Non-logged in user:
 Logged-in user:
 ![Image of logged in user Navbar](readme/images/navbar_loggedin.webp)
 
-#### Footer
+### Footer
 
 The Footer has been kept very simple, showing just the logo, website designer name, and relevant social links:
 
 ![Image of Footer](readme/images/footer.webp)
 
-#### Hottest Profiles, SideBar and DividerLine
+### Hottest Profiles, SideBar and DividerLine
 
 The sidebar was designed to hold a basic menu of quicklinks. From here the user can easily open the following pages:
 
@@ -259,7 +259,7 @@ A DividerLine component was created to show seperation between the sidebar menu 
 
 ![Image of sidebar menu](readme/images/sidebar.webp)
 
-#### BackToTopButton
+### BackToTopButton
 
 As inifinite scroll was implemented on the page showing all posts, a back to the top button component was also designed. This button shows on pages where a large number of posts are/could be rendered.
 
@@ -267,35 +267,35 @@ A simple click of the bright pink arrow button sends the user back to the top of
 
 [![Image from Gyazo](https://i.gyazo.com/5df28bf214cfdbe999429e2b99d25402.gif)](https://gyazo.com/5df28bf214cfdbe999429e2b99d25402)
 
-#### Button
+### Button
 
 A resuable button component was created to ensure the buttons had continuity of design throughout
 
 ![Image of Button component](readme/images/button.webp)
 
-#### MenuDropDown
+### MenuDropDown
 
 The MenuDropDown component is used across the site when a small drop down menu is required. For exmaple options to edit the profile page, or options to edit/delete comments on a post.
 
 ![Image of drop down menu](readme/images/dropdownmenu.webp)
 
-#### Asset
+### Asset
 
 The Asset component has multi-functionality. It is primarily used to show a loading spinner.
 
-#### Avatar
+### Avatar
 
 The avatar component is used on pages where the profile image is presented. It is a rounded version of this image:
 
 ![Image of Avatar component](readme/images/avatar.webp)
 
-#### Profile
+### Profile
 
 The Profile page is a central component used to display details of the current user:
 
 ![Image of Profile page](readme/images/profile.webp)
 
-#### Post
+### Post
 
 The Post component renders the post that has been uploaded by the user. It is passed to other components such as the PostList to render all posts by users.
 
@@ -307,7 +307,7 @@ The Post component renders the post that has been uploaded by the user. It is pa
 
 ### **Existing Features:**
 
-#### Home
+### Home
 
 The Home page has been created as an initial introduction to InkPad. It features some content explaining what the site is about, links to login and register, and a carousel of images.
 
@@ -316,7 +316,7 @@ Images have been sourced from [Pexels](https://www.pexels.com/) and [Unsplash](h
 
 [![Image from Gyazo](https://i.gyazo.com/c7327476e92c115cee9cb96ea4da7042.gif)](https://gyazo.com/c7327476e92c115cee9cb96ea4da7042)
 
-#### Login and Register
+### Login and Register
 
 Register Page:
 
@@ -326,7 +326,7 @@ Login Page:
 
 ![Image of Login Page](readme/images/login.webp)
 
-#### Add Post
+### Add Post
 
 The Add Post Form allows users to upload an image, add a caption, and apply up to 5 different tags. The tags are used to assist with keyword searching.
 
@@ -336,7 +336,7 @@ A simple image cropper has been implemented on the add post form. This is so tha
 
 ![Image cropper on Add Post Form](readme/images/addpost_cropper.webp)
 
-#### Add Comment Form
+### Add Comment Form
 
 The Add Comment form appears below the post of the individual post page:
 
@@ -346,13 +346,13 @@ An emoji picker has been integrated into the add/edit comment form. There are so
 
 [![Image from Gyazo](https://i.gyazo.com/3eb819a58718c58500a7100249283b10.gif)](https://gyazo.com/3eb819a58718c58500a7100249283b10)
 
-#### Following and Followers
+### Following and Followers
 
 In order for the user to know which other users are following them, or to quickly see the posts of users they follow, quicklinks have been created in the sidebar menu to redirect to a version of the PostList that renders posts of followers/following.
 
 <br>
 
-### **Accessibility**
+## **Accessibility**
 
 The style of the website has utlised a rough punky style. However, in keeping with best practices steps have still been taken to ensure accessibility is considered throughout.
 
@@ -364,7 +364,7 @@ Close attention has been paid to the following in order to ensure the site is as
 
 <br>
 
-### **Future Features**
+## **Future Features**
 
 In the future there are features and developments that it would be useful to consider adding to create an even better user experience of this website. They include:
 
@@ -484,6 +484,7 @@ For all testing details visit the [TESTING](TESTING.md) file.
 
 - [Code Institute's 'Moments' Walkthrough]() - a large amount of the structure of this site was based on CI's Moments walkthrough project from their Advanced Front End course content
 - [Code Like a Pro - 'Crop, Zoom, Rotate and upload profile images in React using react-easy-crop and Firebase'](https://www.youtube.com/watch?v=MWzaItRRTXw) - Image cropper walkthrough
+- [Milad Tech - 'Part 1 Crude Application, Integrate Emoji Mart in React JS and tailwind css](https://www.youtube.com/watch?v=pOuIC73VNR8) - Emoji picker integration tutorial
 - [Geeks for Geeks - 'How to create a Scroll to top button in React'](https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/) - Tutorial for how to build back to top button
 - [Medium - 'Crop Images in React JS'](https://medium.com/@adarsh-d/crop-images-in-react-js-b9e3bcb433e0)
 - [Medium - 'How to customize the file upload button in React'](https://medium.com/web-dev-survey-from-kyoto/how-to-customize-the-file-upload-button-in-react-b3866a5973d8)

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../services/axiosDefaults";
 import Avatar from "../../components/Avatar";
@@ -19,6 +19,13 @@ function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
+
+  const [isPickerReady, setIsPickerReady] = useState(false); // Track whether the picker is ready to be rendered
+
+  useEffect(() => {
+    // Set isPickerReady to true when necessary data is available
+    setIsPickerReady(true);
+  }, []);
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -81,7 +88,7 @@ function AddCommentForm(props) {
             >
               <BsEmojiSmile size={18} />
             </span>
-            {expanded && (
+            {isPickerReady && expanded && (
               <div className={s.Picker}>
                 <Picker
                   data={data}
