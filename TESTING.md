@@ -166,73 +166,73 @@ All pages passed [WC3](https://validator.w3.org/) validation testing.
 <details>
 <summary>Home Page</summary>
 
-![Screenshot of WC3 testing for home page]()
+![Screenshot of WC3 testing for home page](readme/testing_images/wc3_home.webp)
 
 </details>
 <details>
 <summary>Register</summary>
 
-![Screenshot of WC3 testing for register page]()
+![Screenshot of WC3 testing for register page](readme/testing_images/wc3_register.webp)
 
 </details>
 <details>
 <summary>Login</summary>
 
-![Screenshot of WC3 testing for login]()
+![Screenshot of WC3 testing for login](readme/testing_images/wc3_login.webp)
 
 </details>
 <details>
 <summary>Logged in Home page (PostList Feed)</summary>
 
-![Screenshot of WC3 testing for logged in home page]()
+![Screenshot of WC3 testing for logged in home page](readme/testing_images/wc3_feed.webp)
 
 </details>
 <details>
 <summary>Profile</summary>
 
-![Screenshot of WC3 testing for profile page]()
+![Screenshot of WC3 testing for profile page](readme/testing_images/wc3_profile.webp)
 
 </details>
 <details>
 <summary>Update Profile</summary>
 
-![Screenshot of WC3 testing for update profile page]()
+![Screenshot of WC3 testing for update profile page](readme/testing_images/wc3_profile_update.webp)
 
 </details>
 <details>
 <summary>Add Post</summary>
 
-![Screenshot of WC3 testing for add post page]()
+![Screenshot of WC3 testing for add post page](readme/testing_images/wc3_add_post.webp)
 
 </details>
 <details>
 <summary>Post</summary>
 
-![Screenshot of WC3 testing for post page]()
+![Screenshot of WC3 testing for post page](readme/testing_images/wc3_post.webp)
 
 </details>
 <details>
 <summary>Trending</summary>
 
-![Screenshot of WC3 testing for trending page]()
+![Screenshot of WC3 testing for trending page](readme/testing_images/wc3_trending.webp)
 
 </details>
 <details>
 <summary>Favourites</summary>
 
-![Screenshot of WC3 testing for favourites page]()
+![Screenshot of WC3 testing for favourites page](readme/testing_images/wc3_favourites.webp)
 
 </details>
 <details>
 <summary>Following</summary>
 
-![Screenshot of WC3 testing for following page]()
+![Screenshot of WC3 testing for following page](readme/testing_images/wc3_following.webp)
 
 </details>
 <details>
 <summary>Followers</summary>
 
-![Screenshot of WC3 testing for followers page]()
+![Screenshot of WC3 testing for followers page](readme/testing_images/wc3_followers.webp)
 
 </details>
 
