@@ -246,7 +246,13 @@ All stylesheets passed [WC3](https://jigsaw.w3.org/css-validator/) validation te
 
 <br>
 
-### JSHint
+### ESLint
+
+Throughout the build of this application problems that have been risen via ESLint have been dealt with accordingly.
+
+There is only one circumstance were a 'eslint-disable-next-line' command has been used. This can be found in the ImageCropper component on line 22/23. The Image Cropper code was adapted from a walkthrough tutorial and ESLint was throwing a warning about 'croppedImage' being assigned a value but never used. In this instance this warning has been ignored to ensure the functionality of the cropper based on the walkthrough.
+
+In furture releases of this application, a more advanced image cropper is planned and this warning will be re-visited.
 
 <br>
 
