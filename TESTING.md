@@ -109,31 +109,25 @@ Testing was performed across a range of devices, including:
 <details>
 <summary>Logged in Home page (PostList Feed)</summary>
 
-![Screenshot of Lighthouse testing for logged in home page on desktop devices]()
+![Screenshot of Lighthouse testing for logged in home page on desktop devices](readme/testing_images/lh_feed.webp)
 
 </details>
 <details>
 <summary>Profile</summary>
 
-![Screenshot of Lighthouse testing for profile page on desktop devices]()
-
-</details>
-<details>
-<summary>Update Profile</summary>
-
-![Screenshot of Lighthouse testing for update profile page on desktop devices]()
+![Screenshot of Lighthouse testing for profile page on desktop devices](readme/testing_images/lh_profile.webp)
 
 </details>
 <details>
 <summary>Add Post</summary>
 
-![Screenshot of Lighthouse testing for add post page on desktop devices]()
+![Screenshot of Lighthouse testing for add post page on desktop devices](readme/testing_images/lh_add_post.webp)
 
 </details>
 <details>
 <summary>Post</summary>
 
-![Screenshot of Lighthouse testing for post page on desktop devices]()
+![Screenshot of Lighthouse testing for post page on desktop devices](readme/testing_images/lh_post.webp)
 
 </details>
 <details>
