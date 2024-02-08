@@ -415,6 +415,7 @@ In the future there are features and developments that it would be useful to con
 - [Axios](https://www.npmjs.com/package/axios) - HTTP client for the browser and node.js
 - [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)
 - [Gyazo](https://gyazo.com) - creating GIFs for README
+- [Miro](https://miro.com/app/dashboard/) - creating database diagrams
 
 <br>
 
@@ -494,6 +495,7 @@ For all testing details visit the [TESTING](TESTING.md) file.
 - [Slack](https://slack.com/intl/en-gb) - the Code Institute Slack Community was utilised to assist with various other queries including how to overcome an axios module error when testing
 - [Pexels](https://www.pexels.com/) - royalty free images
 - [Unsplash](https://unsplash.com/) - royalty free images
+- [ChatGPT](https://chat.openai.com/) - help with trouble shooting some more complex issues
 
 <br>
 
