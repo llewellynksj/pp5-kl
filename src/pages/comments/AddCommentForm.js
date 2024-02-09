@@ -29,16 +29,23 @@ function AddCommentForm(props) {
 
   const handleChange = (event) => {
     setContent(event.target.value);
+    console.log(content);
   };
 
   // Code adapted from Emoji Mart Walkthrough by Milad Tech: https://www.youtube.com/watch?v=pOuIC73VNR8
   const handleEmojiSelect = (event) => {
-    const icon = event.unified.split("_");
-    const newArray = [];
-    icon.forEach((element) => newArray.push("0x" + element));
-    let emoji = String.fromCodePoint(...newArray);
-    console.log(emoji);
-    setContent((prevContent) => prevContent + emoji);
+    console.log("handle emoji select triggered");
+    try {
+      const icon = event.unified.split("_");
+      const newArray = [];
+      icon.forEach((element) => newArray.push("0x" + element));
+      let emoji = String.fromCodePoint(...newArray);
+      console.log("Selected Emoji:", emoji);
+      setContent((prevContent) => prevContent + emoji);
+      console.log(content);
+    } catch (error) {
+      console.error("Error selecting emoji:", error);
+    }
   };
 
   const handleSubmit = async (event) => {
@@ -95,7 +102,7 @@ function AddCommentForm(props) {
                 <Picker
                   data={data}
                   emojiSize={18}
-                  emojiButtonSize={25}
+                  emojiButtonSize={28}
                   onEmojiSelect={handleEmojiSelect}
                   maxFrequentRows={0}
                   perLine={12}

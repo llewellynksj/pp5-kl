@@ -6,6 +6,8 @@ import Button from "../../components/Button";
 import Asset from "../../components/Asset";
 import upload from "../../assets/upload.png";
 import ImageCropper from "../../components/ImageCropper";
+import EmojiPicker from "emoji-picker-react";
+import { BsEmojiSmileFill } from "react-icons/bs";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
@@ -46,6 +48,8 @@ function AddPostForm() {
   const [tagChoices, setTagChoices] = useState([]);
   const [openCrop, setOpenCrop] = useState(false);
   const [croppedImage, setCroppedImage] = useState(null);
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+  // const [selectedEmoji, setSelectedEmoji] = useState("");
 
   // Fetch the tag choices from api
   useEffect(() => {
@@ -66,6 +70,16 @@ function AddPostForm() {
       ...postData,
       [event.target.name]: event.target.value,
     });
+  };
+
+  const handleEmojiClick = (emojiObject) => {
+    const { emoji } = emojiObject;
+    if (emoji) {
+      setPostData((prevData) => ({
+        ...prevData,
+        caption: prevData.caption + emoji,
+      }));
+    }
   };
 
   // Image cropping code adapted from tutorial by 'Code Like a Pro'
@@ -128,7 +142,7 @@ function AddPostForm() {
   const formFields = (
     <div className="text-center">
       {/* Caption */}
-      <Form.Group>
+      <Form.Group className="mb-0">
         <Form.Label htmlFor="caption">Caption</Form.Label>
         <Form.Control
           id="caption"
@@ -137,8 +151,19 @@ function AddPostForm() {
           name="caption"
           value={caption}
           onChange={handleChange}
+          onClick={() => setShowEmojiPicker(!showEmojiPicker)} // Toggle emoji picker visibility
         />
       </Form.Group>
+      <div className="d-flex justify-content-end">
+        <span
+          type="button"
+          onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+          className={s.EmojiBtn}
+        >
+          <BsEmojiSmileFill size={18} />
+        </span>
+      </div>
+      {showEmojiPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
