@@ -5,6 +5,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../services/axiosDefaults";
 import Button from "../../components/Button";
+import AddEmoji from "../../components/AddEmoji";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
@@ -98,6 +99,16 @@ function EditPostForm() {
     });
   };
 
+  const handleEmojiClick = (emojiObject) => {
+    const { emoji } = emojiObject;
+    if (emoji) {
+      setPostData((prevData) => ({
+        ...prevData,
+        caption: prevData.caption + emoji,
+      }));
+    }
+  };
+
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
@@ -150,6 +161,7 @@ function EditPostForm() {
           onChange={handleChange}
         />
       </Form.Group>
+      <AddEmoji onEmojiClick={handleEmojiClick} />
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}

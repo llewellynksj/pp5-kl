@@ -7,9 +7,6 @@ import AddEmoji from "../../components/AddEmoji";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-// Styles
-import s from "../../styles/AddEditCommentForm.module.css";
-
 // Code adapted from Code Institute's 'Moments' Walkthrough
 
 function EditCommentForm(props) {
