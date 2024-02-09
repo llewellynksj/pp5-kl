@@ -45,6 +45,7 @@ The back-end API for this site was created using Django REST Framework:
 - [Components](#components)
   - [NavBar](#navbar)
   - [Footer](#footer)
+  - [AddEmoji](#addemoji)
   - [Hottest Profiles, SideBar and DividerLine](#hottest-profiles-sidebar-and-dividerline)
   - [BackToTopButton](#backtotopbutton)
   - [Button](#button)
@@ -245,6 +246,13 @@ The Footer has been kept very simple, showing just the logo, website designer na
 
 ![Image of Footer](readme/images/footer.webp)
 
+### AddEmoji
+
+The AddEmoji component was created using the [Emoji Picker React](https://www.npmjs.com/package/emoji-picker-react) library.
+Initially the emoji picker was just added to the AddPostForm, but in realising it would also be used on the AddCommentForm and EditCommentForm, the fucntion was refactored into it's own reusable component.
+
+For further details, see the [Add Comment Form](#add-comment-form) within [Existing Features](#existing-features)
+
 ### Hottest Profiles, SideBar and DividerLine
 
 The sidebar was designed to hold a basic menu of quicklinks. From here the user can easily open the following pages:
@@ -344,7 +352,9 @@ The Add Comment form appears below the post of the individual post page:
 
 ![Image of comment form](readme/images/comment.webp)
 
-An emoji picker has been integrated into the add/edit comment form (as well as the add post form).
+<br>
+
+An **emoji picker** has been integrated into the add/edit comment form (as well as the add post form).
 
 ![Gif of emoji picker being used](https://i.gyazo.com/6376016c27ae18cbbb49a252bb7183a1.gif)
 
