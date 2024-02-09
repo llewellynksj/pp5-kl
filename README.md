@@ -336,15 +336,17 @@ A simple image cropper has been implemented on the add post form. This is so tha
 
 ![Image cropper on Add Post Form](readme/images/addpost_cropper.webp)
 
+An emoji picker has also been added to the Add Post Form, as outlined in the Add Comment Form below.
+
 ### Add Comment Form
 
 The Add Comment form appears below the post of the individual post page:
 
 ![Image of comment form](readme/images/comment.webp)
 
-An emoji picker has been integrated into the add/edit comment form. There are some minor issues with this that would be improved upon in future implementations. For example the user needs to click out of the textbox for the emoji menu picker to appear.
+An emoji picker has been integrated into the add/edit comment form (as well as the add post form).
 
-[![Image from Gyazo](https://i.gyazo.com/3eb819a58718c58500a7100249283b10.gif)](https://gyazo.com/3eb819a58718c58500a7100249283b10)
+![Gif of emoji picker being used](https://i.gyazo.com/6376016c27ae18cbbb49a252bb7183a1.gif)
 
 ### Following and Followers
 
@@ -410,7 +412,7 @@ In the future there are features and developments that it would be useful to con
 - [Canva](https://www.canva.com/) - designing the logo
 - [Coolors](https://coolors.co/) - designing colour palette
 - [React Easy Crop](https://www.npmjs.com/package/react-easy-crop) - image cropping
-- [React Emoji Mart](https://www.npmjs.com/package/emoji-mart) - emoji picker
+- [Emoji Picker React](https://www.npmjs.com/package/emoji-picker-react) - emoji picker
 - [React Rouer Dom](https://www.npmjs.com/package/react-router-dom)
 - [Axios](https://www.npmjs.com/package/axios) - HTTP client for the browser and node.js
 - [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component)

@@ -281,14 +281,10 @@ Testing was carried out on the following:
 
 ### **Bugs**
 
-Additional testing was carried out by friends and family, and resulting bugs and their solutions were detailed below.
+**Emoji Picker**
 
-| Raised by   | Bug | Solution |
-| :---------- | :-- | :------- |
-| User Tester |     |          |
-| User Tester |     |          |
-| User Tester |     |          |
-| User Tester |     |          |
+Initially I had implemented the emoji picker using the [Emoji-Mart](https://github.com/missive/emoji-mart) library. However I experienced a multitude of issues with this including emoji's not appearing, or only appearing after some time.
+After a great deal of debugging I decided to replace this with a simple lightweight emoji picker; [Emoji Picker React](https://www.npmjs.com/package/emoji-picker-react).
 
 <br>
 
