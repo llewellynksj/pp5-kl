@@ -240,11 +240,15 @@ Non-logged in user:
 Logged-in user:
 ![Image of logged in user Navbar](readme/images/navbar_loggedin.webp)
 
+<br>
+
 ### Footer
 
 The Footer has been kept very simple, showing just the logo, website designer name, and relevant social links:
 
 ![Image of Footer](readme/images/footer.webp)
+
+<br>
 
 ### AddEmoji
 
@@ -252,6 +256,8 @@ The AddEmoji component was created using the [Emoji Picker React](https://www.np
 Initially the emoji picker was just added to the AddPostForm, but in realising it would also be used on the AddCommentForm and EditCommentForm, the fucntion was refactored into it's own reusable component.
 
 For further details, see the [Add Comment Form](#add-comment-form) within [Existing Features](#existing-features)
+
+<br>
 
 ### Hottest Profiles, SideBar and DividerLine
 
@@ -267,6 +273,8 @@ A DividerLine component was created to show seperation between the sidebar menu 
 
 ![Image of sidebar menu](readme/images/sidebar.webp)
 
+<br>
+
 ### BackToTopButton
 
 As inifinite scroll was implemented on the page showing all posts, a back to the top button component was also designed. This button shows on pages where a large number of posts are/could be rendered.
@@ -275,11 +283,15 @@ A simple click of the bright pink arrow button sends the user back to the top of
 
 [![Image from Gyazo](https://i.gyazo.com/5df28bf214cfdbe999429e2b99d25402.gif)](https://gyazo.com/5df28bf214cfdbe999429e2b99d25402)
 
+<br>
+
 ### Button
 
 A resuable button component was created to ensure the buttons had continuity of design throughout
 
 ![Image of Button component](readme/images/button.webp)
+
+<br>
 
 ### MenuDropDown
 
@@ -287,9 +299,13 @@ The MenuDropDown component is used across the site when a small drop down menu i
 
 ![Image of drop down menu](readme/images/dropdownmenu.webp)
 
+<br>
+
 ### Asset
 
 The Asset component has multi-functionality. It is primarily used to show a loading spinner.
+
+<br>
 
 ### Avatar
 
@@ -297,11 +313,15 @@ The avatar component is used on pages where the profile image is presented. It i
 
 ![Image of Avatar component](readme/images/avatar.webp)
 
+<br>
+
 ### Profile
 
 The Profile page is a central component used to display details of the current user:
 
 ![Image of Profile page](readme/images/profile.webp)
+
+<br>
 
 ### Post
 
@@ -497,7 +517,6 @@ For all testing details visit the [TESTING](TESTING.md) file.
 
 - [Code Institute's 'Moments' Walkthrough]() - a large amount of the structure of this site was based on CI's Moments walkthrough project from their Advanced Front End course content
 - [Code Like a Pro - 'Crop, Zoom, Rotate and upload profile images in React using react-easy-crop and Firebase'](https://www.youtube.com/watch?v=MWzaItRRTXw) - Image cropper walkthrough
-- [Milad Tech - 'Part 1 Crude Application, Integrate Emoji Mart in React JS and tailwind css](https://www.youtube.com/watch?v=pOuIC73VNR8) - Emoji picker integration tutorial
 - [Geeks for Geeks - 'How to create a Scroll to top button in React'](https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/) - Tutorial for how to build back to top button
 - [Medium - 'Crop Images in React JS'](https://medium.com/@adarsh-d/crop-images-in-react-js-b9e3bcb433e0)
 - [Medium - 'How to customize the file upload button in React'](https://medium.com/web-dev-survey-from-kyoto/how-to-customize-the-file-upload-button-in-react-b3866a5973d8)
