@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosRes } from "../../services/axiosDefaults";
 import Avatar from "../../components/Avatar";
 import Button from "../../components/Button";
-import data from "@emoji-mart/data";
-import Picker from "@emoji-mart/react";
-import { BsEmojiSmile } from "react-icons/bs";
-import useClickOutsideToggle from "../../hooks/useClickOutsideToggle";
+import AddEmoji from "../../components/AddEmoji";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
@@ -20,31 +17,16 @@ import s from "../../styles/AddEditCommentForm.module.css";
 function AddCommentForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
-  const { expanded, setExpanded, ref } = useClickOutsideToggle();
-  const [isPickerReady, setIsPickerReady] = useState(false);
-
-  useEffect(() => {
-    setIsPickerReady(true);
-  }, []);
 
   const handleChange = (event) => {
     setContent(event.target.value);
     console.log(content);
   };
 
-  // Code adapted from Emoji Mart Walkthrough by Milad Tech: https://www.youtube.com/watch?v=pOuIC73VNR8
-  const handleEmojiSelect = (event) => {
-    console.log("handle emoji select triggered");
-    try {
-      const icon = event.unified.split("_");
-      const newArray = [];
-      icon.forEach((element) => newArray.push("0x" + element));
-      let emoji = String.fromCodePoint(...newArray);
-      console.log("Selected Emoji:", emoji);
-      setContent((prevContent) => prevContent + emoji);
-      console.log(content);
-    } catch (error) {
-      console.error("Error selecting emoji:", error);
+  const handleEmojiClick = (emojiObject) => {
+    const { emoji } = emojiObject;
+    if (emoji) {
+      setContent(content + emoji);
     }
   };
 
@@ -76,7 +58,7 @@ function AddCommentForm(props) {
   return (
     <div className={`m-2 pb-2`}>
       <Form className="mt-2" onSubmit={handleSubmit}>
-        <Form.Group>
+        <Form.Group className="mb-0">
           <InputGroup>
             <Link to={`/profiles/${profile_id}`}>
               <Avatar src={profileImage} />
@@ -88,29 +70,10 @@ function AddCommentForm(props) {
               value={content}
               onChange={handleChange}
               rows={2}
-              className={s.TextareaIcon}
             />
-            <span
-              ref={ref}
-              onClick={() => setExpanded(!expanded)}
-              className={s.EmojiBtn}
-            >
-              <BsEmojiSmile size={18} />
-            </span>
-            {isPickerReady && expanded && (
-              <div className={s.Picker}>
-                <Picker
-                  data={data}
-                  emojiSize={18}
-                  emojiButtonSize={28}
-                  onEmojiSelect={handleEmojiSelect}
-                  maxFrequentRows={0}
-                  perLine={12}
-                />
-              </div>
-            )}
           </InputGroup>
         </Form.Group>
+        <AddEmoji onEmojiClick={handleEmojiClick} />
         <Button disabled={!content.trim()} type="submit">
           Add
         </Button>

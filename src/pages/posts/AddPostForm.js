@@ -6,8 +6,7 @@ import Button from "../../components/Button";
 import Asset from "../../components/Asset";
 import upload from "../../assets/upload.png";
 import ImageCropper from "../../components/ImageCropper";
-import EmojiPicker from "emoji-picker-react";
-import { BsEmojiSmileFill } from "react-icons/bs";
+import AddEmoji from "../../components/AddEmoji";
 
 // Bootstrap
 import Form from "react-bootstrap/Form";
@@ -48,8 +47,6 @@ function AddPostForm() {
   const [tagChoices, setTagChoices] = useState([]);
   const [openCrop, setOpenCrop] = useState(false);
   const [croppedImage, setCroppedImage] = useState(null);
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  // const [selectedEmoji, setSelectedEmoji] = useState("");
 
   // Fetch the tag choices from api
   useEffect(() => {
@@ -151,19 +148,9 @@ function AddPostForm() {
           name="caption"
           value={caption}
           onChange={handleChange}
-          onClick={() => setShowEmojiPicker(!showEmojiPicker)} // Toggle emoji picker visibility
         />
       </Form.Group>
-      <div className="d-flex justify-content-end">
-        <span
-          type="button"
-          onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-          className={s.EmojiBtn}
-        >
-          <BsEmojiSmileFill size={18} />
-        </span>
-      </div>
-      {showEmojiPicker && <EmojiPicker onEmojiClick={handleEmojiClick} />}
+      <AddEmoji onEmojiClick={handleEmojiClick} />
       {errors?.content?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
