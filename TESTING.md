@@ -88,6 +88,9 @@ Testing was performed across a range of devices, including:
 
 ### **Lighthouse**
 
+I found I had some significant issues with performance scores on some of the pages of my application. On further inspection of Lighthouse I could see that the main issue was the Largest Contentful Paint.
+I was able to spend some time researching this but not sufficient to implement changes to improve the performance at this stage. Future implementations of this project will ensure better performance is a high priority.
+
 <details>
 <summary>Home Page</summary>
 
@@ -133,25 +136,25 @@ Testing was performed across a range of devices, including:
 <details>
 <summary>Trending</summary>
 
-![Screenshot of Lighthouse testing for trending page on desktop devices]()
+![Screenshot of Lighthouse testing for trending page on desktop devices](readme/testing_images/lh_trending.webp)
 
 </details>
 <details>
 <summary>Favourites</summary>
 
-![Screenshot of Lighthouse testing for favourites page on desktop devices]()
+![Screenshot of Lighthouse testing for favourites page on desktop devices](readme/testing_images/lh_favs.webp)
 
 </details>
 <details>
 <summary>Following</summary>
 
-![Screenshot of Lighthouse testing for following page on desktop devices]()
+![Screenshot of Lighthouse testing for following page on desktop devices](readme/testing_images/lh_following.webp)
 
 </details>
 <details>
 <summary>Followers</summary>
 
-![Screenshot of Lighthouse testing for followers page on desktop devices]()
+![Screenshot of Lighthouse testing for followers page on desktop devices](readme/testing_images/lh_followers.webp)
 
 </details>
 
@@ -285,6 +288,15 @@ Testing was carried out on the following:
 
 Initially I had implemented the emoji picker using the [Emoji-Mart](https://github.com/missive/emoji-mart) library. However I experienced a multitude of issues with this including emoji's not appearing, or only appearing after some time.
 After a great deal of debugging I decided to replace this with a simple lightweight emoji picker; [Emoji Picker React](https://www.npmjs.com/package/emoji-picker-react).
+
+<br>
+
+**Lighthouse Scores**
+
+I found I had some significant issues with performance scores on some of the pages of my application. On further inspection of Lighthouse I could see that the main issue was the Largest Contentful Paint.
+I was able to spend some time researching this but not sufficient to implement changes to improve the performance at this stage. Future implementations of this project will ensure better performance is a high priority.
+
+I had attempted to implement a conversion tool that would automatically convert images that users uploaded into webp files to help improve performace. I used [image conversion](https://www.npmjs.com/package/image-conversion) for this, however it caused errors when working with react bootstrap image components. Due to time limitations with this project, this will now be added to future implementations.
 
 <br>
 
